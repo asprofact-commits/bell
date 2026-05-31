@@ -1,0 +1,32 @@
+# Bell Kitchen · COOKaki — robots.txt
+# Allow all standard search engine crawlers full access.
+# Static site, no admin paths, no sensitive directories.
+
+User-agent: *
+Allow: /
+
+# Explicit welcomes for AI / answer-engine crawlers
+# (these are allowed by the wildcard above; explicit rules make the intent unambiguous)
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://cookaki.gr/sitemap.xml

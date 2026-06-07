@@ -10,19 +10,19 @@
   const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
 
   /* ---------- SINGLE SOURCE OF TRUTH: opening hours ------------------------ */
-  /* IMPORTANT: confirm Sunday and Friday/Saturday hours with the owners.
-     This object is the canonical schedule referenced by the open-now badge
+  /* This object is the canonical schedule referenced by the open-now badge
      AND should be reflected in the JSON-LD schema on index.html and in
-     contact.html's hours table. If you change hours, update all three. */
+     contact.html's hours table. If you change hours, update all three.
+     Each day holds one or more service sessions (split shifts supported). */
   const HOURS = {
     /* day index per JS Date#getDay(): 0=Sunday, 1=Monday, ... 6=Saturday */
-    0: { open: 12, close: 24, label: "12:00 – 24:00" }, // Sunday
-    1: { open: 12, close: 24, label: "12:00 – 24:00" }, // Monday
-    2: { open: 12, close: 24, label: "12:00 – 24:00" }, // Tuesday
-    3: { open: 12, close: 24, label: "12:00 – 24:00" }, // Wednesday
-    4: { open: 12, close: 24, label: "12:00 – 24:00" }, // Thursday
-    5: { open: 12, close: 25, label: "12:00 – 01:00" }, // Friday (close=25 means 01:00 next day)
-    6: { open: 12, close: 25, label: "12:00 – 01:00" }  // Saturday
+    0: { sessions: [{ open: 10, close: 18 }], label: "10:00 – 18:00" },                 // Sunday
+    1: { sessions: [{ open: 9, close: 16 }, { open: 19, close: 22 }], label: "09:00 – 16:00 · 19:00 – 22:00" }, // Monday
+    2: { sessions: [{ open: 9, close: 16 }, { open: 19, close: 22 }], label: "09:00 – 16:00 · 19:00 – 22:00" }, // Tuesday
+    3: { sessions: [{ open: 9, close: 16 }, { open: 19, close: 22 }], label: "09:00 – 16:00 · 19:00 – 22:00" }, // Wednesday
+    4: { sessions: [{ open: 9, close: 16 }, { open: 19, close: 22 }], label: "09:00 – 16:00 · 19:00 – 22:00" }, // Thursday
+    5: { sessions: [{ open: 9, close: 16 }, { open: 19, close: 22 }], label: "09:00 – 16:00 · 19:00 – 22:00" }, // Friday
+    6: { sessions: [{ open: 9, close: 16 }, { open: 19, close: 22 }], label: "09:00 – 16:00 · 19:00 – 22:00" }  // Saturday
   };
 
   /* ---------- 1. Mobile menu toggle ---------------------------------------- */
@@ -256,27 +256,39 @@
     const nowHr = hour + minute / 60;
 
     const today = HOURS[day];
-    const prevDay = HOURS[(day + 6) % 7];
+    const hhmm = (h) => `${String(Math.floor(h)).padStart(2, "0")}:${String(Math.round((h % 1) * 60)).padStart(2, "0")}`;
 
     let isOpen = false;
-    let label = "Closed · Opens 12:00";
+    let label = "";
 
-    // After midnight on Saturday/Sunday morning, we may still be inside the previous day's late session
-    if (prevDay.close > 24 && nowHr < (prevDay.close - 24)) {
+    // Currently inside a session today?
+    const current = today.sessions.find((s) => nowHr >= s.open && nowHr < s.close);
+    // Next session still to come today?
+    const next = today.sessions.find((s) => nowHr < s.open);
+
+    if (current) {
       isOpen = true;
-      label = `Open now · Until 0${prevDay.close - 24}:00`;
-    } else if (nowHr >= today.open && nowHr < today.close) {
-      isOpen = true;
-      const closeHr = today.close > 24 ? today.close - 24 : today.close;
-      const closeStr = today.close > 24
-        ? `0${closeHr}:00`
-        : (today.close === 24 ? "24:00" : `${String(closeHr).padStart(2, "0")}:00`);
-      label = `Open now · Until ${closeStr}`;
-    } else if (nowHr < today.open) {
-      label = `Opens ${String(today.open).padStart(2, "0")}:00`;
+      label = `Open now · Until ${hhmm(current.close)}`;
+    } else if (next) {
+      label = `Closed · Opens ${hhmm(next.open)}`;
+    } else {
+
+      // No more sessions today - find next opening day
+      let daysAhead = 1;
+      while (daysAhead <= 7) {
+        const nextDay = HOURS[(day + daysAhead) % 7];
+        if (nextDay && nextDay.sessions.length) {
+          const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+          label = "Closed · Opens " + dayNames[(day + daysAhead) % 7] + " " + hhmm(nextDay.sessions[0].open);
+          break;
+        }
+        daysAhead++;
+      }
+      if (!label) label = "Closed";
     }
 
     openBadge.textContent = label;
-    openBadge.style.color = isOpen ? "var(--olive)" : "var(--ink-muted)";
+    openBadge.setAttribute("data-open", isOpen ? "true" : "false");
   }
+
 })();

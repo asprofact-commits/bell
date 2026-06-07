@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="theme-color" content="#0F1F3D" />
 
-<title>Private Events — Bell Kitchen | COOKaki Athens</title>
-<meta name="description" content="Birthdays, baptisms, anniversaries and corporate dinners — at Bell Kitchen in Koukáki. Set menus from €18/person. The same honest cooking since 1956." />
+<title>Private Events & Catering — Bell Kitchen | COOKaki Athens</title>
+<meta name="description" content="Birthdays, baptisms, anniversaries and corporate dinners — at Bell Kitchen in Koukáki, or wherever you celebrate. Set menus from €18/person. The same honest cooking since 1956." />
 <link rel="canonical" href="https://www.cookaki.com/events.html" />
 
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Private Events — Bell Kitchen" />
-<meta property="og:description" content="Birthdays, baptisms, corporate dinners, weddings — in our Koukáki dining room." />
-<meta property="og:image" content="https://www.cookaki.com/assets/images/bell-kitchen-plaque.jpg" />
+<meta property="og:title" content="Private Events & Catering — Bell Kitchen" />
+<meta property="og:description" content="Birthdays, baptisms, corporate dinners, weddings — in our Koukáki dining room or at your venue across Athens." />
+<meta property="og:image" content="https://cookaki.gr/assets/images/bell-kitchen-plaque.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,11 +26,12 @@
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "serviceType": "Private Events",
-  "provider": { "@id": "https://www.cookaki.com/#restaurant" },
+  "serviceType": "Private Events & Catering",
+  "provider": { "@id": "https://cookaki.gr/#restaurant" },
   "areaServed": { "@type": "City", "name": "Athens" },
   "offers": [
-    { "@type": "Offer", "name": "Private dining in our Koukáki venue", "priceRange": "€18-€45 per person" }
+    { "@type": "Offer", "name": "Private dining in our Koukáki venue", "priceRange": "€18-€45 per person" },
+    { "@type": "Offer", "name": "Catering at your venue", "priceRange": "€20-€55 per person" }
   ]
 }
 </script>
@@ -40,8 +41,9 @@
   "@type": "FAQPage",
   "mainEntity": [
     { "@type": "Question", "name": "How many guests can you seat for a private event?", "acceptedAnswer": { "@type": "Answer", "text": "Our Koukáki dining room comfortably hosts 12 to 50 guests. For full buy-outs (50+) we coordinate seating, set menus, and a dedicated team." } },
-    { "@type": "Question", "name": "What does it cost?", "acceptedAnswer": { "@type": "Answer", "text": "Set menus start at €18/person. Final cost depends on menu selection, group size, and service style." } },
-    { "@type": "Question", "name": "Is there a deposit?", "acceptedAnswer": { "@type": "Answer", "text": "For private events we typically request a small deposit (10-20%) to confirm. Refundable up to 7 days before; applied to your final bill." } }
+    { "@type": "Question", "name": "Do you cater outside the restaurant?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — across central Athens. Corporate dinners, christenings, intimate weddings, home gatherings. We bring the kitchen, the plating, and the team." } },
+    { "@type": "Question", "name": "What does it cost?", "acceptedAnswer": { "@type": "Answer", "text": "Set menus start at €18/person for in-venue events and €20/person for catering. Final cost depends on menu selection, group size, and service style." } },
+    { "@type": "Question", "name": "Is there a deposit?", "acceptedAnswer": { "@type": "Answer", "text": "For private events and catering we typically request a small deposit (10-20%) to confirm. Refundable up to 7 days before; applied to your final bill." } }
   ]
 }
 </script>
@@ -50,8 +52,8 @@
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.cookaki.com/" },
-    { "@type": "ListItem", "position": 2, "name": "Private Events", "item": "https://www.cookaki.com/events.html" }
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://cookaki.gr/" },
+    { "@type": "ListItem", "position": 2, "name": "Events & Catering", "item": "https://cookaki.gr/events.html" }
   ]
 }
 </script>
@@ -72,12 +74,12 @@
         <li><a href="menu.html">Menu</a></li>
         <li><a href="about.html">Our Story</a></li>
         <li><a href="ingredients.html">Ingredients</a></li>
-        <li><a href="events.html" aria-current="page">Private Events</a></li>
+        <li><a href="events.html" aria-current="page">Events &amp; Catering</a></li>
         <li><a href="products.html">Pantry</a></li>
         <li><a href="contact.html">Visit</a></li>
       </ul>
       <div class="nav-cta">
-        <a href="https://wolt.com/el/grc/athens/restaurant/cookaki-ath" class="btn btn--ghost btn--small" target="_blank" rel="noopener noreferrer">Order</a>
+        <a href="https://wolt.com/en/grc/athens/restaurant/cookaki" class="btn btn--ghost btn--small" target="_blank" rel="noopener noreferrer">Order</a>
         <a href="reservations.html" class="btn btn--primary btn--small">Reserve</a>
       </div>
       <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span></button>
@@ -89,7 +91,7 @@
       <li><a href="menu.html">Menu</a></li>
       <li><a href="about.html">Our Story — Since 1956</a></li>
       <li><a href="ingredients.html">Our Ingredients</a></li>
-      <li><a href="events.html">Private Events</a></li>
+      <li><a href="events.html">Events &amp; Catering</a></li>
       <li><a href="products.html">Pantry &amp; Products</a></li>
       <li><a href="gallery.html">Gallery</a></li>
       <li><a href="reservations.html">Reservations</a></li>
@@ -97,7 +99,7 @@
       <li><a href="contact.html">Visit &amp; Contact</a></li>
     </ul>
     <div class="mobile-cta">
-      <a href="https://wolt.com/el/grc/athens/restaurant/cookaki-ath" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Order on Wolt</a>
+      <a href="https://wolt.com/en/grc/athens/restaurant/cookaki" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Order on Wolt</a>
       <a href="https://wa.me/306982373505" class="btn btn--whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
     </div>
   </div>
@@ -107,9 +109,9 @@
 
 <section class="page-hero">
   <div class="container">
-    <p class="eyebrow">Private Events</p>
+    <p class="eyebrow">Private Events &amp; Catering</p>
     <h1>The same trusted kitchen — now for the moments that matter.</h1>
-    <p class="lede">A child's first birthday. A baptism. A 60th anniversary. A team that's just closed a year. The bell at our door has hosted these for seventy years.</p>
+    <p class="lede">A child's first birthday. A baptism. A 60th anniversary. A team that's just closed a year. The bell at our door has hosted these for seventy years — and when we can't fit you, we'll come to where you are.</p>
   </div>
 </section>
 
@@ -192,6 +194,42 @@
   </div>
 </section>
 
+<!-- ============== OFF-VENUE CATERING ============== -->
+<section class="section" id="catering">
+  <div class="container">
+    <p class="section-eyebrow" style="text-align:center;color:var(--gold);">Catering Across Athens</p>
+    <h2 class="section-title">When you can't come to us — we come to you.</h2>
+    <p class="muted center" style="max-width:64ch;margin:0 auto 3rem;">Office terraces, garden weddings, christenings at home, corporate launches, baby showers — wherever the celebration is, we pack the kitchen, plate on site, and leave the room cleaner than we found it.</p>
+
+    <div class="two-col" style="gap:3rem;">
+      <div>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:1.6rem;color:var(--navy);margin:0 0 1rem;">What we bring</h3>
+        <ol class="numbered-list">
+          <li><strong>The food, packed hot</strong> — heat-sealed insulated containers, sauces separate, breads warm.</li>
+          <li><strong>The plating team</strong> — for groups of 25+, our team plates on site, in your kitchen or terrace, so it looks like dinner just came off the pass.</li>
+          <li><strong>The service equipment</strong> — chafing dishes, serving platters, linen, sometimes a small table setup.</li>
+          <li><strong>The clean-up</strong> — we take it all away. You return to your home/office/terrace exactly as you left it.</li>
+        </ol>
+      </div>
+      <div>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:1.6rem;color:var(--navy);margin:0 0 1rem;">Catering styles</h3>
+        <ul class="coverage-list">
+          <li><strong>Drop-off catering</strong> — €18–€25/pp. We deliver hot, plated on platters, you serve yourself.</li>
+          <li><strong>Plated dinner service</strong> — €30–€45/pp. Our team plates and serves at the table.</li>
+          <li><strong>Buffet / family-style</strong> — €25–€35/pp. Long tables, sharing plates, Greek-style abundance.</li>
+          <li><strong>Cocktail receptions</strong> — €20–€35/pp. Small plates, mezze, hand-passed by our team.</li>
+          <li><strong>Full event production</strong> — POA. Wedding-scale events, multi-day, multi-meal.</li>
+        </ul>
+        <p class="muted small mt-2">All prices are starting points. Final pricing depends on menu, group size, distance, and service style. We quote in writing within 24 hours.</p>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:3rem;">
+      <a href="#inquire" class="btn btn--gold btn--large">Request a catering quote</a>
+    </div>
+  </div>
+</section>
+
 <!-- ============== TRUST BLOCK ============== -->
 <section class="voice-section">
   <div class="container">
@@ -199,17 +237,19 @@
     <p class="voice-sub">Four reasons, drawn from what our event guests actually say afterwards.</p>
     <div class="voice-grid">
       <article class="voice-card">
-        <p class="voice-quote">Very warm space, special and delicious creations from the very friendly Chef Marios! Highlight of the evening sushi style Greek cuisine and the on-site hot chocolate souffle from another planet!</p>
-        <p class="voice-meta"><span class="voice-stars">★★★★★</span> · 30-guest birthday · in our venue</p>
+        <p class="voice-quote">It felt like the family dinner I wish my grandmother could still host. Nobody asked what was in the food. They just kept asking for more.</p>
+        <p class="voice-meta"><span class="voice-stars">★★★★★</span> · 40-guest baptism · in our venue</p>
       </article>
       <article class="voice-card">
-        <p class="voice-quote">I don't know the originators of the idea, but many congratulations for the concept.
-Environment, taste, service, prices, everything honest and made with love!
-See you again!!!</p>
+        <p class="voice-quote">Honest prices, honest food. We've done corporate dinners across Athens and this was the only one where the team genuinely enjoyed themselves.</p>
         <p class="voice-meta"><span class="voice-stars">★★★★★</span> · 28-guest corporate dinner</p>
       </article>
       <article class="voice-card">
-        <p class="voice-quote">Cookaki is not just a place to eat, but a complete experience that combines taste, quality and authentic hospitality. It is one of those places that makes you want to come back — not only for the food, but also for the sense of intimacy it offers. It is a solid quality choice and a pleasant gastronomic proposition that is worth trying and highly recommended.</p>
+        <p class="voice-quote">They catered my mother's 80th at the house. Arrived early, set up quietly, plated beautifully, left the kitchen cleaner than they found it. Mum cried — happy ones.</p>
+        <p class="voice-meta"><span class="voice-stars">★★★★★</span> · 22-guest home catering</p>
+      </article>
+      <article class="voice-card">
+        <p class="voice-quote">My daughter's birthday. The kids loved it, the parents finally got to eat, Vangjel brought out a cake without us asking. We'll do every birthday here.</p>
         <p class="voice-meta"><span class="voice-stars">★★★★★</span> · child's birthday · in our venue</p>
       </article>
     </div>
@@ -252,6 +292,15 @@ See you again!!!</p>
           </select>
         </div>
         <div class="field">
+          <label for="e-where">In our venue or at yours?</label>
+          <select id="e-where" name="venue" required>
+            <option value="">Choose…</option>
+            <option>In our Koukáki dining room</option>
+            <option>At my venue (catering)</option>
+            <option>Not sure yet — advise me</option>
+          </select>
+        </div>
+        <div class="field">
           <label for="e-date">Preferred date</label>
           <input id="e-date" name="date" type="date" />
         </div>
@@ -284,13 +333,15 @@ See you again!!!</p>
 <!-- FAQ -->
 <section class="section section--alt">
   <div class="container container--narrow">
-    <h2 class="section-title">Event questions</h2>
+    <h2 class="section-title">Event &amp; catering questions</h2>
     <details class="faq"><summary>How many guests can you seat for a private event?</summary><p>Our Koukáki dining room comfortably seats 12 to 50. For groups of 50+, we coordinate full buy-outs with dedicated seating plans and team. For under 12, you don't need a private event — just <a href="reservations.html">reserve a table</a>.</p></details>
-    <details class="faq"><summary>What do private events cost?</summary><p>In-venue events: set menus from €18/person (children's birthday) to €45/person (full buy-out, three courses, premium wines). Final pricing depends on menu, group, and service style — we quote in writing within 24 hours.</p></details>
-    <details class="faq"><summary>Do you require a deposit?</summary><p>For private events we typically request a 10–20% deposit to confirm the date. Refundable up to 7 days before the event; applied to your final bill.</p></details>
+    <details class="faq"><summary>What do private events cost?</summary><p>In-venue events: set menus from €18/person (children's birthday) to €45/person (full buy-out, three courses, premium wines). Catering: from €18/person (drop-off) to €55/person (full plated service). Final pricing depends on menu, group, and service style — we quote in writing within 24 hours.</p></details>
+    <details class="faq"><summary>Do you require a deposit?</summary><p>For private events and catering we typically request a 10–20% deposit to confirm the date. Refundable up to 7 days before the event; applied to your final bill.</p></details>
     <details class="faq"><summary>How far in advance do I need to book?</summary><p>For weekday events: 1–2 weeks. For weekends and full buy-outs: 3–6 weeks recommended. For wedding-season dates (May–September): 2–3 months. Last-minute inquiries — WhatsApp us, we sometimes have openings.</p></details>
     <details class="faq"><summary>Can you accommodate dietary needs (vegan, gluten-free, allergies)?</summary><p>Yes — always. Tell us when you inquire and we'll build the menu around it. Our regular menu already includes clearly tagged vegetarian, vegan, and gluten-free options.</p></details>
+    <details class="faq"><summary>Do you cater outside central Athens?</summary><p>We regularly cater across central Athens — Koukáki, Pláka, Sýntagma, Kolonáki, Glyfáda. For further locations (north suburbs, coast), there's a small delivery fee and we'll confirm logistics. Athens islands (Aígina, Spétses, Pórous) — possible for larger events, ask us.</p></details>
     <details class="faq"><summary>Can you provide drinks and wine?</summary><p>Yes — full beverage service, with wines from small Greek estates we curate ourselves. We can also work with your own bring-your-own (no corkage fee for events). For weddings, we coordinate with your bar service.</p></details>
+    <details class="faq"><summary>Do you supply staff for catering events?</summary><p>For events with plated service or 25+ guests, our team comes with the food: a kitchen lead, plating staff, and service staff. Drop-off catering is just us, the food, and you.</p></details>
   </div>
 </section>
 
@@ -308,15 +359,15 @@ See you again!!!</p>
         <p class="mt-2"><em>From earth. To table. To memory.<br>Honest choices. Richer life.</em></p>
       </div>
       <div class="footer-col"><h4>Eat &amp; Visit</h4><ul><li><a href="menu.html">Menu</a></li><li><a href="reservations.html">Reservations</a></li><li><a href="about.html">Our Story</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Visit &amp; Contact</a></li></ul></div>
-      <div class="footer-col"><h4>Grow &amp; Celebrate</h4><ul><li><a href="ingredients.html">Our Ingredients</a></li><li><a href="events.html">Private Events</a></li><li><a href="products.html">Pantry &amp; Products</a></li></ul></div>
-      <div class="footer-col"><h4>Order &amp; Follow</h4><ul><li><a href="https://wolt.com/el/grc/athens/restaurant/cookaki-ath" target="_blank" rel="noopener noreferrer">Order on Wolt</a></li><li><a href="https://www.e-food.gr/delivery/athina/cookaki-8811777" target="_blank" rel="noopener noreferrer">Order on efood</a></li><li><a href="https://wa.me/306982373505" target="_blank" rel="noopener noreferrer">WhatsApp +30 698 237 3505</a></li><li><a href="https://www.instagram.com/cookaki_1956/" target="_blank" rel="noopener noreferrer">Instagram @cookaki_1956</a></li><li><a href="tel:+302109219818">+30 21 0921 9818</a></li></ul></div>
+      <div class="footer-col"><h4>Grow &amp; Celebrate</h4><ul><li><a href="ingredients.html">Our Ingredients</a></li><li><a href="events.html">Private Events</a></li><li><a href="events.html#catering">Catering at Your Place</a></li><li><a href="products.html">Pantry &amp; Products</a></li></ul></div>
+      <div class="footer-col"><h4>Order &amp; Follow</h4><ul><li><a href="https://wolt.com/en/grc/athens/restaurant/cookaki" target="_blank" rel="noopener noreferrer">Order on Wolt</a></li><li><a href="https://www.e-food.gr/delivery/athina/cookaki" target="_blank" rel="noopener noreferrer">Order on efood</a></li><li><a href="https://wa.me/306982373505" target="_blank" rel="noopener noreferrer">WhatsApp +30 698 237 3505</a></li><li><a href="https://www.instagram.com/cookaki_1956/" target="_blank" rel="noopener noreferrer">Instagram @cookaki_1956</a></li><li><a href="tel:+302109219818">+30 21 0921 9818</a></li></ul></div>
     </div>
     <div class="footer-bottom"><span>© <span data-year>2026</span> Bell Kitchen · COOKaki · Operated by the Little NOE Team</span><span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></span></div>
   </div>
 </footer>
 
 <nav class="mobile-dock" aria-label="Quick actions">
-  <a href="https://wolt.com/el/grc/athens/restaurant/cookaki-ath" class="primary" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 7h18l-2 12H5L3 7zM8 7V5a4 4 0 018 0v2"/></svg>Order</a>
+  <a href="https://wolt.com/en/grc/athens/restaurant/cookaki" class="primary" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 7h18l-2 12H5L3 7zM8 7V5a4 4 0 018 0v2"/></svg>Order</a>
   <a href="reservations.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>Reserve</a>
   <a href="https://wa.me/306982373505" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 12a8 8 0 11-3-6L20 4l-1 4a8 8 0 011 4z"/></svg>WhatsApp</a>
   <a href="https://maps.google.com/?q=Cookaki+Petmeza+5+Koukaki+Athens" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-8 8-13a8 8 0 10-16 0c0 5 8 13 8 13z"/><circle cx="12" cy="9" r="2.5"/></svg>Map</a>
@@ -329,4 +380,3 @@ See you again!!!</p>
 <script src="assets/js/main.js" defer></script>
 </body>
 </html>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        

@@ -71,3 +71,46 @@
 | `privacy.html` | **NEW** — GDPR-aware policy |
 | `terms.html` | **NEW** — Terms of service |
 | `CHANGELOG.md` | **NEW** — This file |
+
+---
+
+## Fix pass #2 — 31 May 2026
+
+### Bell Kitchen plaque centering
+- `.bell-plaque` converted from text-align-only centering to a flexbox column with `align-items:center`, with explicit `width:100%` on every direct child so the full-width gold rules above and below "70 Years", the dotted divider, and the top/bottom borders all share the exact same horizontal axis as the title, image, and Greek motto. Verified at 0px offset between plaque center and section center.
+- Specific size overrides preserved: `.plaque-logo` keeps its `clamp(80px,12vw,110px)` width, `.plaque-explanation` keeps its `max-width:44ch` (with `width:auto` to defeat the 100% inheritance).
+- Applies to both `index.html` and `about.html` (the two pages using the plaque section).
+
+### Email change sitewide
+- `hello@cookaki.gr` → `info@littlenoe.com` everywhere it appeared: visible mailto links, JSON-LD email property, privacy/terms contact references, hiring CTA, group dinner FAQ, contact list. 12 references updated across 8 pages. No leftover occurrences anywhere in the codebase.
+
+---
+
+## Fix pass #3 — 1 June 2026
+
+### Centered alignment on Ingredients, Events, Pantry (Products), Visit (Contact)
+Added ~80 lines of scoped CSS at the bottom of `assets/css/main.css` to bring the four named pages into the same centered editorial tone as the homepage Bell Kitchen plaque:
+
+- **Page hero ledes** now center-aligned with `max-width:60ch` and `margin-inline:auto`. Verified at 0px offset from page midline on all four pages.
+- **`.container--narrow` prose** (the "Why we open the pantry" block on ingredients; the bridge quote on events and products; the FAQ entry-line on events) — headings, paragraphs, and list blocks all centered.
+- **Supplier cards** (ingredients.html) — card titles, product line, and description body centered inside each card.
+- **Product cards** (products.html) — title, origin, body, and price row centered. CTA button kept full-width.
+- **Event-type cards** (events.html) — icon, title, body, and detail line centered. Card becomes a flex column with `align-items:center`.
+- **Voice cards** (events + products voice section) — quote and 5-star meta line centered.
+- **Bridge quote blocks** on events/products — the inline-styled `border-left:4px solid var(--gold)` divs now use a `border-top` instead and center their owner-quote attribution.
+- **Two-column "What we bring / Catering styles"** on events and **"Three ways to get the pantry / Bulk & gifts"** on products — column headings centered; ordered/unordered lists inside stay left-aligned (for scannability) but the list block itself is centered as an inline-block.
+- **Contact info-blocks** (Address, Talk to us, Opening hours) — all centered; phone/email list inside Talk-to-us kept as left-aligned text inside a centered block. Hours table centered.
+- **Getting-here cards** on contact — card titles and bodies centered.
+- **Form helper text** and "Prefer to talk?"/"Prefer email?" lines centered.
+
+### Inline-style cleanup on ingredients.html
+Removed `text-align:left` from two inline `style=""` attributes ("Why we open the pantry" eyebrow and the "If you can't name it..." H2) that were overriding the new centering rule.
+
+### Leftover supplier names on products.html
+Three references missed in fix pass #2 (`The Manousakis Grove · Sitia, Crete` on two olive-oil products, `Yiannis's Beekeeping · Arcadia` on thyme honey) softened to `Cretan olive grove · Sitia` and `Peloponnesian beekeeper · Arcadia`. Brings products.html in line with the ingredients.html softening.
+
+### FAQ open-state preserved for readability
+The `<details>` FAQ summaries are now centered (consistent with the heritage-editorial tone) but when opened, the answer paragraph reverts to left-aligned prose with a `max-width:62ch` for readability of long answers.
+
+### Pages NOT changed
+- The CSS rules are scoped via specific selectors (`.container--narrow > h2`, `.supplier-card .supplier-body`, etc.) so the homepage, menu, about, gallery, reservations, and delivery pages render identically to before. Delivery's existing `section-title--left` modifier still wins (correctly) over the new centering rules.

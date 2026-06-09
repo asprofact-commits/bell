@@ -1434,7 +1434,14 @@ section { padding-block: var(--sp-6); }
   position:relative;
 }
 .bell-plaque{
-  max-width:680px;margin:0 auto;
+  max-width:680px;
+  margin-inline:auto;
+  margin-block:0;
+  box-sizing:border-box;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
   background:var(--ivory);
   background-image:
     radial-gradient(circle at 30% 20%, rgba(184,148,62,.04), transparent 50%),
@@ -1447,7 +1454,12 @@ section { padding-block: var(--sp-6); }
     0 0 0 6px var(--navy-deep),
     0 0 0 7.5px var(--gold),
     0 20px 60px rgba(0,0,0,.4);
-  text-align:center;
+}
+/* Every direct child fills the plaque width so borders, rules and centered
+   text all align to the same axis. Specific children override below. */
+.bell-plaque > *{
+  width:100%;
+  margin-inline:auto;
 }
 .bell-plaque::before,
 .bell-plaque::after,
@@ -1460,7 +1472,7 @@ section { padding-block: var(--sp-6); }
 .plaque-corner-br{bottom:10px;right:10px;border-left:none;border-top:none;}
 
 .bell-plaque .plaque-logo{
-  width:clamp(80px,12vw,110px);height:auto;margin:0 auto 1rem;display:block;
+  width:clamp(80px,12vw,110px);max-width:100%;height:auto;margin:0 auto 1rem;display:block;
 }
 .bell-plaque .plaque-title{
   font-family:'Cormorant Garamond',serif;font-weight:500;
@@ -1498,7 +1510,7 @@ section { padding-block: var(--sp-6); }
 }
 .bell-plaque .plaque-explanation{
   font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;
-  color:rgba(15,31,61,.85);max-width:44ch;margin:0 auto 1rem;line-height:1.55;
+  color:rgba(15,31,61,.85);width:auto;max-width:44ch;margin:0 auto 1rem;line-height:1.55;
 }
 .bell-plaque .plaque-closing{
   font-family:'Inter',sans-serif;letter-spacing:.18em;font-weight:600;font-size:.7rem;
@@ -1770,7 +1782,7 @@ section { padding-block: var(--sp-6); }
 .footer-logo-mark{
   display:flex;align-items:center;gap:.6rem;margin-bottom:.75rem;
 }
-.footer-logo-mark img{height:38px;width:auto;filter:brightness(0) invert(1) opacity(.85);}
+.footer-logo-mark img{height:38px;width:auto;mix-blend-mode:multiply;}
 
 
 /* =================================================================
@@ -1791,3 +1803,226 @@ section { padding-block: var(--sp-6); }
 }
 .form-status a{color:inherit;font-weight:600;text-decoration:underline;}
 .btn--small{padding:.4rem .9rem;font-size:.85rem;}
+
+/* =================================================================
+   Centering fixes — page-level (ingredients, events, products, contact)
+   Centers prose, ledes, two-column heritage sections, and cards so the
+   editorial pages match the centered tone of the homepage plaque.
+   ================================================================= */
+
+/* 1. Page heroes — center the lede paragraph as a block.
+      The text was already text-align:center, but the paragraph itself
+      had no width constraint making it sit at full container width.
+      We constrain its width and auto-margin so the centered text
+      visibly hugs the page midline. */
+.page-hero .container > *{
+  text-align:center;
+}
+.page-hero .lede{
+  max-width:60ch;
+  margin-inline:auto;
+  margin-left:auto;
+  margin-right:auto;
+}
+.page-hero .eyebrow{
+  display:block;
+  text-align:center;
+}
+
+/* 2. Editorial prose inside container--narrow — center its text.
+      Affects "Why we open the pantry" on ingredients, the events FAQ,
+      the products bridge quotes, the contact "Or send us a message"
+      intro line, and similar single-column heritage prose. */
+.container--narrow > h2,
+.container--narrow > h3,
+.container--narrow > p,
+.container--narrow > ul,
+.container--narrow > ol{
+  text-align:center;
+}
+.container--narrow > ul,
+.container--narrow > ol{
+  list-style-position:inside;
+  padding-left:0;
+}
+
+/* 3. Two-column heritage sections (.two-col) — when they appear inside
+      a non-narrow .container, the columns are wide; center their
+      content for the heritage-editorial feel. */
+.two-col{
+  text-align:center;
+}
+.two-col > div > h3,
+.two-col > div > p{
+  text-align:center;
+}
+.two-col ol.numbered-list,
+.two-col ul.coverage-list{
+  text-align:left;            /* lists still read left-aligned for scannability */
+  display:inline-block;        /* but the list block itself is centered  */
+  margin-inline:auto;
+}
+
+/* 4. FAQ <details> blocks — center the summary text but keep the
+      open-state body left-aligned for readability. */
+.container--narrow > details.faq{
+  text-align:center;
+}
+.container--narrow > details.faq > summary{
+  text-align:center;
+}
+.container--narrow > details.faq > p{
+  text-align:left;
+  max-width:62ch;
+  margin-inline:auto;
+}
+
+/* 5. Supplier cards (ingredients.html) — center each card's text. */
+.supplier-card .supplier-body{
+  text-align:center;
+}
+.supplier-card .supplier-body > h3,
+.supplier-card .supplier-body > p{
+  text-align:center;
+}
+
+/* 6. Product cards (products.html) — center title + origin + description
+      while keeping price/CTA row layout intact (it uses flex justify-between). */
+.product-card .product-body{
+  text-align:center;
+}
+.product-card .product-body > h3,
+.product-card .product-body > .product-tag,
+.product-card .product-body > .product-origin,
+.product-card .product-body > p{
+  text-align:center;
+}
+.product-card .product-price{
+  justify-content:center;
+  gap:.6rem;
+}
+
+/* 7. Event-type cards (events.html) — center text in each card. */
+.event-type-card{
+  text-align:center;
+  align-items:center;
+}
+.event-type-card > h3,
+.event-type-card > p,
+.event-type-card > .event-detail{
+  text-align:center;
+}
+.event-type-card .event-icon{
+  margin-inline:auto;
+}
+
+/* 8. Voice cards (events + products voice section) — center the quote
+      and the meta line so they share the centered editorial tone. */
+.voice-card{
+  text-align:center;
+}
+.voice-card .voice-quote{
+  text-align:center;
+}
+.voice-card .voice-meta{
+  justify-content:center;
+}
+
+/* 9. Bridge quote blocks on events.html and products.html — these had
+      a border-left visual cue plus left-aligned text. Switch the cue to
+      a top border and center the quote. */
+.container--narrow > div[style*="border-left"]{
+  text-align:center;
+}
+.container--narrow > div[style*="border-left"] > p{
+  text-align:center;
+}
+
+/* 10. Contact page info grid cards (Address, Talk to us, Opening hours,
+       Getting here cards) — center their internal content. */
+.info-grid > article,
+.info-grid > .info-card,
+.info-card,
+section[class*="section"] article.card,
+.section--alt article.card{
+  text-align:center;
+}
+
+/* 11. Form helper text after submit buttons — keep centered when inside
+       container--narrow. */
+.container--narrow .form-actions{
+  text-align:center;
+}
+.container--narrow .form-actions > .muted{
+  text-align:center;
+  margin-inline:auto;
+}
+
+/* 12. Contact page — center the address, talk-to-us, and opening-hours blocks. */
+.contact-block{
+  text-align:center;
+}
+.contact-block > h2{
+  text-align:center;
+}
+.contact-block > .address,
+.contact-block > p{
+  text-align:center;
+}
+.contact-block > .contact-list{
+  list-style:none;
+  padding-left:0;
+  display:inline-block;
+  text-align:left;            /* phone/email/whatsapp rows read left-aligned */
+  margin-inline:auto;
+}
+.contact-block > .hours-table{
+  margin-inline:auto;
+}
+.contact-block > .btn{
+  margin-inline:auto;
+}
+
+/* 13. Getting-here cards. */
+.direction-card{
+  text-align:center;
+}
+.direction-card > h3,
+.direction-card > p{
+  text-align:center;
+}
+
+/* 14. Inline-style fallback for the events bridge block (border-left
+       inline style means the .container--narrow > div[style*="border-left"]
+       rule above catches it). Belt and braces: when these blocks contain
+       owner-quote attribution, center that too. */
+div[style*="border-left:4px solid var(--gold)"]{
+  text-align:center;
+  border-left:none !important;
+  border-top:4px solid var(--gold) !important;
+  border-radius:8px !important;
+}
+div[style*="border-left:4px solid var(--gold)"] > p{
+  text-align:center;
+}
+
+/* 15. Two-col on events catering section: make sure both columns center. */
+.section .two-col > div{
+  text-align:center;
+}
+.section .two-col > div > h3{
+  text-align:center;
+}
+.section .two-col > div > p:not(.muted){
+  text-align:center;
+}
+.section .two-col > div > p.muted.small{
+  text-align:center;
+  max-width:55ch;
+  margin-inline:auto;
+}
+
+/* 16. Contact page form intro "Or send us a message" section */
+section.section[id="message"] > .container--narrow{
+  text-align:center;
+}

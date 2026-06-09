@@ -1,15 +1,39 @@
 <!doctype html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VCL4K7HGYJ"></script>
+<!-- Google Consent Mode v2 — analytics & ads denied until the visitor opts in -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent','default',{
+    ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+    analytics_storage:'denied', functionality_storage:'denied',
+    personalization_storage:'denied', security_storage:'granted', wait_for_update:500
+  });
+  (function(){
+    try {
+      var d = JSON.parse(localStorage.getItem('cookaki_consent'));
+      if (d && d.version===1 && (Date.now()-(d.ts||0) < 31536000000) && d.categories){
+        var c = d.categories;
+        gtag('consent','update',{
+          analytics_storage:c.analytics?'granted':'denied',
+          ad_storage:c.marketing?'granted':'denied',
+          ad_user_data:c.marketing?'granted':'denied',
+          ad_personalization:c.marketing?'granted':'denied',
+          functionality_storage:c.preferences?'granted':'denied',
+          personalization_storage:c.preferences?'granted':'denied'
+        });
+        gtag('set','ads_data_redaction', !c.marketing);
+      } else { gtag('set','ads_data_redaction', true); }
+    } catch(e){ gtag('set','ads_data_redaction', true); }
+  })();
+  gtag('set','url_passthrough', true);
   gtag('js', new Date());
-
-  gtag('config', 'G-VCL4K7HGYJ');
+  gtag('config','G-VCL4K7HGYJ');
 </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VCL4K7HGYJ"></script>
+<link rel="stylesheet" href="assets/css/consent.css" />
+
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -31,7 +55,7 @@
 <link rel="icon" type="image/png" href="assets/images/bell-kitchen-logo.png" />
 <link rel="stylesheet" href="assets/css/main.css" />
 
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://maps.google.com https://maps.gstatic.com https://www.google.com; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self'; frame-src https://maps.google.com https://www.google.com; connect-src 'self'; form-action 'self' https://wa.me; base-uri 'self'; object-src 'none'" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://maps.google.com https://maps.gstatic.com https://www.google.com https://www.google-analytics.com https://stats.g.doubleclick.net; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; frame-src https://maps.google.com https://www.google.com; connect-src 'self' https://www.google-analytics.com https://stats.g.doubleclick.net; form-action 'self' https://wa.me; base-uri 'self'; object-src 'none'" />
 </head>
 
 <body>
@@ -179,5 +203,6 @@
 </footer>
 
 <script src="assets/js/main.js" defer></script>
+<script src="assets/js/consent.js" defer></script>
 </body>
 </html>

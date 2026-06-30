@@ -1,4 +1,4 @@
-# Bell Kitchen · COOKaki — robots.txt
+# Bell Kitchen · Cookaki — robots.txt
 # Allow all standard search engine crawlers full access.
 # Static site, no admin paths, no sensitive directories.
 

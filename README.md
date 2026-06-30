@@ -1,4 +1,4 @@
-# COOKaki | Bell Kitchen 1956 — Website
+# Cookaki | Bell Kitchen 1956 — Website
 
 Heritage-led conversion site for **Cookaki Bell Kitchen 1956**, Petméza 5, Koukáki, Athens. Built as a static HTML/CSS/JS bundle — no backend, no build step. Drop it on any host and it works.
 

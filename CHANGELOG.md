@@ -1,4 +1,4 @@
-# Bell Kitchen · COOKaki — Post-Audit Fix Pass
+# Bell Kitchen · Cookaki — Post-Audit Fix Pass
 
 **Date:** 31 May 2026
 **Scope:** Applies the fixable findings from the Cybersecurity / QA / UX / Operations audit (`Cookaki_Bell_Kitchen_Security_QA_UX_Ops_Audit.docx`) and the earlier SEO / GEO audit.
@@ -16,7 +16,7 @@
 - **BUG-03** — All `<input type="date">` get `min=today` and `max=today+365d` set by JavaScript on page load. `novalidate` removed from all forms so HTML5 validation also runs.
 - **OPS-02** — Opening hours centralised in a single `HOURS` object at the top of `main.js`. The open-now badge now derives correctly per day-of-week with Athens timezone, and handles after-midnight Friday/Saturday spillover. **Still needs your input:** confirm the actual Sunday hours (events.html says "we open earlier on Sundays" — what time?), then update the table on `contact.html` and the JSON-LD `openingHoursSpecification` on `index.html` to match.
 - **OPS-05** — The reservations form's "9+" option label updated to "9+ (use Events form)". When selected, the form intercepts the submit and shows an inline message linking to events.html instead of routing to WhatsApp with insufficient context.
-- **OPS-06** — All WhatsApp form messages now start with "Hi Bell Kitchen" (was "Hi COOKaki"). Brand voice consistent at the conversion point.
+- **OPS-06** — All WhatsApp form messages now start with "Hi Bell Kitchen" (was "Hi Cookaki"). Brand voice consistent at the conversion point.
 - **BIZ-01** — Fabricated `aggregateRating` block (4.8/5, 850 reviews) removed from the Restaurant JSON-LD on `index.html`. Eliminates the Google manual-action risk.
 - **BIZ-02** — All six named suppliers on `ingredients.html` softened to regional descriptors ("Cretan olive grove", "Evia mountain dairy", "Peloponnesian beekeeper", etc.). Removes the reputational landmine. As you confirm real producers and get their permission, add specific names and links back.
 - **SEC-04** — `rel="noopener noreferrer"` (was just `noopener`) on all 121 external links. Stops referrer leakage to Wolt, efood, WhatsApp, Instagram, Google Maps.

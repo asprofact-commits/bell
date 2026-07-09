@@ -1,5 +1,5 @@
 /* ============================================================================
-   COOKaki — Cookie consent banner (GDPR / ePrivacy + Google Consent Mode v2)
+   Cookaki — Cookie consent banner (GDPR / ePrivacy + Google Consent Mode v2)
    Sleek, brand-matched, GPU-light. Styles only load on interaction surfaces.
    ============================================================================ */
 
@@ -20,15 +20,15 @@
   padding: 0;
   border: 1px solid var(--line, rgba(42,42,42,.12));
   border-radius: 999px;
-  background: var(--cream, #F6F1E7);
-  color: var(--olive-deep, #3F5240);
+  background: var(--cream, #FCFAF6);
+  color: var(--olive-deep, #081F49);
   box-shadow: var(--shadow, 0 6px 18px rgba(42,42,42,.08));
   cursor: pointer;
   transition: transform var(--t-fast,180ms) var(--ease,ease),
               box-shadow var(--t-fast,180ms) var(--ease,ease);
 }
 .ck-reopen:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg, 0 24px 48px rgba(42,42,42,.14)); }
-.ck-reopen:focus-visible { outline: 2px solid var(--olive,#556B52); outline-offset: 2px; }
+.ck-reopen:focus-visible { outline: 2px solid var(--olive,#0D2E67); outline-offset: 2px; }
 .ck-reopen svg { width: 20px; height: 20px; }
 .ck-show-reopen .ck-reopen { display: inline-flex; }
 
@@ -49,8 +49,8 @@
 .ck-banner,
 .ck-modal {
   font-family: var(--font-body, system-ui, sans-serif);
-  color: var(--ink, #2A2A2A);
-  background: var(--cream, #F6F1E7);
+  color: var(--ink, #2B2B2B);
+  background: var(--cream, #FCFAF6);
   border: 1px solid var(--line, rgba(42,42,42,.12));
   box-shadow: var(--shadow-lg, 0 24px 48px rgba(42,42,42,.14));
 }
@@ -83,10 +83,10 @@
 .ck-banner__text {
   font-size: var(--fs-sm, .92rem);
   line-height: 1.55;
-  color: var(--ink-muted, #4A4A47);
+  color: var(--ink-muted, #6E6E6E);
   margin: 0 0 16px;
 }
-.ck-banner__text a { color: var(--olive-deep, #3F5240); text-decoration: underline; }
+.ck-banner__text a { color: var(--olive-deep, #081F49); text-decoration: underline; }
 
 /* ---- Buttons -------------------------------------------------------------- */
 .ck-actions { display: flex; flex-wrap: wrap; gap: 10px; }
@@ -109,27 +109,27 @@
               color var(--t-fast,180ms) var(--ease,ease);
 }
 .ck-btn:hover { transform: translateY(-1px); }
-.ck-btn:focus-visible { outline: 2px solid var(--olive,#556B52); outline-offset: 2px; }
+.ck-btn:focus-visible { outline: 2px solid var(--olive,#0D2E67); outline-offset: 2px; }
 
-.ck-btn--primary { background: var(--olive, #556B52); color: var(--cream, #F6F1E7); flex: 1 1 auto; }
-.ck-btn--primary:hover { background: var(--olive-deep, #3F5240); }
+.ck-btn--primary { background: var(--olive, #0D2E67); color: var(--cream, #FCFAF6); flex: 1 1 auto; }
+.ck-btn--primary:hover { background: var(--olive-deep, #081F49); }
 
 .ck-btn--ghost {
   background: transparent;
-  color: var(--ink, #2A2A2A);
+  color: var(--ink, #2B2B2B);
   border-color: var(--line-strong, rgba(42,42,42,.24));
   flex: 1 1 auto;
 }
-.ck-btn--ghost:hover { border-color: var(--ink, #2A2A2A); background: rgba(42,42,42,.04); }
+.ck-btn--ghost:hover { border-color: var(--ink, #2B2B2B); background: rgba(42,42,42,.04); }
 
 .ck-btn--link {
   background: transparent;
-  color: var(--ink-muted, #4A4A47);
+  color: var(--ink-muted, #6E6E6E);
   padding: 12px 10px;
   text-decoration: underline;
   flex: 0 0 auto;
 }
-.ck-btn--link:hover { color: var(--ink, #2A2A2A); transform: none; }
+.ck-btn--link:hover { color: var(--ink, #2B2B2B); transform: none; }
 
 /* ---- Customise modal ------------------------------------------------------ */
 .ck-modal {
@@ -160,7 +160,7 @@
 .ck-modal__intro {
   font-size: var(--fs-sm, .92rem);
   line-height: 1.55;
-  color: var(--ink-muted, #4A4A47);
+  color: var(--ink-muted, #6E6E6E);
   margin: 0 0 18px;
 }
 
@@ -175,14 +175,14 @@
 }
 .ck-cat:last-of-type { border-bottom: 1px solid var(--line, rgba(42,42,42,.12)); }
 .ck-cat__name { font-weight: 600; font-size: var(--fs-base, 1rem); }
-.ck-cat__desc { grid-column: 1 / 2; font-size: var(--fs-xs, .8rem); line-height: 1.5; color: var(--ink-muted, #4A4A47); }
+.ck-cat__desc { grid-column: 1 / 2; font-size: var(--fs-xs, .8rem); line-height: 1.5; color: var(--ink-muted, #6E6E6E); }
 
 /* ---- Toggle --------------------------------------------------------------- */
 .ck-switch { position: relative; width: 46px; height: 26px; flex: none; }
 .ck-switch input { position: absolute; opacity: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
 .ck-switch__track {
   position: absolute; inset: 0;
-  background: var(--beige, #D8CBB8);
+  background: var(--beige, #E7E0D4);
   border-radius: 999px;
   transition: background var(--t-fast,180ms) var(--ease,ease);
 }
@@ -194,11 +194,11 @@
   box-shadow: 0 1px 3px rgba(42,42,42,.3);
   transition: transform var(--t-fast,180ms) var(--ease,ease);
 }
-.ck-switch input:checked + .ck-switch__track { background: var(--olive, #556B52); }
+.ck-switch input:checked + .ck-switch__track { background: var(--olive, #0D2E67); }
 .ck-switch input:checked + .ck-switch__track::after { transform: translateX(20px); }
-.ck-switch input:focus-visible + .ck-switch__track { outline: 2px solid var(--olive,#556B52); outline-offset: 2px; }
+.ck-switch input:focus-visible + .ck-switch__track { outline: 2px solid var(--olive,#0D2E67); outline-offset: 2px; }
 .ck-switch input:disabled { cursor: not-allowed; }
-.ck-switch input:disabled + .ck-switch__track { background: var(--sage, #87937B); opacity: .7; }
+.ck-switch input:disabled + .ck-switch__track { background: var(--sage, #C9D4C1); opacity: .7; }
 
 .ck-modal__actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
 .ck-modal__actions .ck-btn--primary,

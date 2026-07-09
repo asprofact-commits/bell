@@ -114,3 +114,31 @@ The `<details>` FAQ summaries are now centered (consistent with the heritage-edi
 
 ### Pages NOT changed
 - The CSS rules are scoped via specific selectors (`.container--narrow > h2`, `.supplier-card .supplier-body`, etc.) so the homepage, menu, about, gallery, reservations, and delivery pages render identically to before. Delivery's existing `section-title--left` modifier still wins (correctly) over the new centering rules.
+
+---
+
+## SEO / GEO pass — 09 Jul 2026
+
+**Domain & technical**
+- Migrated the last `cookaki.gr` references (sitemap.xml, robots.txt) to `www.bellacropolis.gr` (canonical was already set in all HTML).
+- Regenerated `sitemap.xml`: 38 URLs (EN + EL) with `xhtml:link` hreflang alternates and fresh lastmod.
+- Added `CNAME` (www.bellacropolis.gr), `.nojekyll`, `_headers`, and `SECURITY-HEADERS.md` (GitHub Pages can't set custom headers — documented Cloudflare path). Added `Referrer-Policy` + `X-Content-Type-Options` meta and CSP `frame-ancestors 'self'` to every page.
+- Fixed a broken LCP preload on index (pointed to a non-existent interior image → now the real hero image).
+
+**Ratings / NAP**
+- Standardised Google rating to real figures **4.8 ★ / 448 reviews** sitewide; fixed a stray "4.6 on Google"; restored `AggregateRating` (with bestRating/worstRating) on the homepage Restaurant schema and aligned it across pages.
+
+**New pages (EN + EL)**
+- `moussaka.html` — targets "best moussaka in Athens".
+- `langoustines-linguine.html` — signature seafood.
+- `signature-fish-bell-nest.html` — "The Wild Fish & The Bell Nest" (€29.90), built from the real dish brief; real photo processed to SEO JPG+WebP (`cookaki-signature-wild-fish-bell-nest-trahanas-koukaki-athens.*`).
+- Each has MenuItem + FAQPage + Breadcrumb schema, hreflang, sticky CTAs, AI-friendly answer-first structure.
+
+**Schema / GEO**
+- Completed `Menu` structured data (added Pastitsio, fish soup, signature dish, dish-page URLs).
+- Added a **visible** FAQ block to the homepage mirroring the FAQPage schema (traveller questions).
+- Topical-cluster internal linking: Home → dish pages → landing pages, plus footer "Signature Dishes" column.
+
+**Greek /el/ mirror (19 pages)**
+- Built: lang=el, ../asset paths, localized canonical/og, hreflang reciprocity, EN↔EL switcher, Greek chrome (nav/footer/docks/CTAs) sitewide, Greek title/meta/H1 on every page.
+- Fully translated bodies: homepage + the 3 dish pages. Remaining 15 page bodies: chrome/title/meta/H1 are Greek, body prose translation pending (see task list).

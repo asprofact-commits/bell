@@ -33,8 +33,48 @@
   <url><loc>https://www.bellacropolis.gr/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/"/>
-    <lastmod>2026-07-09</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+    <lastmod>2026-07-12</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://www.bellacropolis.gr/de/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/"/>
+    <lastmod>2026-07-12</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.bellacropolis.gr/fr/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/"/>
+    <lastmod>2026-07-12</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.bellacropolis.gr/es/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/"/>
+    <lastmod>2026-07-12</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.bellacropolis.gr/zh/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/"/>
+    <lastmod>2026-07-12</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.bellacropolis.gr/ingredients.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/ingredients.html"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/ingredients.html"/>

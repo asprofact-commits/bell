@@ -280,9 +280,10 @@
         <div class="bkg-mark">✓</div>
         <h2>Ihr Tisch ist reserviert!</h2>
         <p class="bkg-sub" id="bkgDoneSub"></p>
+        <p class="bkg-sub" id="bkgMailNote" style="margin-top:.6rem"></p>
         <p class="bkg-kerasma">„Ein Kérasma aus Brot, Olivenöl und Salz von unserer Familie wird auf Ihrem Tisch warten — wie seit 1956.“</p>
         <div class="bkg-acts">
-          <a class="btn btn--secondary btn--small" id="bkgIcs" download="cookaki-reservation.ics" href="#">📅 Zum Kalender hinzufügen</a>
+          <a class="btn btn--primary btn--large" id="bkgIcs" download="cookaki-reservation.ics" href="#">📅 Zum Kalender hinzufügen</a>
           <a class="btn btn--whatsapp btn--small" href="https://wa.me/306982373505" target="_blank" rel="noopener noreferrer">💬 Schreiben Sie uns auf WhatsApp</a>
           <a class="btn btn--secondary btn--small" href="https://maps.google.com/?q=Cookaki+Petmeza+5+Koukaki+Athens" target="_blank" rel="noopener noreferrer">📍 So finden Sie uns</a>
         </div>
@@ -386,6 +387,7 @@
     done: function (p, d, h, n) { return "Wir haben Ihren Tisch für " + p + " Gäste am " + d + " um " + h + " Uhr gespeichert. Wir bestätigen in Kürze per WhatsApp — bis bald, " + n + "!"; },
     errNet: "Etwas ist schiefgelaufen — bitte erneut versuchen, oder schreiben Sie uns per WhatsApp unter +30 698 237 3505.",
     cats: { hot: "Die warme Theke · heutige Mageireftá", sea: "Aus dem Meer", cold: "Salate &amp; Vorspeisen", sweet: "Etwas Süßes" },
+    mailNote: function (a) { return "Eine Kopie ging an <strong>" + a + "</strong>. Nach ein paar Minuten nichts da? Schauen Sie kurz in den Spam-Ordner — Ihr Tisch ist so oder so reserviert."; },
     groupWa: function (d) { return "Hallo Bell Kitchen! Wir sind eine Gruppe von 9+ und hätten gern einen Tisch" + (d ? " am " + d : "") + ". Könnten Sie uns bei der Planung helfen?"; }
   };
   /* ------------------------------------------------ */
@@ -612,6 +614,8 @@
       }
       $("bkgStatus").textContent = "";
       $("bkgDoneSub").textContent = TXT.done(S.party, longDate(S.date), S.time, S.name.split(" ")[0]);
+      var mn = $("bkgMailNote");
+      if (mn) mn.innerHTML = S.email ? TXT.mailNote(esc(S.email)) : "";
       buildIcs();
       go(6);
     };

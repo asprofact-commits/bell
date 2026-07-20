@@ -46,6 +46,10 @@
 <link rel="canonical" href="https://www.bellacropolis.gr/el/reservations.html" />
 <link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/reservations.html" />
 <link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/reservations.html" />
+<link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/reservations.html" />
+<link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/reservations.html" />
+<link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/reservations.html" />
+<link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/reservations.html" />
 <link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/reservations.html" />
 
 <meta property="og:type" content="website" />
@@ -613,6 +617,8 @@
     var payload = {
       action: "reserve", name: S.name, phone: S.phone, notes: extraNotes,
       date: S.date, time: S.time, party: S.party, lang: LANG,
+      email: S.email, marketing: S.marketing ? "yes" : "",
+      dateLong: longDate(S.date),
       plates: plateSummary().join("; "), source: "site-" + LANG,
       cid: Date.now().toString(36) + Math.random().toString(36).slice(2, 8)
     };

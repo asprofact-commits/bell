@@ -280,9 +280,10 @@
         <div class="bkg-mark">✓</div>
         <h2>Votre table est réservée !</h2>
         <p class="bkg-sub" id="bkgDoneSub"></p>
+        <p class="bkg-sub" id="bkgMailNote" style="margin-top:.6rem"></p>
         <p class="bkg-kerasma">« Un kérasma de pain, d'huile d'olive et de sel de notre famille vous attendra sur votre table — comme depuis 1956. »</p>
         <div class="bkg-acts">
-          <a class="btn btn--secondary btn--small" id="bkgIcs" download="cookaki-reservation.ics" href="#">📅 Ajouter au calendrier</a>
+          <a class="btn btn--primary btn--large" id="bkgIcs" download="cookaki-reservation.ics" href="#">📅 Ajouter au calendrier</a>
           <a class="btn btn--whatsapp btn--small" href="https://wa.me/306982373505" target="_blank" rel="noopener noreferrer">💬 Nous écrire sur WhatsApp</a>
           <a class="btn btn--secondary btn--small" href="https://maps.google.com/?q=Cookaki+Petmeza+5+Koukaki+Athens" target="_blank" rel="noopener noreferrer">📍 Comment nous trouver</a>
         </div>
@@ -386,6 +387,7 @@
     done: function (p, d, h, n) { return "Nous avons réservé votre table pour " + p + " convives le " + d + " à " + h + ". Nous confirmerons bientôt sur WhatsApp — à très vite, " + n + " !"; },
     errNet: "Une erreur est survenue — réessayez, ou écrivez-nous sur WhatsApp au +30 698 237 3505.",
     cats: { hot: "Les plats chauds · mageireftá du jour", sea: "De la mer", cold: "Salades &amp; entrées", sweet: "Une douceur" },
+    mailNote: function (a) { return "Nous avons envoyé une copie à <strong>" + a + "</strong>. Rien après quelques minutes ? Jetez un œil aux spams — votre table est réservée dans tous les cas."; },
     groupWa: function (d) { return "Bonjour Bell Kitchen ! Nous sommes un groupe de 9+ et aimerions une table" + (d ? " le " + d : "") + ". Pourriez-vous nous aider à l'organiser ?"; }
   };
   /* ------------------------------------------------ */
@@ -600,6 +602,8 @@
     var payload = {
       action: "reserve", name: S.name, phone: S.phone, notes: extraNotes,
       date: S.date, time: S.time, party: S.party, lang: LANG,
+      email: S.email, marketing: S.marketing ? "yes" : "",
+      dateLong: longDate(S.date),
       plates: plateSummary().join("; "), source: "site-" + LANG,
       cid: Date.now().toString(36) + Math.random().toString(36).slice(2, 8)
     };
@@ -610,6 +614,8 @@
       }
       $("bkgStatus").textContent = "";
       $("bkgDoneSub").textContent = TXT.done(S.party, longDate(S.date), S.time, S.name.split(" ")[0]);
+      var mn = $("bkgMailNote");
+      if (mn) mn.innerHTML = S.email ? TXT.mailNote(esc(S.email)) : "";
       buildIcs();
       go(6);
     };

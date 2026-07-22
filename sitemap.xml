@@ -1,35 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url><loc>https://www.bellacropolis.gr/about.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/about.html"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/about.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/about.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/about.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/about.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/about.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/about.html"/>
-    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-plaque.jpg</image:loc></image:image></url>
   <url><loc>https://www.bellacropolis.gr/contact.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/contact.html"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/contact.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/contact.html"/>
-    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
   <url><loc>https://www.bellacropolis.gr/delivery.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/delivery.html"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/delivery.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/delivery.html"/>
-    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.75</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
   <url><loc>https://www.bellacropolis.gr/events.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/events.html"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/events.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/events.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/events.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/events.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/events.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/events.html"/>
-    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
   <url><loc>https://www.bellacropolis.gr/gallery.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/gallery.html"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/gallery.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/gallery.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/gallery.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/gallery.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/gallery.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/gallery.html"/>
-    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.6</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/Cookaki_Interior_Space.png?v=3</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/Cookaki-restaurant-interior-plants-wine-glasses-Athens-Acropolis.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-restaurant-facade-koukaki-signage-02.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-exterior-blue-fish-petmeza-5-detail.png?v=3</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-koukaki-pink-flowers-exterior-spring.png?v=3</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-bell-kitchen-menu-card-heritage-1956.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-greek-decor-evil-eye-olive-oil-menu-flatlay.png?v=3</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-trachanas-tomato-soup-feta-white-wine.png?v=3</image:loc></image:image></url>
   <url><loc>https://www.bellacropolis.gr/greek-restaurant-near-acropolis.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/greek-restaurant-near-acropolis.html"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/greek-restaurant-near-acropolis.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/greek-restaurant-near-acropolis.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/greek-restaurant-near-acropolis.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/greek-restaurant-near-acropolis.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/greek-restaurant-near-acropolis.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/greek-restaurant-near-acropolis.html"/>
-    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-restaurant-facade-koukaki-signage-02.jpg</image:loc></image:image></url>
   <url><loc>https://www.bellacropolis.gr/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/"/>
@@ -78,156 +118,1170 @@
   <url><loc>https://www.bellacropolis.gr/ingredients.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/ingredients.html"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/ingredients.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/ingredients.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/ingredients.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/ingredients.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/ingredients.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/ingredients.html"/>
-    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
   <url><loc>https://www.bellacropolis.gr/langoustines-linguine.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/langoustines-linguine.html"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/langoustines-linguine.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/langoustines-linguine.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/langoustines-linguine.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/langoustines-linguine.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/langoustines-linguine.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/langoustines-linguine.html"/>
-    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.85</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/langoustines.jpg</image:loc></image:image></url>
   <url><loc>https://www.bellacropolis.gr/menu.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/menu.html"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/menu.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/menu.html"/>
-    <lastmod>2026-07-09</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    <lastmod>2026-07-09</lastmod><changefreq>weekly</changefreq><priority>0.9</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-moussaka-traditional-greek.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-pastitsio-homemade-lasagna.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-plaque.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/langoustines.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-grilled-chicken-fillet-rice.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/grilled-beef-patties-biftekia-cookaki-koukaki.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-psarosoupa-veloute-thalassina-koukaki-athina-acropolis.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-sfakiani-pita-honey.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-xoriatiki-salata-feta-elies-koukaki-athina.jpg</image:loc></image:image></url>
   <url><loc>https://www.bellacropolis.gr/moussaka.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/moussaka.html"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/moussaka.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/moussaka.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/moussaka.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/moussaka.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/moussaka.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/moussaka.html"/>
-    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-moussaka-traditional-greek.jpg</image:loc></image:image></url>
   <url><loc>https://www.bellacropolis.gr/our-story.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/our-story.html"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/our-story.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/our-story.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/our-story.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/our-story.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/our-story.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/our-story.html"/>
-    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-chef-mario-preparing-greek-food-athens.jpg</image:loc></image:image></url>
   <url><loc>https://www.bellacropolis.gr/privacy.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/privacy.html"/>
-    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.3</priority></url>
+    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.3</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
   <url><loc>https://www.bellacropolis.gr/products.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/products.html"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/products.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/products.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/products.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/products.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/products.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/products.html"/>
-    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.85</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
   <url><loc>https://www.bellacropolis.gr/reservations.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/reservations.html"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/reservations.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/reservations.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/reservations.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/reservations.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/reservations.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/reservations.html"/>
-    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.85</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
   <url><loc>https://www.bellacropolis.gr/signature-fish-bell-nest.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/signature-fish-bell-nest.html"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/signature-fish-bell-nest.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/signature-fish-bell-nest.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/signature-fish-bell-nest.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/signature-fish-bell-nest.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/signature-fish-bell-nest.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/signature-fish-bell-nest.html"/>
-    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-signature-wild-fish-bell-nest-trahanas-koukaki-athens.jpg</image:loc></image:image></url>
   <url><loc>https://www.bellacropolis.gr/terms.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/terms.html"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/terms.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/terms.html"/>
-    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.3</priority></url>
+    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.3</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
   <url><loc>https://www.bellacropolis.gr/vegetarian-greek-koukaki.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/vegetarian-greek-koukaki.html"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/vegetarian-greek-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/vegetarian-greek-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/vegetarian-greek-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/vegetarian-greek-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/vegetarian-greek-koukaki.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/vegetarian-greek-koukaki.html"/>
-    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/briam-roasted-vegetables-vegan-cookaki-koukaki-athens-acropolis.jpg</image:loc></image:image></url>
   <url><loc>https://www.bellacropolis.gr/where-to-eat-in-koukaki.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/where-to-eat-in-koukaki.html"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/where-to-eat-in-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/where-to-eat-in-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/where-to-eat-in-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/where-to-eat-in-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/where-to-eat-in-koukaki.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/where-to-eat-in-koukaki.html"/>
-    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-koukaki-pink-flowers-exterior-spring.jpg</image:loc></image:image></url>
   <url><loc>https://www.bellacropolis.gr/el/about.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/about.html"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/about.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/about.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/about.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/about.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/about.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/about.html"/>
-    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-plaque.jpg</image:loc></image:image></url>
   <url><loc>https://www.bellacropolis.gr/el/contact.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/contact.html"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/contact.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/contact.html"/>
-    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
   <url><loc>https://www.bellacropolis.gr/el/delivery.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/delivery.html"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/delivery.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/delivery.html"/>
-    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.75</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
   <url><loc>https://www.bellacropolis.gr/el/events.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/events.html"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/events.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/events.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/events.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/events.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/events.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/events.html"/>
-    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
   <url><loc>https://www.bellacropolis.gr/el/gallery.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/gallery.html"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/gallery.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/gallery.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/gallery.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/gallery.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/gallery.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/gallery.html"/>
-    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.6</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/Cookaki_Interior_Space.png?v=3</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/Cookaki-restaurant-interior-plants-wine-glasses-Athens-Acropolis.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-restaurant-facade-koukaki-signage-02.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-exterior-blue-fish-petmeza-5-detail.png?v=3</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-koukaki-pink-flowers-exterior-spring.png?v=3</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-bell-kitchen-menu-card-heritage-1956.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-greek-decor-evil-eye-olive-oil-menu-flatlay.png?v=3</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-trachanas-tomato-soup-feta-white-wine.png?v=3</image:loc></image:image></url>
   <url><loc>https://www.bellacropolis.gr/el/greek-restaurant-near-acropolis.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/greek-restaurant-near-acropolis.html"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/greek-restaurant-near-acropolis.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/greek-restaurant-near-acropolis.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/greek-restaurant-near-acropolis.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/greek-restaurant-near-acropolis.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/greek-restaurant-near-acropolis.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/greek-restaurant-near-acropolis.html"/>
-    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-restaurant-facade-koukaki-signage-02.jpg</image:loc></image:image></url>
   <url><loc>https://www.bellacropolis.gr/el/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/"/>
     <lastmod>2026-07-09</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://www.bellacropolis.gr/el/ingredients.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/ingredients.html"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/ingredients.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/ingredients.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/ingredients.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/ingredients.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/ingredients.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/ingredients.html"/>
-    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
   <url><loc>https://www.bellacropolis.gr/el/langoustines-linguine.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/langoustines-linguine.html"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/langoustines-linguine.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/langoustines-linguine.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/langoustines-linguine.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/langoustines-linguine.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/langoustines-linguine.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/langoustines-linguine.html"/>
-    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.85</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/langoustines.jpg</image:loc></image:image></url>
   <url><loc>https://www.bellacropolis.gr/el/menu.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/menu.html"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/menu.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/menu.html"/>
-    <lastmod>2026-07-09</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    <lastmod>2026-07-09</lastmod><changefreq>weekly</changefreq><priority>0.9</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-moussaka-traditional-greek.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-pastitsio-homemade-lasagna.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-plaque.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/langoustines.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-grilled-chicken-fillet-rice.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/grilled-beef-patties-biftekia-cookaki-koukaki.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-psarosoupa-veloute-thalassina-koukaki-athina-acropolis.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-sfakiani-pita-honey.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-xoriatiki-salata-feta-elies-koukaki-athina.jpg</image:loc></image:image></url>
   <url><loc>https://www.bellacropolis.gr/el/moussaka.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/moussaka.html"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/moussaka.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/moussaka.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/moussaka.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/moussaka.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/moussaka.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/moussaka.html"/>
-    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-moussaka-traditional-greek.jpg</image:loc></image:image></url>
   <url><loc>https://www.bellacropolis.gr/el/our-story.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/our-story.html"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/our-story.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/our-story.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/our-story.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/our-story.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/our-story.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/our-story.html"/>
-    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-chef-mario-preparing-greek-food-athens.jpg</image:loc></image:image></url>
   <url><loc>https://www.bellacropolis.gr/el/privacy.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/privacy.html"/>
-    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.3</priority></url>
+    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.3</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
   <url><loc>https://www.bellacropolis.gr/el/products.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/products.html"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/products.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/products.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/products.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/products.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/products.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/products.html"/>
-    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.85</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
   <url><loc>https://www.bellacropolis.gr/el/reservations.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/reservations.html"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/reservations.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/reservations.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/reservations.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/reservations.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/reservations.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/reservations.html"/>
-    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.85</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
   <url><loc>https://www.bellacropolis.gr/el/signature-fish-bell-nest.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/signature-fish-bell-nest.html"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/signature-fish-bell-nest.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/signature-fish-bell-nest.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/signature-fish-bell-nest.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/signature-fish-bell-nest.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/signature-fish-bell-nest.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/signature-fish-bell-nest.html"/>
-    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-signature-wild-fish-bell-nest-trahanas-koukaki-athens.jpg</image:loc></image:image></url>
   <url><loc>https://www.bellacropolis.gr/el/terms.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/terms.html"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/terms.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/terms.html"/>
-    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.3</priority></url>
+    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.3</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
   <url><loc>https://www.bellacropolis.gr/el/vegetarian-greek-koukaki.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/vegetarian-greek-koukaki.html"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/vegetarian-greek-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/vegetarian-greek-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/vegetarian-greek-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/vegetarian-greek-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/vegetarian-greek-koukaki.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/vegetarian-greek-koukaki.html"/>
-    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.8</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/briam-roasted-vegetables-vegan-cookaki-koukaki-athens-acropolis.jpg</image:loc></image:image></url>
   <url><loc>https://www.bellacropolis.gr/el/where-to-eat-in-koukaki.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/where-to-eat-in-koukaki.html"/>
     <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/where-to-eat-in-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/where-to-eat-in-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/where-to-eat-in-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/where-to-eat-in-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/where-to-eat-in-koukaki.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/where-to-eat-in-koukaki.html"/>
-    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+    <lastmod>2026-07-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-koukaki-pink-flowers-exterior-spring.jpg</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/de/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/about.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/about.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/about.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/about.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/about.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/about.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-plaque.jpg</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/de/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/contact.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/de/delivery.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/delivery.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/de/events.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/events.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/events.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/events.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/events.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/events.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/events.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/events.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/de/gallery.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/gallery.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/gallery.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/gallery.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/gallery.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/gallery.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/gallery.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/gallery.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/Cookaki_Interior_Space.png?v=3</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/Cookaki-restaurant-interior-plants-wine-glasses-Athens-Acropolis.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-restaurant-facade-koukaki-signage-02.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-exterior-blue-fish-petmeza-5-detail.png?v=3</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-koukaki-pink-flowers-exterior-spring.png?v=3</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-bell-kitchen-menu-card-heritage-1956.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-greek-decor-evil-eye-olive-oil-menu-flatlay.png?v=3</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-trachanas-tomato-soup-feta-white-wine.png?v=3</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/de/greek-restaurant-near-acropolis.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/greek-restaurant-near-acropolis.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/greek-restaurant-near-acropolis.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/greek-restaurant-near-acropolis.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/greek-restaurant-near-acropolis.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/greek-restaurant-near-acropolis.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/greek-restaurant-near-acropolis.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/greek-restaurant-near-acropolis.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-restaurant-facade-koukaki-signage-02.jpg</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/de/ingredients.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/ingredients.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/ingredients.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/ingredients.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/ingredients.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/ingredients.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/ingredients.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/ingredients.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/de/langoustines-linguine.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/langoustines-linguine.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/langoustines-linguine.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/langoustines-linguine.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/langoustines-linguine.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/langoustines-linguine.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/langoustines-linguine.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/langoustines-linguine.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/langoustines.jpg</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/de/menu.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/menu.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-moussaka-traditional-greek.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-pastitsio-homemade-lasagna.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-plaque.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/langoustines.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-grilled-chicken-fillet-rice.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/grilled-beef-patties-biftekia-cookaki-koukaki.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-psarosoupa-veloute-thalassina-koukaki-athina-acropolis.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-sfakiani-pita-honey.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-xoriatiki-salata-feta-elies-koukaki-athina.jpg</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/de/moussaka.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/moussaka.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/moussaka.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/moussaka.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/moussaka.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/moussaka.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/moussaka.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/moussaka.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-moussaka-traditional-greek.jpg</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/de/our-story.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/our-story.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/our-story.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/our-story.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/our-story.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/our-story.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/our-story.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/our-story.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-chef-mario-preparing-greek-food-athens.jpg</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/de/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/privacy.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/de/products.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/products.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/products.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/products.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/products.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/products.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/products.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/products.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/de/reservations.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/reservations.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/reservations.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/reservations.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/reservations.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/reservations.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/reservations.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/reservations.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/de/signature-fish-bell-nest.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/signature-fish-bell-nest.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/signature-fish-bell-nest.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/signature-fish-bell-nest.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/signature-fish-bell-nest.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/signature-fish-bell-nest.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/signature-fish-bell-nest.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/signature-fish-bell-nest.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-signature-wild-fish-bell-nest-trahanas-koukaki-athens.jpg</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/de/terms.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/terms.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/de/vegetarian-greek-koukaki.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/vegetarian-greek-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/vegetarian-greek-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/vegetarian-greek-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/vegetarian-greek-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/vegetarian-greek-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/vegetarian-greek-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/vegetarian-greek-koukaki.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/briam-roasted-vegetables-vegan-cookaki-koukaki-athens-acropolis.jpg</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/de/where-to-eat-in-koukaki.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/where-to-eat-in-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/where-to-eat-in-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/where-to-eat-in-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/where-to-eat-in-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/where-to-eat-in-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/where-to-eat-in-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/where-to-eat-in-koukaki.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-koukaki-pink-flowers-exterior-spring.jpg</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/fr/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/about.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/about.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/about.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/about.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/about.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/about.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-plaque.jpg</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/fr/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/contact.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/fr/delivery.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/delivery.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/fr/events.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/events.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/events.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/events.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/events.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/events.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/events.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/events.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/fr/gallery.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/gallery.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/gallery.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/gallery.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/gallery.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/gallery.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/gallery.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/gallery.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/Cookaki_Interior_Space.png?v=3</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/Cookaki-restaurant-interior-plants-wine-glasses-Athens-Acropolis.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-restaurant-facade-koukaki-signage-02.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-exterior-blue-fish-petmeza-5-detail.png?v=3</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-koukaki-pink-flowers-exterior-spring.png?v=3</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-bell-kitchen-menu-card-heritage-1956.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-greek-decor-evil-eye-olive-oil-menu-flatlay.png?v=3</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-trachanas-tomato-soup-feta-white-wine.png?v=3</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/fr/greek-restaurant-near-acropolis.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/greek-restaurant-near-acropolis.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/greek-restaurant-near-acropolis.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/greek-restaurant-near-acropolis.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/greek-restaurant-near-acropolis.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/greek-restaurant-near-acropolis.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/greek-restaurant-near-acropolis.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/greek-restaurant-near-acropolis.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-restaurant-facade-koukaki-signage-02.jpg</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/fr/ingredients.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/ingredients.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/ingredients.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/ingredients.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/ingredients.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/ingredients.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/ingredients.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/ingredients.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/fr/langoustines-linguine.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/langoustines-linguine.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/langoustines-linguine.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/langoustines-linguine.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/langoustines-linguine.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/langoustines-linguine.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/langoustines-linguine.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/langoustines-linguine.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/langoustines.jpg</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/fr/menu.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/menu.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-moussaka-traditional-greek.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-pastitsio-homemade-lasagna.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-plaque.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/langoustines.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-grilled-chicken-fillet-rice.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/grilled-beef-patties-biftekia-cookaki-koukaki.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-psarosoupa-veloute-thalassina-koukaki-athina-acropolis.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-sfakiani-pita-honey.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-xoriatiki-salata-feta-elies-koukaki-athina.jpg</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/fr/moussaka.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/moussaka.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/moussaka.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/moussaka.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/moussaka.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/moussaka.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/moussaka.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/moussaka.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-moussaka-traditional-greek.jpg</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/fr/our-story.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/our-story.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/our-story.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/our-story.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/our-story.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/our-story.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/our-story.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/our-story.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-chef-mario-preparing-greek-food-athens.jpg</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/fr/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/privacy.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/fr/products.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/products.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/products.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/products.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/products.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/products.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/products.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/products.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/fr/reservations.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/reservations.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/reservations.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/reservations.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/reservations.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/reservations.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/reservations.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/reservations.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/fr/signature-fish-bell-nest.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/signature-fish-bell-nest.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/signature-fish-bell-nest.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/signature-fish-bell-nest.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/signature-fish-bell-nest.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/signature-fish-bell-nest.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/signature-fish-bell-nest.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/signature-fish-bell-nest.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-signature-wild-fish-bell-nest-trahanas-koukaki-athens.jpg</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/fr/terms.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/terms.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/fr/vegetarian-greek-koukaki.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/vegetarian-greek-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/vegetarian-greek-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/vegetarian-greek-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/vegetarian-greek-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/vegetarian-greek-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/vegetarian-greek-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/vegetarian-greek-koukaki.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/briam-roasted-vegetables-vegan-cookaki-koukaki-athens-acropolis.jpg</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/fr/where-to-eat-in-koukaki.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/where-to-eat-in-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/where-to-eat-in-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/where-to-eat-in-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/where-to-eat-in-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/where-to-eat-in-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/where-to-eat-in-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/where-to-eat-in-koukaki.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-koukaki-pink-flowers-exterior-spring.jpg</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/es/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/about.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/about.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/about.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/about.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/about.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/about.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-plaque.jpg</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/es/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/contact.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/es/delivery.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/delivery.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/es/events.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/events.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/events.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/events.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/events.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/events.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/events.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/events.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/es/gallery.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/gallery.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/gallery.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/gallery.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/gallery.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/gallery.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/gallery.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/gallery.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/Cookaki_Interior_Space.png?v=3</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/Cookaki-restaurant-interior-plants-wine-glasses-Athens-Acropolis.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-restaurant-facade-koukaki-signage-02.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-exterior-blue-fish-petmeza-5-detail.png?v=3</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-koukaki-pink-flowers-exterior-spring.png?v=3</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-bell-kitchen-menu-card-heritage-1956.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-greek-decor-evil-eye-olive-oil-menu-flatlay.png?v=3</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-trachanas-tomato-soup-feta-white-wine.png?v=3</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/es/greek-restaurant-near-acropolis.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/greek-restaurant-near-acropolis.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/greek-restaurant-near-acropolis.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/greek-restaurant-near-acropolis.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/greek-restaurant-near-acropolis.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/greek-restaurant-near-acropolis.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/greek-restaurant-near-acropolis.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/greek-restaurant-near-acropolis.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-restaurant-facade-koukaki-signage-02.jpg</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/es/ingredients.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/ingredients.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/ingredients.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/ingredients.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/ingredients.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/ingredients.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/ingredients.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/ingredients.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/es/langoustines-linguine.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/langoustines-linguine.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/langoustines-linguine.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/langoustines-linguine.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/langoustines-linguine.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/langoustines-linguine.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/langoustines-linguine.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/langoustines-linguine.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/langoustines.jpg</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/es/menu.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/menu.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-moussaka-traditional-greek.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-pastitsio-homemade-lasagna.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-plaque.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/langoustines.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-grilled-chicken-fillet-rice.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/grilled-beef-patties-biftekia-cookaki-koukaki.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-psarosoupa-veloute-thalassina-koukaki-athina-acropolis.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-sfakiani-pita-honey.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-xoriatiki-salata-feta-elies-koukaki-athina.jpg</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/es/moussaka.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/moussaka.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/moussaka.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/moussaka.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/moussaka.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/moussaka.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/moussaka.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/moussaka.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-moussaka-traditional-greek.jpg</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/es/our-story.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/our-story.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/our-story.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/our-story.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/our-story.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/our-story.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/our-story.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/our-story.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-chef-mario-preparing-greek-food-athens.jpg</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/es/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/privacy.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/es/products.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/products.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/products.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/products.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/products.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/products.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/products.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/products.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/es/reservations.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/reservations.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/reservations.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/reservations.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/reservations.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/reservations.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/reservations.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/reservations.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/es/signature-fish-bell-nest.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/signature-fish-bell-nest.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/signature-fish-bell-nest.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/signature-fish-bell-nest.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/signature-fish-bell-nest.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/signature-fish-bell-nest.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/signature-fish-bell-nest.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/signature-fish-bell-nest.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-signature-wild-fish-bell-nest-trahanas-koukaki-athens.jpg</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/es/terms.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/terms.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/es/vegetarian-greek-koukaki.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/vegetarian-greek-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/vegetarian-greek-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/vegetarian-greek-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/vegetarian-greek-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/vegetarian-greek-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/vegetarian-greek-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/vegetarian-greek-koukaki.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/briam-roasted-vegetables-vegan-cookaki-koukaki-athens-acropolis.jpg</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/es/where-to-eat-in-koukaki.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/where-to-eat-in-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/where-to-eat-in-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/where-to-eat-in-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/where-to-eat-in-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/where-to-eat-in-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/where-to-eat-in-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/where-to-eat-in-koukaki.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-koukaki-pink-flowers-exterior-spring.jpg</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/zh/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/about.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/about.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/about.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/about.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/about.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/about.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-plaque.jpg</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/zh/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/contact.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/zh/delivery.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/delivery.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/delivery.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/zh/events.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/events.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/events.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/events.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/events.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/events.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/events.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/events.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/zh/gallery.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/gallery.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/gallery.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/gallery.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/gallery.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/gallery.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/gallery.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/gallery.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/Cookaki_Interior_Space.png?v=3</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/Cookaki-restaurant-interior-plants-wine-glasses-Athens-Acropolis.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-restaurant-facade-koukaki-signage-02.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-exterior-blue-fish-petmeza-5-detail.png?v=3</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-koukaki-pink-flowers-exterior-spring.png?v=3</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-bell-kitchen-menu-card-heritage-1956.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-greek-decor-evil-eye-olive-oil-menu-flatlay.png?v=3</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-trachanas-tomato-soup-feta-white-wine.png?v=3</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/zh/greek-restaurant-near-acropolis.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/greek-restaurant-near-acropolis.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/greek-restaurant-near-acropolis.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/greek-restaurant-near-acropolis.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/greek-restaurant-near-acropolis.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/greek-restaurant-near-acropolis.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/greek-restaurant-near-acropolis.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/greek-restaurant-near-acropolis.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-restaurant-facade-koukaki-signage-02.jpg</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/zh/ingredients.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/ingredients.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/ingredients.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/ingredients.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/ingredients.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/ingredients.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/ingredients.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/ingredients.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/zh/langoustines-linguine.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/langoustines-linguine.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/langoustines-linguine.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/langoustines-linguine.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/langoustines-linguine.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/langoustines-linguine.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/langoustines-linguine.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/langoustines-linguine.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/langoustines.jpg</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/zh/menu.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/menu.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/menu.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-moussaka-traditional-greek.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-pastitsio-homemade-lasagna.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-plaque.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/langoustines.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-grilled-chicken-fillet-rice.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/grilled-beef-patties-biftekia-cookaki-koukaki.jpeg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-psarosoupa-veloute-thalassina-koukaki-athina-acropolis.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-sfakiani-pita-honey.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-xoriatiki-salata-feta-elies-koukaki-athina.jpg</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/zh/moussaka.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/moussaka.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/moussaka.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/moussaka.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/moussaka.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/moussaka.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/moussaka.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/moussaka.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-moussaka-traditional-greek.jpg</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/zh/our-story.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/our-story.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/our-story.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/our-story.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/our-story.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/our-story.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/our-story.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/our-story.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-chef-mario-preparing-greek-food-athens.jpg</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/zh/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/privacy.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/zh/products.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/products.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/products.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/products.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/products.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/products.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/products.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/products.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/zh/reservations.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/reservations.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/reservations.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/reservations.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/reservations.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/reservations.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/reservations.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/reservations.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/zh/signature-fish-bell-nest.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/signature-fish-bell-nest.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/signature-fish-bell-nest.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/signature-fish-bell-nest.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/signature-fish-bell-nest.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/signature-fish-bell-nest.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/signature-fish-bell-nest.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/signature-fish-bell-nest.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-signature-wild-fish-bell-nest-trahanas-koukaki-athens.jpg</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/zh/terms.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/terms.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/zh/vegetarian-greek-koukaki.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/vegetarian-greek-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/vegetarian-greek-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/vegetarian-greek-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/vegetarian-greek-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/vegetarian-greek-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/vegetarian-greek-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/vegetarian-greek-koukaki.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/briam-roasted-vegetables-vegan-cookaki-koukaki-athens-acropolis.jpg</image:loc></image:image></url>
+  <url><loc>https://www.bellacropolis.gr/zh/where-to-eat-in-koukaki.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bellacropolis.gr/where-to-eat-in-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="el" href="https://www.bellacropolis.gr/el/where-to-eat-in-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.bellacropolis.gr/de/where-to-eat-in-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.bellacropolis.gr/fr/where-to-eat-in-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.bellacropolis.gr/es/where-to-eat-in-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.bellacropolis.gr/zh/where-to-eat-in-koukaki.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bellacropolis.gr/where-to-eat-in-koukaki.html"/>
+    <lastmod>2026-07-12</lastmod><changefreq>monthly</changefreq><priority>0.7</priority>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/bell-kitchen-logo.png</image:loc></image:image>
+    <image:image><image:loc>https://www.bellacropolis.gr/assets/images/cookaki-athens-koukaki-pink-flowers-exterior-spring.jpg</image:loc></image:image></url>
 </urlset>

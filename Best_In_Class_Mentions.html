@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cookaki — "Best in Athens / Greece / Europe" Mentions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+:root{
+  /* Cookaki | Bell Kitchen brand tokens — from assets/css/main.css */
+  --olive:#0D2E67; --olive-deep:#081F49;
+  --terracotta:#A55A3A; --terracotta-deep:#8A4A2E;
+  --cream:#FCFAF6; --cream-warm:#F4EFE6; --beige:#E7E0D4;
+  --charcoal:#2B2B2B; --charcoal-soft:#6E6E6E;
+  --saffron:#B68B3A; --sage:#C9D4C1;
+  --line:rgba(42,42,42,.12); --line-strong:rgba(42,42,42,.24);
+  --font-display:"Cormorant Garamond",Georgia,serif;
+  --font-body:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--cream); color:var(--charcoal);
+  font-family:var(--font-body); font-size:16px; line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1100px; margin:0 auto; padding:0 24px 100px}
+header{
+  background:var(--olive); color:var(--cream); padding:58px 24px 52px; margin-bottom:44px;
+  border-bottom:5px solid var(--saffron);
+}
+header .inner{max-width:1100px; margin:0 auto}
+.eyebrow{
+  font-size:11.5px; letter-spacing:.24em; text-transform:uppercase; font-weight:600;
+  color:var(--sage); margin-bottom:14px;
+}
+h1{
+  font-family:var(--font-display); font-weight:500; font-size:clamp(2.2rem,1.6rem+2.6vw,3.6rem);
+  line-height:1.08; margin:0 0 14px; letter-spacing:-.01em;
+}
+h1 em{font-style:italic; color:var(--saffron)}
+header p{max-width:64ch; margin:0; color:rgba(252,250,246,.82); font-size:16.5px}
+h2{
+  font-family:var(--font-display); font-weight:600; font-size:clamp(1.7rem,1.3rem+1.4vw,2.4rem);
+  color:var(--olive); margin:60px 0 6px; letter-spacing:-.01em; line-height:1.15;
+}
+h2 + .sub{color:var(--charcoal-soft); margin:0 0 24px; font-size:15px}
+h3{font-family:var(--font-display); font-weight:600; font-size:24px; color:var(--olive); margin:0 0 4px}
+p{margin:0 0 14px}
+.rule{height:1px; background:var(--line); margin:0 0 6px}
+
+/* headline answer cards */
+.answer{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; margin:0 0 10px}
+.geo{
+  background:#fff; border:1px solid var(--beige); border-radius:22px; padding:28px 28px 24px;
+  position:relative; overflow:hidden; box-shadow:0 6px 18px rgba(42,42,42,.05);
+}
+.geo::after{content:""; position:absolute; inset:0 0 auto 0; height:5px; background:var(--olive)}
+.geo.g2::after{background:var(--terracotta)} .geo.g3::after{background:var(--saffron)}
+.geo .place{
+  font-size:11.5px; letter-spacing:.2em; text-transform:uppercase; font-weight:600;
+  color:var(--charcoal-soft); margin-bottom:6px;
+}
+.geo .big{
+  font-family:var(--font-display); font-size:78px; line-height:.95; font-weight:600;
+  color:var(--olive); letter-spacing:-.03em;
+}
+.geo.g2 .big{color:var(--terracotta)} .geo.g3 .big{color:var(--saffron)}
+.geo .unit{font-family:var(--font-body); font-size:14px; font-weight:500; color:var(--charcoal-soft); letter-spacing:0; display:block; margin-top:6px}
+.split{display:flex; gap:10px; margin-top:16px; padding-top:14px; border-top:1px solid var(--line)}
+.split div{flex:1}
+.split .n{font-family:var(--font-display); font-size:28px; font-weight:600; color:var(--charcoal); line-height:1}
+.split .l{font-size:11.5px; color:var(--charcoal-soft); line-height:1.35; margin-top:4px}
+.alltime{margin-top:14px; font-size:13px; color:var(--charcoal-soft); border-top:1px dashed var(--line-strong); padding-top:12px}
+.alltime b{color:var(--charcoal); font-weight:600}
+
+/* chart */
+.panel{
+  background:#fff; border:1px solid var(--beige); border-radius:22px; padding:26px 28px 18px;
+  margin:24px 0; box-shadow:0 6px 18px rgba(42,42,42,.05);
+}
+.panel h3{margin-bottom:2px}
+.panel .cap{font-size:13.5px; color:var(--charcoal-soft); margin-bottom:18px}
+.cwrap{position:relative; height:320px; width:100%}
+
+/* quote lists */
+.tier{margin:26px 0 0}
+.tier-head{display:flex; align-items:baseline; gap:12px; margin-bottom:4px}
+.badge{
+  font-size:11px; font-weight:600; letter-spacing:.14em; text-transform:uppercase;
+  padding:5px 12px; border-radius:999px; background:var(--olive); color:var(--cream); white-space:nowrap;
+}
+.badge.t2{background:var(--terracotta)} .badge.adj{background:var(--beige); color:var(--charcoal-soft)}
+.tier-head span.k{font-size:14px; color:var(--charcoal-soft)}
+blockquote{
+  margin:12px 0; padding:16px 22px; background:#fff; border:1px solid var(--beige);
+  border-left:4px solid var(--saffron); border-radius:0 14px 14px 0;
+}
+blockquote.t1{border-left-color:var(--olive)}
+blockquote.t2{border-left-color:var(--terracotta)}
+blockquote.adj{border-left-color:var(--beige); background:var(--cream-warm)}
+blockquote q{
+  font-family:var(--font-display); font-style:italic; font-size:19.5px; line-height:1.45;
+  color:var(--charcoal); quotes:"“" "”";
+}
+blockquote .meta{
+  display:block; margin-top:9px; font-size:12.5px; color:var(--charcoal-soft); letter-spacing:.02em;
+}
+blockquote .tr{display:block; margin-top:7px; font-size:14px; color:var(--charcoal-soft); font-style:normal}
+.stars{color:var(--saffron); letter-spacing:1px}
+
+table{width:100%; border-collapse:collapse; margin:16px 0; font-size:14.5px; background:#fff; border-radius:14px; overflow:hidden}
+th{background:var(--olive); color:var(--cream); text-align:left; padding:12px 14px; font-size:12px; letter-spacing:.09em; text-transform:uppercase; font-weight:600}
+td{padding:11px 14px; border-bottom:1px solid var(--line)}
+tbody tr:nth-child(even){background:var(--cream-warm)}
+td.num{font-family:var(--font-display); font-size:20px; font-weight:600; color:var(--olive)}
+tfoot td{background:var(--beige); font-weight:600; border-bottom:none}
+
+.note{
+  background:var(--cream-warm); border:1px solid var(--beige); border-left:4px solid var(--sage);
+  border-radius:0 14px 14px 0; padding:20px 24px; margin:28px 0;
+}
+.note h3{font-size:20px; margin-bottom:8px}
+.note ul{margin:0; padding-left:20px} .note li{margin:6px 0; font-size:14.5px}
+footer{
+  margin-top:70px; padding-top:22px; border-top:1px solid var(--line);
+  font-size:13px; color:var(--charcoal-soft);
+}
+@media(max-width:620px){
+  .geo .big{font-size:60px}
+  blockquote q{font-size:17.5px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="inner">
+    <div class="eyebrow">Cookaki · Bell Kitchen · Guest Review Evidence</div>
+    <h1>How often do guests call us <em>the best</em>?</h1>
+    <p>Every review published between 1 April and 22 July 2026 (249 reviews, 221 with written text), counted for explicit "best in Athens / Greece / Europe" claims. All-time figures across all 477 reviews are shown alongside.</p>
+  </div>
+</header>
+
+<div class="wrap">
+
+<h2>The answer</h2>
+<p class="sub">Analysis window: 1 April – 22 July 2026 · 221 written reviews</p>
+
+<div class="answer">
+  <div class="geo">
+    <div class="place">1 · Best in Athens</div>
+    <div class="big">15<span class="unit">reviews · 6.8% of all written reviews</span></div>
+    <div class="split">
+      <div><div class="n">9</div><div class="l">call it the best <b>restaurant / place</b> in Athens</div></div>
+      <div><div class="n">6</div><div class="l">call it the best <b>food, meal or dish</b> in Athens</div></div>
+    </div>
+    <div class="alltime">All-time (477 reviews): <b>19</b> mentions — 11 venue-level, 8 food-level</div>
+  </div>
+
+  <div class="geo g2">
+    <div class="place">2 · Best in Greece</div>
+    <div class="big">4<span class="unit">reviews · 1.8% of all written reviews</span></div>
+    <div class="split">
+      <div><div class="n">1</div><div class="l">calls it the best <b>restaurant</b> in Greece</div></div>
+      <div><div class="n">3</div><div class="l">call it the best <b>food or meal</b> in Greece</div></div>
+    </div>
+    <div class="alltime">All-time (477 reviews): <b>5</b> mentions — 2 venue-level, 3 food-level</div>
+  </div>
+
+  <div class="geo g3">
+    <div class="place">3 · Best in Europe</div>
+    <div class="big">3<span class="unit">reviews · 1.4% of all written reviews</span></div>
+    <div class="split">
+      <div><div class="n">1</div><div class="l">calls it the best <b>place they dined</b> in Europe</div></div>
+      <div><div class="n">2</div><div class="l">call it the best <b>food</b> in Europe</div></div>
+    </div>
+    <div class="alltime">All-time (477 reviews): <b>3</b> mentions — unchanged</div>
+  </div>
+</div>
+
+<div class="panel">
+  <h3>Best-in-geography claims</h3>
+  <div class="cap">Venue-level claims name the restaurant itself; food-level claims name the food, meal or dish. Each review is counted once, at its widest geography.</div>
+  <div class="cwrap"><canvas id="cGeo"></canvas></div>
+</div>
+
+<table>
+  <thead>
+    <tr><th>Geography</th><th>Venue-level</th><th>Food-level</th><th>Window total</th><th>Share of 221</th><th>All-time total</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Athens</strong></td><td class="num">9</td><td class="num">6</td><td class="num">15</td><td>6.8%</td><td class="num">19</td></tr>
+    <tr><td><strong>Greece</strong></td><td class="num">1</td><td class="num">3</td><td class="num">4</td><td>1.8%</td><td class="num">5</td></tr>
+    <tr><td><strong>Europe</strong></td><td class="num">1</td><td class="num">2</td><td class="num">3</td><td>1.4%</td><td class="num">3</td></tr>
+  </tbody>
+  <tfoot>
+    <tr><td>Total distinct reviews</td><td>11</td><td>11</td><td>22</td><td>10.0%</td><td>27</td></tr>
+  </tfoot>
+</table>
+
+<!-- ATHENS -->
+<h2>1. "The best in Athens" — 15 reviews</h2>
+<p class="sub">Nine name the restaurant itself; six name the food or the meal.</p>
+<div class="rule"></div>
+
+<div class="tier">
+  <div class="tier-head"><span class="badge">Venue-level · 9</span><span class="k">"best restaurant / best place in Athens"</span></div>
+
+  <blockquote class="t1"><q>best restaurant in Athens! everything is made fresh in house and locally sourced. The staff was amazing too.</q>
+    <span class="meta"><span class="stars">★★★★★</span> · a day ago · English</span></blockquote>
+
+  <blockquote class="t1"><q>Without a doubt, the best restaurant of my entire stay in Athens. This place has soul.</q>
+    <span class="meta"><span class="stars">★★★★★</span> · a week ago · English</span></blockquote>
+
+  <blockquote class="t1"><q>Best traditional restaurant in Athens, you can tell how proud the chef is of his work. You would be crazy to miss this place</q>
+    <span class="meta"><span class="stars">★★★★★</span> · a month ago · English</span></blockquote>
+
+  <blockquote class="t1"><q>the best new restaurant in central Athens for years. Committed cooks, totally fresh ingredients and real Greek food done exceptionally well.</q>
+    <span class="meta"><span class="stars">★★★★★</span> · a month ago · English</span></blockquote>
+
+  <blockquote class="t1"><q>Il miglior ristorante di Atene in cui sono stata!</q>
+    <span class="tr">"The best restaurant in Athens I have ever been to!"</span>
+    <span class="meta"><span class="stars">★★★★★</span> · 2 months ago · Italian</span></blockquote>
+
+  <blockquote class="t1"><q>It is truly one of the best restaurants in the city!</q>
+    <span class="meta"><span class="stars">★★★★★</span> · 2 months ago · Korean couple, written in English and Greek</span></blockquote>
+
+  <blockquote class="t1"><q>It was our first time visiting Athens and of all the places we ate, this was our favorite.</q>
+    <span class="meta"><span class="stars">★★★★★</span> · a week ago · English</span></blockquote>
+
+  <blockquote class="t1"><q>Cookaki was the best place to welcome us to Athens!</q>
+    <span class="meta"><span class="stars">★★★★★</span> · 3 weeks ago · English</span></blockquote>
+
+  <blockquote class="t1"><q>The #1 Hidden Gem! After a few mediocre options in Athens and the area this place could truly shine!</q>
+    <span class="meta"><span class="stars">★★★★★</span> · a month ago · English</span></blockquote>
+</div>
+
+<div class="tier">
+  <div class="tier-head"><span class="badge t2">Food-level · 6</span><span class="k">"best food / best meal in Athens"</span></div>
+
+  <blockquote class="t2"><q>Cookaki was hands-down the best food we had in Athens. We loved it so much we went back two days in a row.</q>
+    <span class="meta"><span class="stars">★★★★★</span> · a week ago · English</span></blockquote>
+
+  <blockquote class="t2"><q>It’s the best food we had an Athens and I would highly recommend!!!</q>
+    <span class="meta"><span class="stars">★★★★★</span> · a week ago · English</span></blockquote>
+
+  <blockquote class="t2"><q>By far, the best meal we’ve had in Athens! Don’t miss this gem of a restaurant!</q>
+    <span class="meta"><span class="stars">★★★★★</span> · a month ago · English</span></blockquote>
+
+  <blockquote class="t2"><q>The best thing we tried in Athens. Thank you, we'll be back.</q>
+    <span class="meta"><span class="stars">★★★★★</span> · 2 weeks ago · English</span></blockquote>
+
+  <blockquote class="t2"><q>Definitely our favourite meal in Athens 🤍</q>
+    <span class="meta"><span class="stars">★★★★★</span> · 2 months ago · English</span></blockquote>
+
+  <blockquote class="t2"><q>#BestBreakfastAthens #BrunchAthens #HiddenGemAthens</q>
+    <span class="tr">Hashtags closing a five-star family breakfast review.</span>
+    <span class="meta"><span class="stars">★★★★★</span> · 2 months ago · English</span></blockquote>
+</div>
+
+<!-- GREECE -->
+<h2>2. "The best in Greece" — 4 reviews</h2>
+<p class="sub">One names the restaurant against every other restaurant in the country; three name the food or the meal.</p>
+<div class="rule"></div>
+
+<div class="tier">
+  <div class="tier-head"><span class="badge">Venue-level · 1</span><span class="k">"best restaurant in Greece"</span></div>
+  <blockquote class="t1"><q>I can say that out of all the restaurants we sampled in Greece, Cookaki was by far the best.</q>
+    <span class="tr">Written after four days in Athens plus Santorini and Crete — the widest comparison set in the dataset.</span>
+    <span class="meta"><span class="stars">★★★★★</span> · a month ago · English</span></blockquote>
+</div>
+
+<div class="tier">
+  <div class="tier-head"><span class="badge t2">Food-level · 3</span><span class="k">"best food / best meal in Greece"</span></div>
+
+  <blockquote class="t2"><q>We have been in Greece for 16 days and this is by far the best food we have had.</q>
+    <span class="meta"><span class="stars">★★★★★</span> · a month ago · English</span></blockquote>
+
+  <blockquote class="t2"><q>Easily our best meal in Greece. Exceptionally fresh ingredients, perfectly cooked.</q>
+    <span class="meta"><span class="stars">★★★★★</span> · a month ago · English</span></blockquote>
+
+  <blockquote class="t2"><q>It is the best meal we have had in Greece. Thank you for the great finale!</q>
+    <span class="meta"><span class="stars">★★★★★</span> · 3 weeks ago · English</span></blockquote>
+</div>
+
+<!-- EUROPE -->
+<h2>3. "The best in Europe" — 3 reviews</h2>
+<p class="sub">The widest claim guests make. One is venue-level, two are about the food.</p>
+<div class="rule"></div>
+
+<div class="tier">
+  <div class="tier-head"><span class="badge">Venue-level · 1</span><span class="k">"best place we have dined in Europe"</span></div>
+  <blockquote class="t1"><q>this has hands down been THE BEST place we’ve dined at in Europe.</q>
+    <span class="meta"><span class="stars">★★★★★</span> · 3 weeks ago · English</span></blockquote>
+</div>
+
+<div class="tier">
+  <div class="tier-head"><span class="badge t2">Food-level · 2</span><span class="k">"best food in Europe"</span></div>
+
+  <blockquote class="t2"><q>This place is out of this world. Best food I've eaten in Europe.</q>
+    <span class="meta"><span class="stars">★★★★★</span> · 3 months ago · English</span></blockquote>
+
+  <blockquote class="t2"><q>This was some of the best food we have had on our Europe trip so far.</q>
+    <span class="meta"><span class="stars">★★★★★</span> · a month ago · English</span></blockquote>
+</div>
+
+<!-- ADJACENT -->
+<h2>Adjacent claims — counted separately</h2>
+<p class="sub">These are superlatives tied to a place, but they are not "best restaurant" claims. They are excluded from the three counts above.</p>
+<div class="rule"></div>
+
+<div class="tier">
+  <div class="tier-head"><span class="badge adj">Not counted · 4</span><span class="k">why each was excluded</span></div>
+
+  <blockquote class="adj"><q>This restaurant is definitely worth a visit and offers the best value for money we saw during our stay in Athens.</q>
+    <span class="tr">Best <em>value</em> in Athens — a price claim, not a quality ranking.</span>
+    <span class="meta"><span class="stars">★★★★★</span> · 3 months ago · English</span></blockquote>
+
+  <blockquote class="adj"><q>The best Greek salad and moussaka I've ever had. I recommend this place to everyone. A must-see in Athens!</q>
+    <span class="tr">Best dish <em>ever</em>, not best in Athens — the superlative is lifetime-scoped.</span>
+    <span class="meta"><span class="stars">★★★★★</span> · 3 months ago · English</span></blockquote>
+
+  <blockquote class="adj"><q>The best surprise for Easter in the city.</q>
+    <span class="tr">Best <em>surprise</em>, from a neighbour who had not known the restaurant existed.</span>
+    <span class="meta"><span class="stars">★★★★★</span> · 3 months ago · English</span></blockquote>
+
+  <blockquote class="adj"><q>It was the best hospitality we experienced during the trip.</q>
+    <span class="tr">Best hospitality of the trip — the same review is already counted under Greece for "the best meal we have had in Greece".</span>
+    <span class="meta"><span class="stars">★★★★★</span> · 3 weeks ago · English</span></blockquote>
+</div>
+
+<!-- ALL TIME -->
+<h2>All-time additions (before 1 April 2026)</h2>
+<p class="sub">Five further best-in-geography claims sit in the older review base, including two from the pre-relaunch era.</p>
+<div class="rule"></div>
+
+<table>
+  <thead><tr><th>Quote</th><th>Geography</th><th>Level</th><th>Age</th></tr></thead>
+  <tbody>
+    <tr><td>"The best restaurant we ate at in Athens."</td><td>Athens</td><td>Venue</td><td>5 months ago</td></tr>
+    <tr><td>"This was the best place I ate in Athens and highly recommend it."</td><td>Athens</td><td>Venue</td><td>2 years ago</td></tr>
+    <tr><td>"One of the best meals i had in athens."</td><td>Athens</td><td>Food</td><td>4 months ago</td></tr>
+    <tr><td>"Best moussaka in Athens. Won't find a place like this on the tourist routes"</td><td>Athens</td><td>Food</td><td>2 years ago</td></tr>
+    <tr><td>"The best restaurant ive been in greece."</td><td>Greece</td><td>Venue</td><td>2 years ago</td></tr>
+  </tbody>
+</table>
+
+<div class="note">
+  <h3>How these were counted</h3>
+  <ul>
+    <li><strong>Source.</strong> Cookaki_Reviews_reviews_2026-07-22.csv — 477 reviews. The headline counts use the 249 reviews published after 31 March 2026, of which 221 contain written text; all-time counts use all 477.</li>
+    <li><strong>Method.</strong> Every superlative ("best", "favourite", "#1", "miglior", "mejor", "meilleur", "καλύτερο", and equivalents in 17 languages, accent-normalised) was located and read in context. A review counts only when the superlative is explicitly tied to Athens, Greece or Europe.</li>
+    <li><strong>One review, one count.</strong> Where a guest claims more than one geography, the review is counted at its widest — so no review appears twice in the totals.</li>
+    <li><strong>Venue-level vs food-level.</strong> Venue-level means the restaurant or the place is named as best. Food-level means the food, meal or dish is named as best. Both are shown separately because only the first is a competitive ranking of the business itself.</li>
+    <li><strong>Every quote above is verbatim.</strong> Non-English quotes are shown in the original with a translation beneath.</li>
+  </ul>
+</div>
+
+<footer>
+  <p><strong>Cookaki | Bell Kitchen</strong> — "Best in Athens / Greece / Europe" mention analysis. Prepared 22 July 2026 from the Google review export of the same date. Colours and typography follow the Cookaki website design system (assets/css/main.css).</p>
+</footer>
+</div>
+
+<script>
+const OLIVE='#0D2E67', TERRA='#A55A3A', SAFFRON='#B68B3A', BEIGE='#E7E0D4', CHAR='#2B2B2B', SOFT='#6E6E6E';
+Chart.defaults.font.family = "Inter, -apple-system, 'Segoe UI', sans-serif";
+Chart.defaults.font.size = 12.5;
+Chart.defaults.color = SOFT;
+new Chart(document.getElementById('cGeo'), {
+  type:'bar',
+  data:{
+    labels:['Best in Athens','Best in Greece','Best in Europe'],
+    datasets:[
+      {label:'Venue-level ("best restaurant / place")', data:[9,1,1], backgroundColor:OLIVE, borderRadius:6, maxBarThickness:64},
+      {label:'Food-level ("best food / meal")', data:[6,3,2], backgroundColor:TERRA, borderRadius:6, maxBarThickness:64},
+      {label:'Additional, all-time (pre-April 2026)', data:[4,1,0], backgroundColor:SAFFRON, borderRadius:6, maxBarThickness:64}
+    ]
+  },
+  options:{
+    maintainAspectRatio:false,
+    plugins:{
+      legend:{position:'top', labels:{usePointStyle:true, pointStyle:'circle', boxWidth:8, padding:16}},
+      tooltip:{callbacks:{footer:items=>'Window total: '+[15,4,3][items[0].dataIndex]+' reviews'}}
+    },
+    scales:{
+      x:{stacked:true, grid:{display:false}, border:{color:BEIGE}, ticks:{color:CHAR, font:{size:13.5, weight:'500'}}},
+      y:{stacked:true, beginAtZero:true, grid:{color:'rgba(42,42,42,.08)'}, border:{display:false},
+         title:{display:true, text:'Reviews', color:SOFT}}
+    }
+  }
+});
+</script>
+</body>
+</html>

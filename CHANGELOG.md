@@ -142,3 +142,14 @@ The `<details>` FAQ summaries are now centered (consistent with the heritage-edi
 **Greek /el/ mirror (19 pages)**
 - Built: lang=el, ../asset paths, localized canonical/og, hreflang reciprocity, EN↔EL switcher, Greek chrome (nav/footer/docks/CTAs) sitewide, Greek title/meta/H1 on every page.
 - Fully translated bodies: homepage + the 3 dish pages. Remaining 15 page bodies: chrome/title/meta/H1 are Greek, body prose translation pending (see task list).
+
+---
+
+## 3 August 2026 — Signature dish photo replaced
+
+- **New hero photo** for *The Wild Fish & The Bell Nest*. Source: `Social/20260801/bell-athens-stuffed-round-courgette-daily-special.jpg` (4032×3024, EXIF-rotated). Straightened, cropped to a native **4:5** frame matching the `.story-img` container (was 590×1280, so the old file was being heavily cover-cropped), lightly warmed/contrast-corrected, and exported at **1400×1750** as `assets/images/cookaki-signature-wild-fish-bell-nest-trahanas-koukaki-athens.jpg` (~340 KB) and `.webp` (~226 KB). Slug intentionally **unchanged** so the indexed image URL, `og:image` and all six sitemap `<image:loc>` entries keep their equity.
+- **Embedded SEO/GEO metadata** written into both files: EXIF `ImageDescription`, `Artist`, `Copyright`, `XPTitle`/`XPKeywords`, and **GPS 37°57'58.75"N, 23°43'41.96"E** (Petmeza 5, Koukáki) — matching the previous file's coordinates. Full XMP/IPTC block (dc:title, dc:description, dc:subject, photoshop:City/State/Country, Iptc4xmpCore:Location) with the dish ingredients as keywords. Sidecar kept at `assets/images/…-koukaki-athens.xmp`.
+- **Alt text rewritten in all six languages** (EN, EL, DE, FR, ES, ZH) to name the three ingredients that make the plate unique — **wild greens (samphire/armyríthra), Aegean fish fillet, and trahanás** — plus the Koukáki, Athens geo signal. Applied on `signature-fish-bell-nest.html` in each locale and on the signature dish card on `de|fr|es|zh/index.html`.
+- **Added `og:image:width`, `og:image:height`, `og:image:alt` and `twitter:image:alt`** to all six signature pages (previously missing).
+- **Fixed declared dimensions** — the dish cards on `de|fr|es|zh/index.html` claimed `800×600` for a portrait file, causing layout shift. Now `1400×1750` with `object-position:50% 85%` so the 4:3 card crop centres on the plate rather than cutting it.
+- Old files archived to `Website/_image-backups/2026-08-03-signature-fish-bell-nest/` (outside the web root).

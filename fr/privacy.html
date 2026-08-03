@@ -28,11 +28,17 @@
     } catch(e){ gtag('set','ads_data_redaction', true); }
   })();
   gtag('set','url_passthrough', true);
+  dataLayer.push({ page_language: (document.documentElement.lang || 'en').toLowerCase() });
   gtag('js', new Date());
-  gtag('config','G-VCL4K7HGYJ');
 </script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VCL4K7HGYJ"></script>
 <link rel="stylesheet" href="../assets/css/consent.css" />
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K6C53VGR');</script>
+<!-- End Google Tag Manager -->
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -87,13 +93,17 @@
 ] }
 </script>
 
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://maps.google.com https://maps.gstatic.com https://www.google.com https://*.google-analytics.com https://*.analytics.google.com https://stats.g.doubleclick.net; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; frame-src https://maps.google.com https://www.google.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://stats.g.doubleclick.net; form-action 'self' https://wa.me; base-uri 'self'; object-src 'none'; frame-ancestors 'self'" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://maps.google.com https://maps.gstatic.com https://www.google.com https://*.google-analytics.com https://*.analytics.google.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://googleads.g.doubleclick.net https://www.googleadservices.com https://www.google.gr; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net; frame-src https://maps.google.com https://www.google.com https://www.googletagmanager.com https://td.doubleclick.net https://bid.g.doubleclick.net; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://googleads.g.doubleclick.net https://www.google.com https://www.google.gr; form-action 'self' https://wa.me; base-uri 'self'; object-src 'none'; frame-ancestors 'self'" />
 <style>
   .lang-switch a:hover{text-decoration:underline}
 </style>
 </head>
 
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K6C53VGR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <a class="skip-link" href="#main">Aller au contenu</a>
 
 <header class="site-header" role="banner">
@@ -128,7 +138,7 @@
     <p class="eyebrow">Mentions légales · RGPD</p>
     <h1>Politique de confidentialité</h1>
     <p class="lede">Comment Bell Kitchen / Cookaki collecte, utilise et protège vos données personnelles.</p>
-    <p class="muted">Dernière mise à jour : 20 juillet 2026</p>
+    <p class="muted">Dernière mise à jour : 3 août 2026</p>
   </div>
 </section>
 <section class="section">
@@ -182,7 +192,8 @@
       <li><strong>Google Workspace &amp; Google Apps Script (Google Ireland Limited) :</strong> les réservations de table sont traitées par un service Google Apps Script et conservées dans une feuille Google Sheets au sein de notre compte Google, y compris les éventuelles informations d'allergie ou de régime que vous choisissez d'ajouter. Si vous fournissez une adresse e-mail, le service de messagerie de Google envoie le message de confirmation pour notre compte. Google agit ici en qualité de sous-traitant et n'utilise pas ces données à ses propres fins publicitaires.</li>
       <li><strong>Notre plateforme de commande en ligne (noe.bfwqr.com) :</strong> si vous commandez en ligne, elle traite les détails de votre commande. Nous ne recevons que ce qui est nécessaire pour préparer et remettre votre repas.</li>
       <li><strong>Google (Maps, Fonts) :</strong> nos pages chargent Google Fonts et intègrent Google Maps. Google peut recevoir votre adresse IP et des informations de base sur le navigateur.</li>
-      <li><strong>Google Analytics (Google Ireland Ltd) :</strong> <em>uniquement avec votre consentement</em>, nous utilisons Google Analytics 4 pour comprendre l'usage du site. Il dépose des cookies et envoie des données d'utilisation (pages vues, localisation approximative, type d'appareil et de navigateur) à Google. Nous l'exploitons via Google Consent Mode v2, de sorte qu'aucune donnée d'analyse ou de publicité n'est collectée avant votre acceptation via notre bandeau cookies. Voir la section 5.</li>
+      <li><strong>Google Analytics (Google Ireland Ltd) :</strong> <em>uniquement avec votre consentement</em>, nous utilisons Google Analytics 4 pour comprendre l'usage du site. Il dépose des cookies et envoie des données d'utilisation (pages vues, localisation approximative, type d'appareil et de navigateur) à Google. Nous l'exploitons via Google Consent Mode v2, de sorte qu'aucune donnée d'analyse ou de publicité n'est collectée avant votre acceptation via notre bandeau cookies. Voir la section 5. Lorsque vous finalisez une réservation, nous transmettons également à Google Analytics la date, l'heure, le nombre de personnes, la langue du site et un numéro de référence aléatoire, afin de mesurer combien de réservations le site génère. Votre nom, votre numéro de téléphone et votre adresse e-mail ne sont jamais transmis à Google Analytics.</li>
+      <li><strong>Google Ads (Google Ireland Ltd) :</strong> <em>uniquement avec votre consentement Marketing</em>, nous utilisons la mesure des conversions et le remarketing Google Ads pour comprendre quelles annonces mènent à une réservation ou à une commande, et pour diffuser nos annonces aux personnes ayant déjà visité le site. Tant que le consentement marketing est désactivé, rien n'est collecté.</li>
       <li><strong>Notre hébergeur :</strong> traite des journaux serveur de base (adresse IP, heure de requête, page demandée) pour la sécurité et l'analyse. Ces journaux sont conservés 30 jours au maximum.</li>
     </ul>
     <h2>5. Cookies et technologies similaires</h2>
@@ -191,7 +202,7 @@
       <li><strong>Strictement nécessaires (toujours actifs) :</strong> requis au fonctionnement du site — sécurité, navigation et mémorisation de votre choix de cookies. Ils ne vous suivent pas et ne nécessitent aucun consentement.</li>
       <li><strong>Préférences (consentement requis) :</strong> mémorisent des choix, comme un menu fermé, pour une expérience plus fluide.</li>
       <li><strong>Analyse (consentement requis) :</strong> cookies Google Analytics 4 qui nous montrent, en agrégé, l'usage du site pour l'améliorer. Déposés uniquement après acceptation.</li>
-      <li><strong>Marketing (consentement requis) :</strong> cookies servant à mesurer les campagnes et à afficher un contenu plus pertinent sur les services Google. Désactivés sauf acceptation ; désactivés, les identifiants publicitaires sont masqués.</li>
+      <li><strong>Marketing (consentement requis) :</strong> cookies servant à mesurer les campagnes et à afficher un contenu plus pertinent sur les services Google. Désactivés sauf acceptation ; désactivés, les identifiants publicitaires sont masqués. Cela couvre la mesure des conversions et le remarketing Google Ads.</li>
     </ul>
     <p>Nous gérons les cookies Google via <strong>Google Consent Mode v2</strong> : avant votre décision, les balises Google se chargent dans un état restreint qui ne stocke aucune donnée d'analyse ni de publicité. Votre choix est mémorisé 12 mois, après quoi nous vous redemandons. Les contenus intégrés de tiers (Google Maps) peuvent déposer leurs propres cookies lorsque vous interagissez avec la carte ; consultez la politique de confidentialité de Google.</p>
     <h2>6. Vos droits au titre du RGPD</h2>

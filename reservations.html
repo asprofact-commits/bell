@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://maps.google.com https://maps.gstatic.com https://www.google.com https://*.google-analytics.com https://*.analytics.google.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://googleads.g.doubleclick.net https://www.googleadservices.com https://www.google.gr https://*.doubleclick.net https://www.google.de https://www.google.fr https://www.google.es https://www.google.it https://www.google.co.uk https://www.google.com.hk; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net; frame-src https://maps.google.com https://www.google.com https://www.googletagmanager.com https://td.doubleclick.net https://bid.g.doubleclick.net https://*.doubleclick.net; connect-src 'self' https://script.google.com https://script.googleusercontent.com https://*.google-analytics.com https://*.analytics.google.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://googleads.g.doubleclick.net https://www.google.com https://www.google.gr https://*.doubleclick.net https://www.google.de https://www.google.fr https://www.google.es https://www.google.it https://www.google.co.uk https://www.google.com.hk; form-action 'self' https://wa.me; base-uri 'self'; object-src 'none'" />
 <!-- Google Consent Mode v2 — analytics & ads denied until the visitor opts in -->
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -41,9 +43,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 
 
-<meta charset="utf-8" />
 <meta name="referrer" content="strict-origin-when-cross-origin" />
-<meta http-equiv="X-Content-Type-Options" content="nosniff" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="theme-color" content="#FCFAF6" />
 
@@ -60,6 +60,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Reservations — Cookaki" />
+<meta property="og:url" content="https://www.bellacropolis.gr/reservations.html" />
 <meta property="og:description" content="Reserve a table at Cookaki, beneath the Acropolis — and reserve today's plates before they sell out." />
 <meta property="og:image" content="https://www.bellacropolis.gr/assets/images/bell-kitchen-plaque.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -105,7 +106,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- MOD: connect-src now allows the Apps Script booking backend
      (script.google.com answers with a redirect to script.googleusercontent.com,
      so BOTH hosts are required or fetch() dies mid-flight). -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://maps.google.com https://maps.gstatic.com https://www.google.com https://*.google-analytics.com https://*.analytics.google.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://googleads.g.doubleclick.net https://www.googleadservices.com https://www.google.gr; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net; frame-src https://maps.google.com https://www.google.com https://www.googletagmanager.com https://td.doubleclick.net https://bid.g.doubleclick.net; connect-src 'self' https://script.google.com https://script.googleusercontent.com https://*.google-analytics.com https://*.analytics.google.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://googleads.g.doubleclick.net https://www.google.com https://www.google.gr; form-action 'self' https://wa.me; base-uri 'self'; object-src 'none'; frame-ancestors 'self'" />
 
 <!-- MOD: booking-wizard styles — scoped under .bkg- so nothing collides with main.css -->
 <style>
@@ -197,7 +197,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="menu.html">Menu</a></li>
-      <li><a href="our-story.html">Our Story — Since 1956</a></li><li><a href="manifesto.html">Manifesto</a></li>
+      <li><a href="about.html">Our Story — Since 1956</a></li><li><a href="manifesto.html">Manifesto</a></li>
       <li><a href="ingredients.html">Our Ingredients</a></li>
       <li><a href="events.html">Events &amp; Catering</a></li>
       <li><a href="products.html">Pantry &amp; Products</a></li>
@@ -429,6 +429,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     menuFor: "Cooking on ", menuEmpty: "The day's menu isn't posted yet — you'll choose at the table.",
     rParty: "Guests", rDate: "Date", rTime: "Time", rPlates: "Plates reserved",
     rNone: "choosing at the table", rName: "Name", rPhone: "Phone", edit: "edit",
+    timeSub: " · Athens time. Last seating 30 minutes before close.",
     done: function (p, d, h, n) { return "We've saved your table for " + p + " guests on " + d + " at " + h + "."; },
     errNet: "Something went wrong — please try again, or WhatsApp us at +30 698 237 3505.",
     cats: { hot: "The hot table · today's mageireftá", sea: "From the sea", cold: "Salads & starters", sweet: "Something sweet" },
@@ -443,7 +444,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   var STEPS = 7;
 
   function locale() { return LANG === "el" ? "el-GR" : "en-GB"; }
+  var ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
+  function isIsoDate(s) {
+    if (typeof s !== "string" || !ISO_DATE.test(s)) return false;
+    var d = new Date(s + "T00:00:00Z");
+    return !isNaN(d.getTime()) && d.toISOString().slice(0, 10) === s;
+  }
   function longDate(iso) {
+    if (!isIsoDate(iso)) return typeof iso === "string" ? iso : "";
     return new Intl.DateTimeFormat(locale(), { weekday: "long", day: "numeric", month: "long", timeZone: "UTC" })
       .format(new Date(iso + "T00:00:00Z"));
   }
@@ -522,6 +530,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   /* ---------------- step 1: dates ---------------- */
   var dateGrid = $("bkgDates");
   function buildDates() {
+    NOW = athensNow();
     dateGrid.innerHTML = "";
     for (var i = 0; i < DAYS_AHEAD; i++) {
       (function (iso, idx) {
@@ -543,6 +552,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   /* ---------------- step 2: time slots ---------------- */
   function buildSlots() {
+    NOW = athensNow();
     var wrap = $("bkgSlots"); wrap.innerHTML = "";
     if (!S.date) return;
     var isToday = S.date === NOW.dateStr;
@@ -560,7 +570,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       }
       wrap.appendChild(g);
     });
-    $("bkgTimeSub").textContent = longDate(S.date) + " · Athens time. Last seating 30 minutes before close.";
+    $("bkgTimeSub").textContent = longDate(S.date) + TXT.timeSub;
   }
 
   /* ---------------- step 3: daily menu ---------------- */
@@ -640,6 +650,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   /* ---------------- submit (POST → GET fallback, cid dedupe) ---------------- */
   function submit() {
     if ($("bkgWeb").value) return; // honeypot
+    if (!isIsoDate(S.date) || !/^([01]\d|2[0-3]):[0-5]\d$/.test(S.time || "") || !S.party) {
+      $("bkgStatus").textContent = TXT.errNet;
+      go(1); return;
+    }
     btn.disabled = true; btn.innerHTML = '<span class="bkg-spin"></span>' + TXT.sending;
     var extraNotes = S.notes +
       (S.email ? (S.notes ? " · " : "") + "Email: " + S.email : "") +

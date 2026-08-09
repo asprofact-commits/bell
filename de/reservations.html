@@ -380,8 +380,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   var SLOT_MIN = 30, CUTOFF_MIN = 45;
   function services(dow) { // 0=Sun … 6=Sat (real opening hours)
     return dow === 0
-      ? [{ name: "Ganztägig", start: "12:00", end: "17:30" }]
-      : [{ name: "Mittagstisch", start: "12:00", end: "15:30" }, { name: "Abendessen", start: "19:00", end: "21:30" }];
+      ? [{ name: "Ganztägig", start: "12:00", end: "16:15" }]
+      : [{ name: "Mittagstisch", start: "12:00", end: "15:30" }, { name: "Abendessen", start: "19:00", end: "21:15" }];
   }
   var WA_PHONE = "306982373505";
   var LANG = "de";
@@ -392,7 +392,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     menuFor: "Wir kochen am ", menuEmpty: "Das Tagesmenü ist noch nicht veröffentlicht — Sie wählen am Tisch.",
     rParty: "Gäste", rDate: "Datum", rTime: "Uhrzeit", rPlates: "Reservierte Gerichte",
     rNone: "Auswahl am Tisch", rName: "Name", rPhone: "Telefon", edit: "ändern",
-    timeSub: " · Athener Zeit. Letzte Platzvergabe 30 Minuten vor Schluss.",
+    timeSub: " · Athener Zeit. Letzte Platzvergabe um 21:15 Uhr (sonntags 16:15 Uhr).",
     done: function (p, d, h, n) { return "Wir haben Ihren Tisch für " + p + " Gäste am " + d + " um " + h + " Uhr gespeichert."; },
     errNet: "Etwas ist schiefgelaufen — bitte erneut versuchen, oder schreiben Sie uns per WhatsApp unter +30 698 237 3505.",
     cats: { hot: "Die warme Theke · heutige Mageireftá", sea: "Aus dem Meer", cold: "Salate &amp; Vorspeisen", sweet: "Etwas Süßes" },
@@ -522,7 +522,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     services(dow(S.date)).forEach(function (svc) {
       var h = document.createElement("p"); h.className = "bkg-svc"; h.textContent = svc.name; wrap.appendChild(h);
       var g = document.createElement("div"); g.className = "bkg-grid";
-      for (var m = toMin(svc.start); m <= toMin(svc.end); m += SLOT_MIN) {
+      var svcEnd = toMin(svc.end), svcTimes = [];
+      for (var sm = toMin(svc.start); sm <= svcEnd; sm += SLOT_MIN) svcTimes.push(sm);
+      if (svcTimes[svcTimes.length - 1] !== svcEnd) svcTimes.push(svcEnd); // keep the exact last seating (e.g. 21:15)
+      svcTimes.forEach(function (m) {
         (function (t, past) {
           var b = document.createElement("button");
           b.type = "button"; b.className = "bkg-opt" + (S.time === t ? " sel" : "");
@@ -530,7 +533,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           b.addEventListener("click", function () { S.time = t; buildSlots(); setTimeout(next, 200); });
           g.appendChild(b);
         })(toHHMM(m), isToday && m < NOW.minutes + CUTOFF_MIN);
-      }
+      });
       wrap.appendChild(g);
     });
     $("bkgTimeSub").textContent = longDate(S.date) + TXT.timeSub;

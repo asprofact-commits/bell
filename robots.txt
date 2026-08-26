@@ -5,6 +5,15 @@
 User-agent: *
 Allow: /
 
+# Transactional pages reached only from a post-visit message.
+# Not for indexing, and not for crawling: the unsubscribe link carries a token.
+Disallow: /unsubscribe.html
+Disallow: /feedback-good.html
+Disallow: /feedback-fine.html
+Disallow: /feedback-not-good.html
+Disallow: /*/unsubscribe.html
+Disallow: /*/feedback-
+
 # Explicit welcomes for AI / answer-engine crawlers
 # (these are allowed by the wildcard above; explicit rules make the intent unambiguous)
 

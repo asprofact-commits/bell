@@ -157,6 +157,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .bkg-kerasma{font-family:var(--font-display);font-style:italic;font-size:var(--fs-md);color:var(--ink-muted);max-width:44ch;margin:var(--sp-2) auto;line-height:1.5}
 .bkg-acts{display:grid;gap:.6rem;max-width:400px;margin:var(--sp-2) auto 0}
 .bkg-err{color:#8a2f1c;font-size:var(--fs-xs);margin-top:.35rem;display:none}
+.bkg-privnotice{background:rgba(0,0,0,.035);border-left:3px solid var(--olive);border-radius:6px;padding:.85rem 1rem;margin-bottom:.95rem}
+.bkg-privnotice p{font-size:var(--fs-xs);line-height:1.65;color:var(--ink-muted);margin:0}
+.bkg-optin{margin-top:.7rem}
+.bkg-optin-foot{font-size:var(--fs-xs);margin-top:.7rem}
 .bkg-hp{position:absolute;left:-5000px;opacity:0}
 .bkg-spin{display:inline-block;width:16px;height:16px;border:2px solid rgba(255,255,255,.35);border-top-color:#fff;border-radius:50%;animation:bkgSp 1s linear infinite;vertical-align:-3px;margin-right:.4rem}
 @keyframes bkgSp{to{transform:rotate(360deg)}}
@@ -201,7 +205,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <li><a href="ingredients.html">Our Ingredients</a></li>
       <li><a href="events.html">Events &amp; Catering</a></li>
       <li><a href="products.html">Pantry &amp; Products</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="gallery.html">Gallery</a></li><li><a href="press.html">Press</a></li>
       <li><a href="reservations.html" aria-current="page">Reservations</a></li>
       <li><a href="delivery.html">Delivery &amp; Takeaway</a></li>
       <li><a href="contact.html">Visit &amp; Contact</a></li>
@@ -297,15 +301,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <textarea id="bkgNotes" rows="3" placeholder="Birthday dinner, two seats inside…" maxlength="1500"></textarea>
           </div>
           <div class="field field--full">
-            <div class="check-row">
-              <input type="checkbox" id="bkgConsent" required>
-              <label for="bkgConsent">I agree that Cookaki may use these details to arrange my booking, as described in the <a href="privacy.html">Privacy Policy</a>. <span aria-hidden="true">*</span></label>
+            <div class="bkg-privnotice">
+              <p><strong>How we use your details.</strong> We use your name and contact details to hold your table. The day after your visit we send one short message asking how it was — you can stop it at any time with one click. We keep your details for 12 months and share them only with the providers that carry our messages. Full details in our <a href="privacy.html">Privacy Policy</a>.</p>
             </div>
-            <p class="bkg-err" id="bkgErrConsent">We need your consent to process the booking — it's only used to arrange your table.</p>
-            <div class="check-row">
+            <div class="check-row bkg-optin">
               <input type="checkbox" id="bkgMarketing">
-              <label for="bkgMarketing">Keep me posted about seasonal dishes and small perks from the Bell Kitchen family <span class="muted">(optional)</span></label>
+              <label for="bkgMarketing">Send me occasional news from Bell Kitchen — new dishes, events, opening changes. I can unsubscribe at any time. <span class="muted">(optional)</span></label>
             </div>
+            <div class="check-row bkg-optin">
+              <input type="checkbox" id="bkgWhatsapp">
+              <label for="bkgWhatsapp">You may contact me on WhatsApp on this number instead of by email. <span class="muted">(optional)</span></label>
+            </div>
+            <p class="muted bkg-optin-foot">Neither box is required to make a booking.</p>
           </div>
         </div>
         <input class="bkg-hp" id="bkgWeb" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -379,7 +386,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p>Petméza 5, Koukáki, Athens 11742 · Greece</p>
         <p class="mt-2"><em>From earth. To table. To memory.<br>Honest choices. Richer life.</em></p>
       </div>
-      <div class="footer-col"><h4>Eat &amp; Visit</h4><ul><li><a href="menu.html">Menu</a></li><li><a href="reservations.html">Reservations</a></li><li><a href="about.html">Our Story</a></li><li><a href="manifesto.html">Manifesto</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Visit &amp; Contact</a></li><li><a href="greek-restaurant-near-acropolis.html">Near the Acropolis</a></li><li><a href="where-to-eat-in-koukaki.html">Where to Eat in Koukáki</a></li><li><a href="vegetarian-greek-koukaki.html">Vegetarian Greek</a></li></ul></div>
+      <div class="footer-col"><h4>Eat &amp; Visit</h4><ul><li><a href="menu.html">Menu</a></li><li><a href="reservations.html">Reservations</a></li><li><a href="about.html">Our Story</a></li><li><a href="manifesto.html">Manifesto</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="press.html">Press</a></li><li><a href="contact.html">Visit &amp; Contact</a></li><li><a href="greek-restaurant-near-acropolis.html">Near the Acropolis</a></li><li><a href="where-to-eat-in-koukaki.html">Where to Eat in Koukáki</a></li><li><a href="vegetarian-greek-koukaki.html">Vegetarian Greek</a></li></ul></div>
       <div class="footer-col"><h4>Grow &amp; Celebrate</h4><ul><li><a href="ingredients.html">Our Ingredients</a></li><li><a href="events.html">Private Events</a></li><li><a href="events.html#catering">Catering at Your Place</a></li><li><a href="products.html">Pantry &amp; Products</a></li></ul></div>
       <div class="footer-col"><h4>Order &amp; Follow</h4><ul><li><a href="https://noe.bfwqr.com/" target="_blank" rel="noopener noreferrer">Order Online</a></li><li><a href="https://wa.me/306982373505" target="_blank" rel="noopener noreferrer">WhatsApp +30 698 237 3505</a></li><li><a href="https://www.instagram.com/cookaki_1956/" target="_blank" rel="noopener noreferrer">Instagram @cookaki_1956</a></li><li><a href="tel:+302109219818">+30 21 0921 9818</a></li></ul></div>
     </div>
@@ -412,6 +419,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   "use strict";
 
   /* ---------------- OWNER SETTINGS ---------------- */
+  var NOTICE_VERSION = "2026-08-26";
   var API = "https://script.google.com/macros/s/AKfycbwlStypPRX6hhMt8EOII7KV32jzoBcRNi6mCNUpVMokj3P0oiztg2vJT_nVdMR0M1Vu8g/exec";
   var DAYS_AHEAD = 7;
   var SLOT_MIN = 30, CUTOFF_MIN = 45;
@@ -619,11 +627,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     S.email = $("bkgEmail").value.trim();
     S.notes = $("bkgNotes").value.trim();
     S.marketing = $("bkgMarketing").checked;
+    S.waChannel = $("bkgWhatsapp").checked;
     $("bkgErrName").style.display = S.name ? "none" : "block"; if (!S.name) ok = false;
     var phoneOk = S.phone.replace(/\D/g, "").length >= 8;
     $("bkgErrPhone").style.display = phoneOk ? "none" : "block"; if (!phoneOk) ok = false;
-    var consent = $("bkgConsent").checked;
-    $("bkgErrConsent").style.display = consent ? "none" : "block"; if (!consent) ok = false;
     return ok;
   }
 
@@ -660,11 +667,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     btn.disabled = true; btn.innerHTML = '<span class="bkg-spin"></span>' + TXT.sending;
     var extraNotes = S.notes +
       (S.email ? (S.notes ? " · " : "") + "Email: " + S.email : "") +
-      (S.marketing ? " · Newsletter: YES" : "");
+      (S.marketing ? " · Newsletter: YES" : "") +
+      (S.waChannel ? " · WhatsApp channel: YES" : "") +
+      " · [consent " + NOTICE_VERSION + " news:" + (S.marketing ? "Y" : "N") + " wa:" + (S.waChannel ? "Y" : "N") + "]";
     var payload = {
       action: "reserve", name: S.name, phone: S.phone, notes: extraNotes,
       date: S.date, time: S.time, party: S.party, lang: LANG,
       email: S.email, marketing: S.marketing ? "yes" : "",
+      whatsapp_channel: S.waChannel ? "yes" : "",
+      notice_version: NOTICE_VERSION, consent_ts: new Date().toISOString(),
       dateLong: longDate(S.date),
       plates: plateSummary().join("; "), source: "site-" + LANG,
       cid: Date.now().toString(36) + Math.random().toString(36).slice(2, 8)

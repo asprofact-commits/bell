@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'unsafe-inline'; connect-src 'self' https://script.google.com https://script.googleusercontent.com; form-action 'none'; base-uri 'self'; object-src 'none'" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#FCFAF6" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<title>已退订 — Bell Kitchen · Cookaki</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" />
+<link rel="stylesheet" href="../assets/css/main.css" />
+<style>
+.fb-wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:var(--sp-4) 1.1rem;background:var(--cream,#FCFAF6)}
+.fb-card{width:100%;max-width:34rem;background:#fff;border:1px solid var(--line,#e6e0d5);border-radius:var(--radius-lg,14px);padding:2rem 1.6rem 1.7rem}
+.fb-brand{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-muted,#7a7368);margin:0 0 1.4rem}
+.fb-ack{font-family:var(--font-display,'Cormorant Garamond',Georgia,serif);font-size:1.6rem;line-height:1.3;color:var(--olive,#4a5340);font-weight:500;margin:0 0 1.3rem}
+.fb-q{font-size:.95rem;line-height:1.55;margin:0 0 .5rem;color:var(--ink,#2e2b26)}
+.fb-opt{font-size:.78rem;color:var(--ink-muted,#7a7368);margin:0 0 .7rem}
+.fb-card textarea{width:100%;font:inherit;font-size:.95rem;line-height:1.55;padding:.75rem .85rem;border:1.5px solid var(--line,#e6e0d5);border-radius:8px;background:#fff;resize:vertical}
+.fb-card textarea:focus{outline:none;border-color:var(--olive,#4a5340)}
+.fb-btn{display:inline-block;width:100%;text-align:center;font:inherit;font-size:.95rem;font-weight:500;padding:.8rem 1.2rem;border-radius:99px;border:1.5px solid var(--olive,#4a5340);background:var(--olive,#4a5340);color:#fff;cursor:pointer;text-decoration:none;margin-top:.8rem}
+.fb-btn:hover{opacity:.9}
+.fb-btn--ghost{background:#fff;color:var(--olive,#4a5340)}
+.fb-status{font-size:.85rem;margin:.7rem 0 0;min-height:1.2em;color:var(--ink-muted,#7a7368)}
+.fb-rule{border:none;border-top:1px solid var(--line,#e6e0d5);margin:1.7rem 0 1.4rem}
+.fb-p{font-size:.92rem;line-height:1.65;color:var(--ink,#2e2b26);margin:0 0 .6rem}
+.fb-sign{font-family:var(--font-display,'Cormorant Garamond',Georgia,serif);font-size:1.05rem;color:var(--olive,#4a5340);margin:1.4rem 0 .15rem}
+.fb-place{font-size:.78rem;color:var(--ink-muted,#7a7368);margin:0}
+.fb-foot{font-size:.75rem;color:var(--ink-muted,#7a7368);margin:1.5rem 0 0}
+.fb-foot a{color:var(--ink-muted,#7a7368)}
+.fb-hide{display:none}
+</style>
+</head>
+<body>
+<main class="fb-wrap">
+  <div class="fb-card">
+    <p class="fb-brand">Bell Kitchen · Cookaki</p>
+    <h1 class="fb-ack" id="unHead">请稍候…</h1>
+    <p class="fb-p" id="unBody"></p>
+    <p class="fb-foot"><a href="index.html">回到餐厅</a> · <a href="privacy.html#post-visit">隐私</a></p>
+  </div>
+</main>
+<script>
+(function(){
+  var API = "https://script.google.com/macros/s/AKfycbwlStypPRX6hhMt8EOII7KV32jzoBcRNi6mCNUpVMokj3P0oiztg2vJT_nVdMR0M1Vu8g/exec";
+  var T = { head: "我们不会再与您联络。", body: "您已列入我们的「请勿联络」名单。它会同时停止所有管道——电子邮件与 WhatsApp——并自您点击的那一刻起生效。我们只保留一笔最精简的纪录，证明您提出过要求，以免我们误再写信给您。", headErr: "我们无法自动完成这项操作。", err: "我们这边出了点问题。请写一行字到 info@littlenoe.com，我们今天就以人工处理。" };
+  function q(n){ try { return new URLSearchParams(location.search).get(n) || ""; } catch(e){ return ""; } }
+  var head = document.getElementById("unHead"), body = document.getElementById("unBody");
+  function ok(){ head.textContent = T.head; body.textContent = T.body; }
+  function bad(){ head.textContent = T.headErr; body.textContent = T.err; }
+  /* One click is the whole act: no confirmation step, no login, no reason asked. */
+  var qs = "action=unsubscribe&u=" + encodeURIComponent(q("u")) +
+           "&e=" + encodeURIComponent(q("e")) + "&lang=zh";
+  fetch(API + "?" + qs).then(function(r){ return r.text(); })
+    .then(function(raw){ var j = JSON.parse(raw); if (j.ok === true) ok(); else bad(); })
+    .catch(bad);
+  setTimeout(function(){ if (head.textContent === "请稍候…") bad(); }, 8000);
+})();
+</script>
+</body>
+</html>

@@ -161,6 +161,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .bkg-kerasma{font-family:var(--font-display);font-style:italic;font-size:var(--fs-md);color:var(--ink-muted);max-width:44ch;margin:var(--sp-2) auto;line-height:1.5}
 .bkg-acts{display:grid;gap:.6rem;max-width:400px;margin:var(--sp-2) auto 0}
 .bkg-err{color:#8a2f1c;font-size:var(--fs-xs);margin-top:.35rem;display:none}
+.bkg-privnotice{background:rgba(0,0,0,.035);border-left:3px solid var(--olive);border-radius:6px;padding:.85rem 1rem;margin-bottom:.95rem}
+.bkg-privnotice p{font-size:var(--fs-xs);line-height:1.65;color:var(--ink-muted);margin:0}
+.bkg-optin{margin-top:.7rem}
+.bkg-optin-foot{font-size:var(--fs-xs);margin-top:.7rem}
 .bkg-hp{position:absolute;left:-5000px;opacity:0}
 .bkg-spin{display:inline-block;width:16px;height:16px;border:2px solid rgba(255,255,255,.35);border-top-color:#fff;border-radius:50%;animation:bkgSp 1s linear infinite;vertical-align:-3px;margin-right:.4rem}
 @keyframes bkgSp{to{transform:rotate(360deg)}}
@@ -191,7 +195,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </nav>
   </div>
   <div class="mobile-menu" id="mobile-menu" data-open="false" role="dialog" aria-modal="true" aria-label="Site menu">
-    <ul><li><a href="index.html">Startseite</a></li><li><a href="menu.html">Speisekarte</a></li><li><a href="about.html">Unsere Geschichte — seit 1956</a></li><li><a href="ingredients.html">Unsere Zutaten</a></li><li><a href="events.html">Events &amp; Catering</a></li><li><a href="products.html">Feinkost &amp; Produkte</a></li><li><a href="gallery.html">Galerie</a></li><li><a href="reservations.html">Reservierungen</a></li><li><a href="delivery.html">Lieferung &amp; Takeaway</a></li><li><a href="contact.html">Besuch &amp; Kontakt</a></li><li style="margin-top:.6rem"><div style="display:flex;flex-wrap:wrap;gap:.5rem" role="group" aria-label="Sprache wählen"><a class="mobile-lang" href="../reservations.html" hreflang="en" lang="en" style="margin-top:0;padding:.4rem .85rem">English</a></div></li></ul>
+    <ul><li><a href="index.html">Startseite</a></li><li><a href="menu.html">Speisekarte</a></li><li><a href="about.html">Unsere Geschichte — seit 1956</a></li><li><a href="ingredients.html">Unsere Zutaten</a></li><li><a href="events.html">Events &amp; Catering</a></li><li><a href="products.html">Feinkost &amp; Produkte</a></li><li><a href="gallery.html">Galerie</a></li><li><a href="press.html">Presse</a></li><li><a href="reservations.html">Reservierungen</a></li><li><a href="delivery.html">Lieferung &amp; Takeaway</a></li><li><a href="contact.html">Besuch &amp; Kontakt</a></li><li style="margin-top:.6rem"><div style="display:flex;flex-wrap:wrap;gap:.5rem" role="group" aria-label="Sprache wählen"><a class="mobile-lang" href="../reservations.html" hreflang="en" lang="en" style="margin-top:0;padding:.4rem .85rem">English</a></div></li></ul>
     <div class="mobile-cta">
       <a href="https://noe.bfwqr.com/" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Online bestellen</a>
       <a href="https://wa.me/306982373505" class="btn btn--whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
@@ -266,15 +270,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <textarea id="bkgNotes" rows="3" placeholder="Geburtstagsessen, zwei Plätze drinnen…" maxlength="1500"></textarea>
           </div>
           <div class="field field--full">
-            <div class="check-row">
-              <input type="checkbox" id="bkgConsent" required>
-              <label for="bkgConsent">Ich stimme zu, dass Cookaki diese Angaben zur Organisation meiner Buchung verwenden darf, wie in der <a href="privacy.html">Datenschutzerklärung</a> beschrieben. <span aria-hidden="true">*</span></label>
+            <div class="bkg-privnotice">
+              <p><strong>Wie wir Ihre Angaben verwenden.</strong> Wir verwenden Ihren Namen und Ihre Kontaktdaten, um Ihren Tisch zu reservieren. Am Tag nach Ihrem Besuch senden wir Ihnen eine kurze Nachricht mit der Frage, wie es war — Sie können sie jederzeit mit einem Klick beenden. Wir bewahren Ihre Daten 12 Monate auf und geben sie nur an die Dienstleister weiter, die unsere Nachrichten übermitteln. Einzelheiten in unserer <a href="privacy.html">Datenschutzerklärung</a>.</p>
             </div>
-            <p class="bkg-err" id="bkgErrConsent">Wir benötigen Ihre Zustimmung zur Bearbeitung der Buchung — sie wird nur zur Organisation Ihres Tisches verwendet.</p>
-            <div class="check-row">
+            <div class="check-row bkg-optin">
               <input type="checkbox" id="bkgMarketing">
-              <label for="bkgMarketing">Halten Sie mich über saisonale Gerichte und kleine Extras der Bell-Kitchen-Familie auf dem Laufenden <span class="muted">(optional)</span></label>
+              <label for="bkgMarketing">Senden Sie mir gelegentlich Neuigkeiten von Bell Kitchen — neue Gerichte, Veranstaltungen, geänderte Öffnungszeiten. Ich kann mich jederzeit abmelden. <span class="muted">(optional)</span></label>
             </div>
+            <div class="check-row bkg-optin">
+              <input type="checkbox" id="bkgWhatsapp">
+              <label for="bkgWhatsapp">Sie dürfen mich unter dieser Nummer über WhatsApp statt per E-Mail kontaktieren. <span class="muted">(optional)</span></label>
+            </div>
+            <p class="muted bkg-optin-foot">Für die Buchung ist keines der beiden Kästchen erforderlich.</p>
           </div>
         </div>
         <input class="bkg-hp" id="bkgWeb" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -344,7 +351,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <meta itemprop="servesCuisine" content="Greek, Seafood, Mediterranean" />
         <p class="mt-2"><em>Von der Erde. Auf den Tisch. In die Erinnerung.<br>Ehrliche Entscheidungen. Reicheres Leben.</em></p>
       </div>
-      <div class="footer-col"><h4>Essen &amp; Besuchen</h4><ul><li><a href="menu.html">Speisekarte</a></li><li><a href="moussaka.html">Traditionelle Moussaka</a></li><li><a href="langoustines-linguine.html">Langustinen &amp; Linguine</a></li><li><a href="signature-fish-bell-nest.html">Wildfisch &amp; Bell Nest</a></li><li><a href="reservations.html">Reservierungen</a></li><li><a href="our-story.html">Unsere Geschichte</a></li><li><a href="gallery.html">Galerie</a></li><li><a href="contact.html">Besuch &amp; Kontakt</a></li><li><a href="greek-restaurant-near-acropolis.html">Nahe der Akropolis</a></li><li><a href="where-to-eat-in-koukaki.html">Essen in Koukaki</a></li><li><a href="vegetarian-greek-koukaki.html">Vegetarisch griechisch</a></li></ul></div>
+      <div class="footer-col"><h4>Essen &amp; Besuchen</h4><ul><li><a href="menu.html">Speisekarte</a></li><li><a href="moussaka.html">Traditionelle Moussaka</a></li><li><a href="langoustines-linguine.html">Langustinen &amp; Linguine</a></li><li><a href="signature-fish-bell-nest.html">Wildfisch &amp; Bell Nest</a></li><li><a href="reservations.html">Reservierungen</a></li><li><a href="our-story.html">Unsere Geschichte</a></li><li><a href="gallery.html">Galerie</a></li><li><a href="press.html">Presse</a></li><li><a href="contact.html">Besuch &amp; Kontakt</a></li><li><a href="greek-restaurant-near-acropolis.html">Nahe der Akropolis</a></li><li><a href="where-to-eat-in-koukaki.html">Essen in Koukaki</a></li><li><a href="vegetarian-greek-koukaki.html">Vegetarisch griechisch</a></li></ul></div>
       <div class="footer-col"><h4>Wachsen &amp; Feiern</h4><ul><li><a href="ingredients.html">Unsere Zutaten</a></li><li><a href="events.html">Private Events</a></li><li><a href="events.html#catering">Catering bei Ihnen</a></li><li><a href="products.html">Feinkost &amp; Produkte</a></li></ul></div>
       <div class="footer-col"><h4>Bestellen &amp; Folgen</h4><ul>
         <li><a href="https://noe.bfwqr.com/" target="_blank" rel="noopener noreferrer">Online bestellen</a></li>
@@ -375,6 +382,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   "use strict";
 
   /* ---------------- OWNER SETTINGS ---------------- */
+  var NOTICE_VERSION = "2026-08-26";
   var API = "https://script.google.com/macros/s/AKfycbwlStypPRX6hhMt8EOII7KV32jzoBcRNi6mCNUpVMokj3P0oiztg2vJT_nVdMR0M1Vu8g/exec";
   var DAYS_AHEAD = 7;
   var SLOT_MIN = 30, CUTOFF_MIN = 45;
@@ -582,11 +590,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     S.email = $("bkgEmail").value.trim();
     S.notes = $("bkgNotes").value.trim();
     S.marketing = $("bkgMarketing").checked;
+    S.waChannel = $("bkgWhatsapp").checked;
     $("bkgErrName").style.display = S.name ? "none" : "block"; if (!S.name) ok = false;
     var phoneOk = S.phone.replace(/\D/g, "").length >= 8;
     $("bkgErrPhone").style.display = phoneOk ? "none" : "block"; if (!phoneOk) ok = false;
-    var consent = $("bkgConsent").checked;
-    $("bkgErrConsent").style.display = consent ? "none" : "block"; if (!consent) ok = false;
     return ok;
   }
 
@@ -623,11 +630,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     btn.disabled = true; btn.innerHTML = '<span class="bkg-spin"></span>' + TXT.sending;
     var extraNotes = S.notes +
       (S.email ? (S.notes ? " · " : "") + "Email: " + S.email : "") +
-      (S.marketing ? " · Newsletter: YES" : "");
+      (S.marketing ? " · Newsletter: YES" : "") +
+      (S.waChannel ? " · WhatsApp channel: YES" : "") +
+      " · [consent " + NOTICE_VERSION + " news:" + (S.marketing ? "Y" : "N") + " wa:" + (S.waChannel ? "Y" : "N") + "]";
     var payload = {
       action: "reserve", name: S.name, phone: S.phone, notes: extraNotes,
       date: S.date, time: S.time, party: S.party, lang: LANG,
       email: S.email, marketing: S.marketing ? "yes" : "",
+      whatsapp_channel: S.waChannel ? "yes" : "",
+      notice_version: NOTICE_VERSION, consent_ts: new Date().toISOString(),
       dateLong: longDate(S.date),
       plates: plateSummary().join("; "), source: "site-" + LANG,
       cid: Date.now().toString(36) + Math.random().toString(36).slice(2, 8)

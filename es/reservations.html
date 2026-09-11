@@ -185,7 +185,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <img src="../assets/images/bell-kitchen-logo.png" alt="Bell Kitchen — Cookaki Athens" width="46" height="46" fetchpriority="high"/>
         <span class="logo-text"><strong>Bell Kitchen</strong><small>Cookaki · Koukaki · Since 1956</small></span>
       </a>
-      <ul class="nav-links"><li><a href="menu.html">Carta</a></li><li><a href="about.html">Nuestra historia</a></li><li><a href="ingredients.html">Ingredientes</a></li><li><a href="events.html">Eventos &amp; Catering</a></li><li><a href="products.html">Despensa</a></li><li><a href="contact.html">Visita</a></li></ul>
+      <ul class="nav-links"><li><a href="menu.html">Carta</a></li><li><a href="takeaway.html">Para llevar</a></li><li><a href="about.html">Nuestra historia</a></li><li><a href="ingredients.html">Ingredientes</a></li><li><a href="events.html">Eventos &amp; Catering</a></li><li><a href="products.html">Despensa</a></li><li><a href="contact.html">Visita</a></li></ul>
       <div class="nav-cta">
         <span class="lang-switch" role="group" aria-label="Elegir idioma" style="gap:.5rem"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.7 2.6 15.3 0 18M12 3c-2.6 2.7-2.6 15.3 0 18"/></svg><a href="../reservations.html" hreflang="en" lang="en" style="color:inherit;text-decoration:none">English</a></span>
         <a href="https://noe.bfwqr.com/" class="btn btn--ghost btn--small" target="_blank" rel="noopener noreferrer">Pedir</a>
@@ -195,7 +195,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </nav>
   </div>
   <div class="mobile-menu" id="mobile-menu" data-open="false" role="dialog" aria-modal="true" aria-label="Site menu">
-    <ul><li><a href="index.html">Inicio</a></li><li><a href="menu.html">Carta</a></li><li><a href="about.html">Nuestra historia — desde 1956</a></li><li><a href="ingredients.html">Nuestros ingredientes</a></li><li><a href="events.html">Eventos &amp; Catering</a></li><li><a href="products.html">Despensa &amp; Productos</a></li><li><a href="gallery.html">Galería</a></li><li><a href="press.html">Prensa</a></li><li><a href="reservations.html">Reservas</a></li><li><a href="delivery.html">Entrega &amp; Para llevar</a></li><li><a href="contact.html">Visita &amp; Contacto</a></li><li style="margin-top:.6rem"><div style="display:flex;flex-wrap:wrap;gap:.5rem" role="group" aria-label="Elegir idioma"><a class="mobile-lang" href="../reservations.html" hreflang="en" lang="en" style="margin-top:0;padding:.4rem .85rem">English</a></div></li></ul>
+    <ul><li><a href="index.html">Inicio</a></li><li><a href="menu.html">Carta</a></li>
+      <li><a href="takeaway.html">Para llevar</a></li><li><a href="about.html">Nuestra historia — desde 1956</a></li><li><a href="ingredients.html">Nuestros ingredientes</a></li><li><a href="events.html">Eventos &amp; Catering</a></li><li><a href="products.html">Despensa &amp; Productos</a></li><li><a href="gallery.html">Galería</a></li><li><a href="press.html">Prensa</a></li><li><a href="reservations.html">Reservas</a></li><li><a href="delivery.html">Entrega &amp; Para llevar</a></li><li><a href="contact.html">Visita &amp; Contacto</a></li><li style="margin-top:.6rem"><div style="display:flex;flex-wrap:wrap;gap:.5rem" role="group" aria-label="Elegir idioma"><a class="mobile-lang" href="../reservations.html" hreflang="en" lang="en" style="margin-top:0;padding:.4rem .85rem">English</a></div></li></ul>
     <div class="mobile-cta">
       <a href="https://noe.bfwqr.com/" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Pedir en línea</a>
       <a href="https://wa.me/306982373505" class="btn btn--whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
@@ -230,12 +231,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="bkg-q">¿Qué día?</p>
         <p class="bkg-sub">El menú cambia a diario — elige un día y mira qué se cocina.</p>
         <div class="bkg-grid" id="bkgDates"></div>
+        <p class="bkg-notice" id="bkgDateNote" hidden></p>
       </section>
       <section class="bkg-step" id="bkgS2">
         <button type="button" class="bkg-back" data-goto="1">← Atrás</button>
         <p class="bkg-q">¿A qué hora?</p>
         <p class="bkg-sub" id="bkgTimeSub">Hora de Atenas. Último pase 30 minutos antes del cierre.</p>
         <div id="bkgSlots"></div>
+        <p class="bkg-notice" id="bkgPauseNote" hidden></p>
         <p class="bkg-err" id="bkgErrTime">Por favor, elige una hora.</p>
       </section>
       <section class="bkg-step" id="bkgS3">
@@ -351,7 +354,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <meta itemprop="servesCuisine" content="Greek, Seafood, Mediterranean" />
         <p class="mt-2"><em>De la tierra. A la mesa. Al recuerdo.<br>Decisiones honestas. Una vida más rica.</em></p>
       </div>
-      <div class="footer-col"><h4>Comer &amp; Visitar</h4><ul><li><a href="menu.html">Carta</a></li><li><a href="moussaka.html">Musaka tradicional</a></li><li><a href="langoustines-linguine.html">Langostinos &amp; Linguine</a></li><li><a href="signature-fish-bell-nest.html">Pescado salvaje &amp; Bell Nest</a></li><li><a href="reservations.html">Reservas</a></li><li><a href="our-story.html">Nuestra historia</a></li><li><a href="gallery.html">Galería</a></li><li><a href="press.html">Prensa</a></li><li><a href="contact.html">Visita &amp; Contacto</a></li><li><a href="greek-restaurant-near-acropolis.html">Cerca de la Acrópolis</a></li><li><a href="where-to-eat-in-koukaki.html">Dónde comer en Koukaki</a></li><li><a href="vegetarian-greek-koukaki.html">Griego vegetariano</a></li></ul></div>
+      <div class="footer-col"><h4>Comer &amp; Visitar</h4><ul><li><a href="menu.html">Carta</a></li><li><a href="takeaway.html">Para llevar</a></li><li><a href="moussaka.html">Musaka tradicional</a></li><li><a href="reservations.html">Reservas</a></li><li><a href="our-story.html">Nuestra historia</a></li><li><a href="gallery.html">Galería</a></li><li><a href="press.html">Prensa</a></li><li><a href="contact.html">Visita &amp; Contacto</a></li><li><a href="greek-restaurant-near-acropolis.html">Cerca de la Acrópolis</a></li><li><a href="where-to-eat-in-koukaki.html">Dónde comer en Koukaki</a></li><li><a href="vegetarian-greek-koukaki.html">Griego vegetariano</a></li></ul></div>
       <div class="footer-col"><h4>Crecer &amp; Celebrar</h4><ul><li><a href="ingredients.html">Nuestros ingredientes</a></li><li><a href="events.html">Eventos privados</a></li><li><a href="events.html#catering">Catering donde estés</a></li><li><a href="products.html">Despensa &amp; Productos</a></li></ul></div>
       <div class="footer-col"><h4>Pedir &amp; Seguir</h4><ul>
         <li><a href="https://noe.bfwqr.com/" target="_blank" rel="noopener noreferrer">Pedir en línea</a></li>
@@ -384,6 +387,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   /* ---------------- OWNER SETTINGS ---------------- */
   var NOTICE_VERSION = "2026-08-26";
   var API = "https://script.google.com/macros/s/AKfycbwlStypPRX6hhMt8EOII7KV32jzoBcRNi6mCNUpVMokj3P0oiztg2vJT_nVdMR0M1Vu8g/exec";
+  /* Staff availability switch \u2014 the /exec URL of staff/Code.gs.
+     Leave "" and the page behaves exactly as it did before the switch. */
+  var PAUSE_API = "";
+  var PAUSE_TTL = 60000;          /* re-read the switch at most once a minute */
   var DAYS_AHEAD = 7;
   var SLOT_MIN = 30, CUTOFF_MIN = 45;
   function services(dow) { // 0=Sun … 6=Sat (real opening hours)
@@ -394,6 +401,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   var WA_PHONE = "306982373505";
   var LANG = "es";
   var TXT = {
+    pauseDates: "<strong>Algunos d\u00edas est\u00e1n cerrados para reservas online.</strong> Las fechas en gris no est\u00e1n disponibles \u2014 escr\u00edbenos y veremos qu\u00e9 podemos hacer.",
+    pauseDay: "<strong>Las reservas online est\u00e1n cerradas para este d\u00eda.</strong> Escr\u00edbenos y veremos qu\u00e9 podemos hacer.",
+    pauseUntil: function (t) { return "<strong>Estamos completos hasta las " + t + ".</strong> Las horas en gris no est\u00e1n disponibles \u2014 los turnos posteriores siguen abiertos, o escr\u00edbenos."; },
+    pauseWa: function (d) { return "\u00a1Hola Bell Kitchen! \u00bfTen\u00e9is mesa" + (d ? " el " + d : "") + "? La web muestra esas horas como no disponibles."; },
+    pauseWaBtn: "Escr\u00edbenos por WhatsApp",
+    pauseGone: "Lo sentimos \u2014 esa hora acaba de cerrarse. Elige otra, por favor.",
     continue_: "Continuar", confirm: "Confirmar la reserva", sending: "Reservando…",
     note: "Gratis · sin pago por adelantado · cancelación gratuita hasta 2 horas antes",
     today: "Hoy", tmrw: "Mañana",
@@ -403,7 +416,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     timeSub: " · Hora de Atenas. Último pase a las 21:15 (16:15 los domingos).",
     done: function (p, d, h, n) { return "Hemos reservado tu mesa para " + p + " comensales el " + d + " a las " + h + "."; },
     errNet: "Algo salió mal — inténtalo de nuevo, o escríbenos por WhatsApp al +30 698 237 3505.",
-    cats: { hot: "La mesa caliente · mageireftá de hoy", sea: "Del mar", cold: "Ensaladas &amp; entrantes", sweet: "Algo dulce" },
+    cats: { hot: "Elija su Main Act", sea: "De los mares griegos", cold: "Complete su viaje", sweet: "Algo dulce" },
     mailNote: function (a) { return "Hemos enviado una copia a <strong>" + a + "</strong>. ¿Nada en unos minutos? Echa un vistazo a spam — tu mesa está reservada igualmente."; },
     groupWa: function (d) { return "¡Hola Bell Kitchen! Somos un grupo de 9+ y nos encantaría una mesa" + (d ? " el " + d : "") + ". ¿Podríais ayudarnos a organizarla?"; }
   };
@@ -438,6 +451,78 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   function dow(iso) { return new Date(iso + "T00:00:00Z").getUTCDay(); }
   var NOW = athensNow();
 
+  /* ---------------- availability switch (staff pause) ----------------
+     Read-only public GET on the staff Apps Script (staff/Code.gs), driven
+     from staff/pause.html. Two things can close a seating:
+       untilDate/untilMin  every seating that starts before that instant
+       days[]              whole dates closed to online booking
+     It FAILS OPEN on purpose: if the switch cannot be reached, booking
+     behaves exactly as it did before it existed.                        */
+  var PAUSE = { untilDate: "", untilMin: 0, days: [], fetched: 0 };
+  var PAUSE_MSG = "";   /* survives the async rebuild that go(2) triggers */
+
+  function pauseFetch() {
+    if (!PAUSE_API) return Promise.resolve(PAUSE);
+    if (PAUSE.fetched && Date.now() - PAUSE.fetched < PAUSE_TTL) return Promise.resolve(PAUSE);
+    var opts = {}, ctl = null;
+    if (typeof AbortController === "function") {
+      ctl = new AbortController(); opts.signal = ctl.signal;
+      setTimeout(function () { try { ctl.abort(); } catch (e) {} }, 4000);
+    }
+    return fetch(PAUSE_API + "?action=pause&t=" + Date.now(), opts)
+      .then(function (r) { return r.json(); })
+      .then(function (j) {
+        if (j && j.ok === true) {
+          PAUSE.untilDate = j.untilDate || "";
+          PAUSE.untilMin = parseInt(j.untilMin, 10) || 0;
+          PAUSE.days = j.days || [];
+          PAUSE.fetched = Date.now();
+        }
+        return PAUSE;
+      })
+      .catch(function () { return PAUSE; });
+  }
+
+  function dayPaused(iso) { return PAUSE.days.indexOf(iso) > -1; }
+  function slotPaused(iso, min) {
+    if (!iso) return false;
+    if (dayPaused(iso)) return true;
+    if (!PAUSE.untilDate) return false;
+    if (iso < PAUSE.untilDate) return true;            /* window runs past this day */
+    return iso === PAUSE.untilDate && min < PAUSE.untilMin;
+  }
+  /* every seating step 2 would offer for a date, in minutes */
+  function slotsFor(iso) {
+    var out = [];
+    services(dow(iso)).forEach(function (svc) {
+      var e = toMin(svc.end);
+      for (var m = toMin(svc.start); m <= e; m += SLOT_MIN) out.push(m);
+      if (out[out.length - 1] !== e) out.push(e);
+    });
+    return out;
+  }
+  function tooSoon(iso, m) { return iso === NOW.dateStr && m < NOW.minutes + CUTOFF_MIN; }
+  function openSlots(iso) {
+    return slotsFor(iso).filter(function (m) {
+      return !tooSoon(iso, m) && !slotPaused(iso, m);
+    }).length;
+  }
+  /* true when the switch \u2014 not simply the passing of time \u2014 emptied a date */
+  function pauseEmptied(iso) {
+    if (openSlots(iso) !== 0) return false;
+    return slotsFor(iso).filter(function (m) {
+      return !tooSoon(iso, m) && slotPaused(iso, m);
+    }).length > 0 || dayPaused(iso);
+  }
+  function pauseWaHref(iso) {
+    return "https://wa.me/" + WA_PHONE + "?text=" +
+      encodeURIComponent(TXT.pauseWa(iso ? longDate(iso) : ""));
+  }
+  function pauseWaBtn(iso) {
+    return '<br><a class="btn btn--whatsapp btn--small" href="' + pauseWaHref(iso) +
+           '" target="_blank" rel="noopener noreferrer">' + TXT.pauseWaBtn + "</a>";
+  }
+
   /* ---------------- navigation ---------------- */
   var prog = $("bkgProgress");
   for (var i = 0; i < STEPS; i++) { var b = document.createElement("i"); prog.appendChild(b); }
@@ -447,6 +532,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       $("bkgS" + i).classList.toggle("on", i === n);
       prog.children[i].classList.toggle("on", i <= n);
     }
+    if (n === 1) pauseFetch().then(function () { buildDates(); });
+    if (n === 2) pauseFetch().then(function () { buildSlots(); });
     if (n === 3) buildMenu();
     if (n === 5) buildReview();
     refreshCta();
@@ -503,6 +590,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   function buildDates() {
     NOW = athensNow();
     dateGrid.innerHTML = "";
+    var blockedDates = 0;
     for (var i = 0; i < DAYS_AHEAD; i++) {
       (function (iso, idx) {
         var d = new Date(iso + "T00:00:00Z");
@@ -512,12 +600,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           new Intl.DateTimeFormat(locale(), { weekday: "short", timeZone: "UTC" }).format(d);
         var mo = new Intl.DateTimeFormat(locale(), { month: "short", timeZone: "UTC" }).format(d);
         b.innerHTML = "<small>" + esc(wd) + "</small><b>" + d.getUTCDate() + "</b><small>" + esc(mo) + "</small>";
+        if (openSlots(iso) === 0) { b.disabled = true; if (pauseEmptied(iso)) blockedDates++; }
         b.addEventListener("click", function () {
           S.date = iso; S.time = null; S.plates = {};
           buildDates(); buildSlots(); setTimeout(next, 200);
         });
         dateGrid.appendChild(b);
       })(addDays(NOW.dateStr, i), i);
+    }
+    var dn = $("bkgDateNote");
+    if (dn) {
+      dn.innerHTML = blockedDates ? TXT.pauseDates + pauseWaBtn("") : "";
+      dn.hidden = !blockedDates;
     }
   }
 
@@ -538,13 +632,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           var b = document.createElement("button");
           b.type = "button"; b.className = "bkg-opt" + (S.time === t ? " sel" : "");
           b.textContent = t; b.disabled = past;
-          b.addEventListener("click", function () { S.time = t; buildSlots(); setTimeout(next, 200); });
+          b.addEventListener("click", function () { PAUSE_MSG = ""; S.time = t; buildSlots(); setTimeout(next, 200); });
           g.appendChild(b);
-        })(toHHMM(m), isToday && m < NOW.minutes + CUTOFF_MIN);
+        })(toHHMM(m), (isToday && m < NOW.minutes + CUTOFF_MIN) || slotPaused(S.date, m));
       });
       wrap.appendChild(g);
     });
     $("bkgTimeSub").textContent = longDate(S.date) + TXT.timeSub;
+
+    var et = $("bkgErrTime");
+    if (et) {
+      if (PAUSE_MSG) { et.textContent = PAUSE_MSG; et.style.display = "block"; }
+      else { et.style.display = "none"; }
+    }
+    var pn = $("bkgPauseNote");
+    if (pn) {
+      var paused = slotsFor(S.date).filter(function (m) { return slotPaused(S.date, m); }).length;
+      if (!paused) {
+        pn.hidden = true; pn.innerHTML = "";
+      } else if (dayPaused(S.date) || openSlots(S.date) === 0) {
+        pn.hidden = false; pn.innerHTML = TXT.pauseDay + pauseWaBtn(S.date);
+      } else {
+        pn.hidden = false;
+        pn.innerHTML = TXT.pauseUntil(toHHMM(PAUSE.untilMin)) + pauseWaBtn(S.date);
+      }
+    }
   }
 
   /* ---------------- step 3: daily menu ---------------- */
@@ -628,6 +740,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       go(1); return;
     }
     btn.disabled = true; btn.innerHTML = '<span class="bkg-spin"></span>' + TXT.sending;
+    /* Staff may have closed this seating while the guest was typing. */
+    if (PAUSE_API) {
+      PAUSE.fetched = 0;
+      pauseFetch().then(function () {
+        if (!slotPaused(S.date, toMin(S.time))) { sendBooking(); return; }
+        PAUSE_MSG = TXT.pauseGone;
+        S.time = null; buildDates(); buildSlots(); go(2);
+        btn.disabled = false; refreshCta();
+      });
+      return;
+    }
+    sendBooking();
+  }
+
+  function sendBooking() {
     var extraNotes = S.notes +
       (S.email ? (S.notes ? " · " : "") + "Email: " + S.email : "") +
       (S.marketing ? " · Newsletter: YES" : "") +
@@ -701,6 +828,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   /* ---------------- init ---------------- */
   buildDates();
   refreshCta();
+  pauseFetch().then(function () { buildDates(); if (S.date) buildSlots(); });
 })();
 </script>
 </body>

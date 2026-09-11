@@ -2138,3 +2138,682 @@ section.section[id="message"] > .container--narrow{
   .review-actions .btn{width:100%;justify-content:center;}
 }
 /* ===================== end BOOKING UPGRADE block ============================ */
+
+
+/* =============================================================================
+   GREEK EDITION — typographic layer            scope: html[lang="el"] only
+   -----------------------------------------------------------------------------
+   Why this block exists
+   ---------------------
+   Cormorant Garamond ships no Greek glyphs (Google Fonts subsets: latin,
+   latin-ext, cyrillic, cyrillic-ext, vietnamese). Every Greek headline was
+   therefore falling out of the brand face and landing on Georgia — or on
+   whatever serif the device happened to have. EB Garamond carries greek and
+   greek-ext, keeps the same Garamond skeleton, and renders identically on
+   every platform.
+
+   Setting principles borrowed from TeX
+   ------------------------------------
+   1. One measure.    ~66 characters per line (Knuth/Bringhurst: 2–3 alphabets).
+   2. One leading.    A single \baselineskip drives every vertical value below.
+   3. Optical size.   EB Garamond's x-height is smaller than Inter's, so Greek
+                      prose is set at 1.045em to hold the same apparent size.
+   4. Even ragging.   text-wrap: pretty / balance + hyphenation ≈ TeX's
+                      paragraph-at-once line breaker; no widows, no orphans.
+   5. Right figures.  Old-style in prose, lining + tabular where numbers align.
+   6. No synthesis.   Real italics and real weights only — never faked.
+
+   Safety: every spacing rule is wrapped in :where() (zero specificity), so any
+   existing component rule always wins. Nothing here can move the layout.
+   ============================================================================ */
+
+html[lang="el"] {
+  /* Display + prose face. Georgia is the only fallback with Greek on every OS. */
+  --font-display: "EB Garamond", Georgia, "Times New Roman", serif;
+  --font-prose:   "EB Garamond", Georgia, "Times New Roman", serif;
+  /* --font-body (Inter) is deliberately untouched: it keeps the UI chrome. */
+
+  /* \baselineskip — the one number the vertical rhythm is derived from. */
+  --leading: 1.66;
+  --rhythm: calc(var(--leading) * 1em);
+  --parskip: calc(var(--rhythm) * 0.62);
+
+  /* Measure */
+  --measure: 66ch;
+  --measure-narrow: 56ch;
+}
+
+/* ---- 1. Optical size ------------------------------------------------------ */
+/* Only inherited sizes scale; every component with an explicit rem/clamp size
+   (buttons, eyebrows, tags, prices) is untouched. */
+html[lang="el"] main { font-size: 1.045em; }
+
+/* ---- 2. Headings --------------------------------------------------------- */
+html[lang="el"] :is(h1, h2, h3, h4, h5) {
+  font-family: var(--font-display);
+  /* Greek capitals and lowercase both carry accents — they need headroom that
+     the Latin setting doesn't. */
+  line-height: 1.16;
+  /* Garamond is tightly fitted by design; negative tracking closes Greek
+     counters and collides accents. Reset to the designer's own spacing. */
+  letter-spacing: 0;
+  text-wrap: balance;
+  font-synthesis: none;
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures contextual;
+}
+html[lang="el"] h1 { letter-spacing: 0; line-height: 1.12; }
+
+/* ---- 3. Prose ------------------------------------------------------------ */
+html[lang="el"] main :is(p, li, blockquote, dd, figcaption),
+html[lang="el"] main .lead,
+html[lang="el"] main .voice-quote,
+html[lang="el"] main .timeline-text,
+html[lang="el"] main .dish-desc {
+  font-family: var(--font-prose);
+  line-height: var(--leading);
+  font-synthesis: none;
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures contextual;
+  /* Old-style figures sit on the x-height and read as text, not as data. */
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  /* TeX-style line breaking: hyphenate, then avoid short last lines. */
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphenate-limit-chars: 6 3 3;
+  -webkit-hyphenate-limit-before: 3;
+  -webkit-hyphenate-limit-after: 3;
+  -webkit-hyphenate-limit-lines: 2;
+  text-wrap: pretty;
+  orphans: 3;
+  widows: 3;
+}
+
+/* One measure, everywhere prose runs. */
+html[lang="el"] main p { max-width: var(--measure); }
+html[lang="el"] main .lead { max-width: var(--measure-narrow); }
+
+/* Punctuation hangs into the margin so the rag reads as a straight edge.
+   (Safari today; progressive enhancement elsewhere.) */
+html[lang="el"] main :is(p, blockquote, .voice-quote) {
+  hanging-punctuation: first allow-end last;
+}
+
+/* ---- 4. Vertical rhythm — zero specificity, never overrides a component --- */
+:where(html[lang="el"] main p + p),
+:where(html[lang="el"] main p + ul),
+:where(html[lang="el"] main p + ol),
+:where(html[lang="el"] main ul + p),
+:where(html[lang="el"] main ol + p) { margin-top: var(--parskip); }
+
+:where(html[lang="el"] main li + li) { margin-top: calc(var(--parskip) * 0.4); }
+
+/* TeX's \section spacing: a generous space above, a smaller one below, both
+   multiples of the single leading value. */
+:where(html[lang="el"] main :is(h2, h3, h4) + p) { margin-top: calc(var(--rhythm) * 0.55); }
+:where(html[lang="el"] main p + :is(h2, h3, h4)) { margin-top: calc(var(--rhythm) * 1.35); }
+
+/* ---- 5. Numbers that must align ------------------------------------------ */
+html[lang="el"] :is(.dish-price, .trust-item strong, .timeline-year, table, .review-list dd) {
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+/* ---- 6. UI chrome stays Inter -------------------------------------------- */
+/* Serif at 12–14px in a nav or a pill is a legibility tax. Everything the user
+   operates rather than reads keeps the sans. */
+html[lang="el"] :is(
+  .site-header, .site-footer, header, footer, nav,
+  .btn, .eyebrow, .chip, .badge, .dish-tag, .card-tag, .dish-meta,
+  .voice-meta, .stars, .voice-stars, .hero-meta-item, .plaque-tagline,
+  .dock, .form-status, label, input, select, textarea, button
+),
+html[lang="el"] :is(
+  .site-header, .site-footer, header, footer, nav,
+  .btn, .eyebrow, .chip, .badge, .dish-tag, .card-tag, .dish-meta,
+  .voice-meta, .dock
+) :is(p, li, span, strong, small, dd, dt) {
+  font-family: var(--font-body);
+  font-variant-numeric: normal;
+  hyphens: manual;
+  -webkit-hyphens: manual;
+}
+
+/* Display accents that should stay in the serif even inside chrome. */
+html[lang="el"] :is(.site-footer, footer) :is(h3, h4, .script, .brand-name) {
+  font-family: var(--font-display);
+}
+
+/* ---- 7. Opt-in: justified setting, TeX's default ------------------------- */
+/* Add class="prose--justified" to a long-form article to get justified,
+   hyphenated columns. Left ragged is the default because browser h&j has no
+   badness function — rivers open up on narrow viewports. */
+html[lang="el"] .prose--justified :is(p, li) {
+  text-align: justify;
+  text-justify: inter-word;
+}
+@media (max-width: 640px) {
+  /* Never justify below ~45 characters: the rag is always the lesser evil. */
+  html[lang="el"] .prose--justified :is(p, li) { text-align: start; }
+}
+
+/* ---- 8. Greek capitals drop their accents when uppercased ---------------- */
+/* ΑΘΉΝΑ → ΑΘΗΝΑ. Browsers do this for lang="el"; stated here so it survives
+   any future refactor of the transform. */
+html[lang="el"] [style*="uppercase"],
+html[lang="el"] .eyebrow,
+html[lang="el"] .card-tag,
+html[lang="el"] .dish-tag { text-transform: uppercase; }
+
+/* ---- 9. Fallback safety net ---------------------------------------------- */
+/* If EB Garamond fails to load, Georgia carries Greek at a larger apparent
+   size — pull it back so the layout doesn't reflow. */
+@supports (font-size-adjust: 0.5) {
+  html[lang="el"] main :is(p, li, blockquote, .lead) { font-size-adjust: ex-height from-font; }
+}
+/* ===================== end GREEK EDITION block ============================== */
+
+
+/* ============================================================================
+   BELL JOURNEY — menu architecture & homepage journey spine
+   Added 2026-09-10 to carry the BELL_MENUA3_SEP26 catalogue onto the site.
+   All selectors are namespaced .bj-* so nothing here can disturb existing
+   components. Uses only tokens already declared in section 1.
+   ========================================================================== */
+
+:root {
+  --bj-warm: #A55A3A;        /* Yiayia's Table — terracotta family */
+  --bj-sea:  #0D2E67;        /* The Islands' Breeze — olive/navy family */
+  --bj-fire: #8A4A2E;        /* The Mountain & The Flame */
+  --bj-gold: var(--saffron);
+  --bj-paper: #F7F2E8;
+  --bj-header-h: 68px;   /* .site-header is sticky at top:0 */
+  --bj-nav-h: 46px;      /* .bj-nav stacks beneath it */
+}
+@media (max-width: 720px) { :root { --bj-header-h: 60px; } }
+
+/* ---- hero ---------------------------------------------------------------- */
+.bj-hero {
+  padding: calc(var(--sp-6) + 2rem) 0 var(--sp-5);
+  text-align: center;
+  background:
+    radial-gradient(120% 80% at 50% 0%, rgba(182, 139, 58, 0.10), transparent 62%),
+    var(--bg-alt);
+  border-bottom: 1px solid var(--line);
+}
+.bj-hero h1 { font-family: var(--font-display); font-size: var(--fs-2xl); line-height: 1.05; font-weight: 500; }
+.bj-hero h1 .script { color: var(--terracotta); font-style: italic; }
+.bj-hero .lead { max-width: 62ch; margin-inline: auto; color: var(--ink-muted); }
+.bj-hero-ctas {
+  display: flex; flex-wrap: wrap; gap: var(--sp-2);
+  justify-content: center; margin-top: var(--sp-4);
+}
+
+/* ---- how it works -------------------------------------------------------- */
+.bj-how { padding: var(--sp-6) 0 var(--sp-5); }
+.bj-how-head { text-align: center; max-width: 60ch; margin: 0 auto var(--sp-4); }
+.bj-how-head h2 { font-family: var(--font-display); font-size: var(--fs-xl); font-weight: 500; }
+
+.bj-steps {
+  list-style: none; display: grid; gap: var(--sp-3);
+  grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
+  counter-reset: bjstep;
+}
+.bj-step {
+  position: relative; padding: var(--sp-3) var(--sp-2) var(--sp-2);
+  border-top: 2px solid var(--line-strong);
+}
+.bj-step-n {
+  font-family: var(--font-display); font-size: 1.6rem; font-weight: 500;
+  color: var(--bj-gold); display: block; line-height: 1; margin-bottom: .45rem;
+}
+.bj-step-t { font-family: var(--font-display); font-size: var(--fs-md); font-weight: 500; margin-bottom: .35rem; }
+.bj-step-d { font-size: 0.9rem; color: var(--ink-muted); line-height: 1.55; }
+
+.bj-rule {
+  margin-top: var(--sp-4); padding: var(--sp-2) var(--sp-3);
+  border-left: 3px solid var(--bj-gold); background: var(--bj-paper);
+  font-size: 0.92rem; color: var(--ink-muted); font-style: italic;
+  border-radius: 0 var(--radius) var(--radius) 0; max-width: 78ch;
+}
+.bj-rule--tight { margin-inline: auto; margin-top: var(--sp-3); font-size: .85rem; }
+
+/* ---- sticky journey nav -------------------------------------------------- */
+.bj-nav {
+  position: sticky; top: var(--bj-header-h); z-index: 40;
+  background: rgba(252, 250, 246, 0.94);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  border-block: 1px solid var(--line);
+}
+.bj-nav-row {
+  display: flex; gap: .35rem; overflow-x: auto; scrollbar-width: none;
+  padding: .55rem 0; scroll-snap-type: x proximity;
+}
+.bj-nav-row::-webkit-scrollbar { display: none; }
+.bj-navlink {
+  flex: 0 0 auto; scroll-snap-align: start;
+  padding: .45rem .95rem; border-radius: 999px;
+  font-size: 0.82rem; letter-spacing: .04em; text-transform: uppercase;
+  color: var(--ink-muted); text-decoration: none; white-space: nowrap;
+  border: 1px solid transparent; transition: all var(--t-fast) var(--ease);
+}
+.bj-navlink:hover, .bj-navlink:focus-visible {
+  color: var(--terracotta); border-color: var(--line-strong); background: var(--bg-alt);
+}
+
+/* ---- secondary dietary filter -------------------------------------------- */
+.bj-filters {
+  display: flex; align-items: center; gap: .35rem;
+  overflow-x: auto; scrollbar-width: none;
+  padding: 0 0 .55rem; border-top: 1px solid var(--line-soft, rgba(42,42,42,.07));
+  padding-top: .5rem;
+}
+.bj-filters::-webkit-scrollbar { display: none; }
+.bj-filters-label {
+  flex: 0 0 auto; font-size: .66rem; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--ink-muted); margin-right: .35rem; white-space: nowrap;
+}
+.bj-filter {
+  flex: 0 0 auto; cursor: pointer; font: inherit;
+  padding: .3rem .8rem; border-radius: 999px; white-space: nowrap;
+  font-size: .76rem; letter-spacing: .03em;
+  background: transparent; color: var(--ink-muted);
+  border: 1px solid var(--line); transition: all var(--t-fast) var(--ease);
+}
+.bj-filter:hover { border-color: var(--line-strong); color: var(--ink); }
+.bj-filter[aria-pressed="true"] {
+  background: var(--terracotta); border-color: var(--terracotta); color: var(--cream);
+}
+.bj-filter-empty {
+  max-width: 60ch; margin: var(--sp-4) auto 0; text-align: center;
+  color: var(--ink-muted); font-style: italic; padding-inline: var(--sp-2);
+}
+.bj-veg-note {
+  margin-top: var(--sp-4); padding: var(--sp-2) var(--sp-3);
+  border-left: 3px solid var(--sage); background: var(--bg-alt);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  font-size: .9rem; color: var(--ink-muted); max-width: 78ch;
+}
+
+/* ---- dine-in vs take-away separation ------------------------------------- */
+.bj-ta-band {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: var(--sp-2) var(--sp-3);
+  margin: var(--sp-4) 0 0; padding: var(--sp-3) var(--sp-4);
+  background: var(--bj-paper); border: 1px solid var(--line);
+  border-left: 4px solid var(--olive); border-radius: 0 var(--radius) var(--radius) 0;
+}
+.bj-ta-band > div { flex: 1 1 320px; min-width: 0; }
+.bj-ta-band-t {
+  font-family: var(--font-display); font-size: var(--fs-md); font-weight: 500;
+  color: var(--olive); margin-bottom: .3rem;
+}
+.bj-ta-band-d { font-size: .88rem; color: var(--ink-muted); line-height: 1.55; max-width: 70ch; }
+.bj-ta-band .btn { flex: 0 0 auto; }
+
+/* ---- section shell ------------------------------------------------------- */
+.bj-sec { padding: var(--sp-6) 0; }
+.bj-sec--alt { background: var(--bg-alt); }
+.bj-sec--sail { background: var(--bj-paper); }
+.bj-sec-head { text-align: center; max-width: 64ch; margin: 0 auto var(--sp-5); }
+.bj-sec-title {
+  font-family: var(--font-display); font-size: var(--fs-xl); font-weight: 500;
+  position: relative; padding-bottom: .7rem;
+}
+.bj-sec-title::after {
+  content: ""; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%);
+  width: 54px; height: 2px; background: var(--bj-gold);
+}
+.bj-sec-sub { color: var(--ink-muted); margin-top: .8rem; font-style: italic; }
+
+/* ---- a Main Act ---------------------------------------------------------- */
+.bj-act {
+  --act: var(--terracotta);
+  margin-bottom: var(--sp-6); border-radius: var(--radius-lg);
+  background: var(--bg); border: 1px solid var(--line);
+  overflow: hidden; box-shadow: var(--shadow-sm);
+}
+.bj-act--warm { --act: var(--bj-warm); }
+.bj-act--sea  { --act: var(--bj-sea); }
+.bj-act--fire { --act: var(--bj-fire); }
+
+/* Photography is out until the new shoot; the act header is a typographic
+   band in the act's own colour. A 21:7 image slot drops back in here. */
+.bj-act-head { display: grid; grid-template-columns: 1fr; }
+.bj-act-intro {
+  position: relative; z-index: 1; color: var(--cream);
+  padding: var(--sp-4) var(--sp-4) var(--sp-4);
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--act) 92%, #000) 0%, var(--act) 100%);
+}
+@supports not (background: color-mix(in srgb, red 50%, blue)) {
+  .bj-act-intro { background: var(--act); }
+}
+.bj-act-intro::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3px;
+  background: var(--bj-gold);
+}
+.bj-act-triad {
+  font-size: 0.74rem; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--bj-gold); margin-bottom: .4rem;
+}
+.bj-act-intro .bj-act-name {
+  font-family: var(--font-display); font-size: var(--fs-xl); font-weight: 500;
+  line-height: 1.1; color: var(--cream);
+}
+.bj-act-intro .bj-act-line { font-style: italic; opacity: .94; margin-top: .3rem; color: var(--cream); }
+/* the same classes are reused on the light homepage cards */
+.bj-home-card .bj-act-name { font-family: var(--font-display); font-weight: 500; line-height: 1.1; }
+.bj-home-card .bj-act-line { font-style: italic; margin-top: .3rem; }
+
+/* dishes inside an act */
+.bj-dishes { padding: var(--sp-3) var(--sp-4) 0; }
+.bj-dish {
+  display: grid; gap: var(--sp-3);
+  grid-template-columns: 1fr;
+  padding: var(--sp-4) 0; border-bottom: 1px solid var(--line);
+}
+.bj-dish:last-child { border-bottom: 0; }
+.bj-dish-media { border-radius: var(--radius); overflow: hidden; aspect-ratio: 4 / 3; max-width: 100%; }
+.bj-dish-media img { width: 100%; height: 100%; object-fit: cover; transition: transform var(--t-base) var(--ease); }
+.bj-dish:hover .bj-dish-media img { transform: scale(1.04); }
+
+.bj-dish-name {
+  font-family: var(--font-display); font-size: var(--fs-lg); font-weight: 500;
+  color: var(--act); display: flex; flex-wrap: wrap; align-items: center; gap: .6rem;
+}
+.bj-dish-name a { color: inherit; text-decoration: none; border-bottom: 1px solid currentColor; }
+.bj-dish-sub { font-size: 0.9rem; font-style: italic; color: var(--ink-muted); margin: .45rem 0 .7rem; }
+.bj-dish-body { min-width: 0; }
+.bj-dish-desc { font-size: 0.94rem; line-height: 1.62; color: var(--ink); max-width: 68ch; }
+.bj-dish-kicker {
+  margin-top: .7rem; font-size: 0.8rem; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--act); font-weight: 500; line-height: 1.5; max-width: 62ch;
+}
+.bj-dish-note { margin-top: .6rem; font-size: 0.8rem; color: var(--ink-muted); }
+.bj-dish-tags { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .9rem; }
+.bj-dish-tags span {
+  font-size: 0.68rem; letter-spacing: .07em; text-transform: uppercase;
+  padding: .28rem .65rem; border-radius: 999px;
+  background: var(--bg-alt); color: var(--ink-muted); border: 1px solid var(--line);
+}
+.bj-dish-price { display: flex; flex-wrap: wrap; align-items: baseline; gap: .6rem; }
+.bj-price { font-family: var(--font-display); font-size: 1.6rem; font-weight: 500; color: var(--act); white-space: nowrap; }
+.bj-price--alt { font-size: 1.25rem; opacity: .78; }
+
+.bj-badge {
+  font-family: var(--font-body); font-size: 0.62rem; font-weight: 600;
+  letter-spacing: .12em; text-transform: uppercase;
+  padding: .26rem .6rem; border-radius: 999px; white-space: nowrap;
+}
+.bj-badge--sig   { background: var(--terracotta); color: var(--cream); }
+.bj-badge--chef  { background: var(--bj-gold); color: #241a08; }
+.bj-badge--daily { background: var(--sage); color: #23301f; }
+.bj-badge--share { background: var(--olive); color: var(--cream); }
+
+/* the upsell ladder: Trilogy → Symphony */
+.bj-ladder {
+  display: grid; gap: 1px; background: var(--line);
+  border-top: 1px solid var(--line); margin-top: var(--sp-3);
+}
+.bj-rung { background: var(--bg-alt); padding: var(--sp-3) var(--sp-4); }
+.bj-rung--sym {
+  background: linear-gradient(135deg, rgba(182,139,58,.13), rgba(182,139,58,.05));
+  border-left: 3px solid var(--bj-gold);
+}
+.bj-rung-label {
+  font-size: 0.7rem; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--ink-muted); margin-bottom: .4rem;
+}
+.bj-rung--sym .bj-rung-label { color: #7a5a17; font-weight: 600; }
+.bj-rung-name { font-family: var(--font-display); font-size: var(--fs-md); font-weight: 500; color: var(--act); }
+.bj-rung-desc { font-size: 0.88rem; color: var(--ink-muted); line-height: 1.55; margin: .45rem 0 .7rem; max-width: 60ch; }
+.bj-rung-price { font-family: var(--font-display); font-size: 1.35rem; font-weight: 500; color: var(--act); }
+
+/* ---- essentials ---------------------------------------------------------- */
+.bj-ess-grid { display: grid; gap: var(--sp-3); grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+.bj-ess {
+  background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius-lg);
+  padding: var(--sp-4) var(--sp-3); text-align: center; box-shadow: var(--shadow-sm);
+}
+.bj-ess-icon { width: 42px; height: 42px; margin: 0 auto .9rem; color: var(--bj-gold); }
+.bj-ess-tone {
+  font-size: 0.72rem; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--terracotta); margin-bottom: .35rem;
+}
+.bj-ess-name { font-family: var(--font-display); font-size: var(--fs-md); font-weight: 500; }
+.bj-ess-desc { font-size: 0.88rem; color: var(--ink-muted); line-height: 1.55; margin: .6rem 0 1rem; }
+.bj-ess-price { font-family: var(--font-display); font-size: 1.4rem; font-weight: 500; color: var(--terracotta); }
+.bj-ess-price small { font-family: var(--font-body); font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-muted); }
+
+/* ---- art of time --------------------------------------------------------- */
+.bj-time-grid { display: grid; gap: var(--sp-3); grid-template-columns: repeat(auto-fit, minmax(255px, 1fr)); }
+.bj-time {
+  padding: var(--sp-4) var(--sp-3); border: 1px solid var(--line);
+  border-top: 3px solid var(--bj-gold); border-radius: 0 0 var(--radius) var(--radius);
+  background: var(--bg);
+}
+.bj-time-triad { font-size: 0.72rem; letter-spacing: .16em; text-transform: uppercase; color: var(--bj-gold); margin-bottom: .4rem; }
+.bj-time-name { font-family: var(--font-display); font-size: var(--fs-md); font-weight: 500; }
+.bj-time-desc { font-size: 0.88rem; color: var(--ink-muted); line-height: 1.55; margin: .6rem 0 1rem; }
+.bj-time-price { font-family: var(--font-display); font-size: 1.35rem; font-weight: 500; color: var(--terracotta); }
+
+.bj-onetaste {
+  margin-top: var(--sp-4); padding: var(--sp-3) var(--sp-4);
+  background: var(--bg-alt); border-radius: var(--radius-lg);
+  display: flex; flex-wrap: wrap; gap: var(--sp-2);
+  align-items: center; justify-content: space-between;
+}
+.bj-onetaste h3 { font-family: var(--font-display); font-size: var(--fs-md); font-weight: 500; }
+.bj-onetaste p { font-size: 0.88rem; color: var(--ink-muted); margin-top: .25rem; }
+.bj-onetaste .bj-price { color: var(--terracotta); }
+
+/* ---- liquid sail --------------------------------------------------------- */
+.bj-sail-grid { display: grid; gap: var(--sp-5); grid-template-columns: 1fr; }
+.bj-sail-h { font-family: var(--font-display); font-size: var(--fs-lg); font-weight: 500; }
+.bj-sail-sub { font-size: 0.9rem; font-style: italic; color: var(--ink-muted); margin: .35rem 0 var(--sp-3); }
+.bj-sips { list-style: none; display: grid; gap: .9rem; }
+.bj-sip { padding-left: 1rem; border-left: 2px solid var(--bj-gold); }
+.bj-sip h4 {
+  font-family: var(--font-display); font-size: var(--fs-md); font-weight: 500;
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: .6rem; color: var(--terracotta);
+}
+.bj-sip h4 small {
+  font-family: var(--font-body); font-size: .66rem; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--ink-muted); font-weight: 500;
+}
+.bj-sip p { font-size: 0.88rem; color: var(--ink-muted); line-height: 1.55; margin-top: .2rem; }
+.bj-sail-price {
+  margin-top: var(--sp-3); padding-top: .8rem; border-top: 1px solid var(--line-strong);
+  font-size: 0.86rem; letter-spacing: .04em; color: var(--ink); font-weight: 500;
+}
+.bj-sail-price + .bj-sail-price { margin-top: .4rem; padding-top: .4rem; border-top: 0; }
+
+/* ---- closing ------------------------------------------------------------- */
+.bj-final { padding: var(--sp-6) 0 var(--sp-7); text-align: center; background: var(--bg-alt); }
+.bj-closing {
+  font-family: var(--font-display); font-size: var(--fs-md); font-style: italic;
+  color: var(--terracotta); letter-spacing: .02em;
+}
+.bj-closing-sub {
+  font-size: 0.76rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--ink-muted); margin: .5rem 0 var(--sp-4);
+}
+.bj-final h2 { font-family: var(--font-display); font-size: var(--fs-xl); font-weight: 500; }
+.bj-final .lead { max-width: 56ch; margin: .8rem auto 0; color: var(--ink-muted); }
+
+/* ---- homepage journey spine --------------------------------------------- */
+.bj-home { padding: var(--sp-6) 0; }
+.bj-home-steps {
+  list-style: none; display: flex; flex-wrap: wrap; justify-content: center;
+  gap: .5rem; margin: 0 auto var(--sp-5); max-width: 900px;
+}
+.bj-home-steps li {
+  display: flex; align-items: center; gap: .5rem;
+  font-size: 0.82rem; color: var(--ink-muted);
+  padding: .4rem .9rem; border: 1px solid var(--line); border-radius: 999px;
+  background: var(--bg-alt);
+}
+.bj-home-steps li span { font-family: var(--font-display); color: var(--bj-gold); font-size: 1rem; font-weight: 500; }
+
+.bj-home-grid { display: grid; gap: var(--sp-3); grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); }
+.bj-home-card {
+  --act: var(--terracotta);
+  border-radius: var(--radius-lg); overflow: hidden;
+  border: 1px solid var(--line); background: var(--bg);
+  box-shadow: var(--shadow-sm); transition: transform var(--t-base) var(--ease), box-shadow var(--t-base) var(--ease);
+}
+.bj-home-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.bj-home-link { text-decoration: none; color: inherit; display: block; height: 100%; }
+.bj-home-img { aspect-ratio: 4 / 3; overflow: hidden; max-width: 100%; }
+.bj-home-img img { width: 100%; height: 100%; object-fit: cover; transition: transform var(--t-base) var(--ease); }
+.bj-home-card:hover .bj-home-img img { transform: scale(1.05); }
+.bj-home-body { padding: var(--sp-3); }
+.bj-home-body .bj-act-triad { color: var(--bj-gold); }
+.bj-home-body .bj-act-name { color: var(--act); font-size: var(--fs-lg); }
+.bj-home-body .bj-act-line { color: var(--ink-muted); font-size: 0.92rem; }
+.bj-home-price { margin-top: .9rem; display: flex; flex-direction: column; gap: .15rem; }
+.bj-home-price span { font-family: var(--font-display); font-size: 1.35rem; font-weight: 500; color: var(--act); }
+.bj-home-price small { font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-muted); }
+
+/* ---- anchor offsets: clear the sticky header + journey nav --------------- */
+.bj-act, .bj-sec, .bj-dish, [id^="act-"], [id^="dish-"] {
+  scroll-margin-top: calc(var(--bj-header-h) + var(--bj-nav-h) + 12px);
+}
+
+/* ---- take-away catalogue page -------------------------------------------- */
+.ta-hero {
+  padding: calc(var(--sp-6) + 2rem) 0 var(--sp-5); text-align: center;
+  background: radial-gradient(120% 80% at 50% 0%, rgba(13,46,103,.09), transparent 62%), var(--bg-alt);
+  border-bottom: 1px solid var(--line);
+}
+.ta-hero h1 { font-family: var(--font-display); font-size: var(--fs-2xl); font-weight: 500; line-height: 1.05; }
+.ta-hero h1 .script { color: var(--olive); font-style: italic; }
+.ta-hero .lead { max-width: 62ch; margin-inline: auto; color: var(--ink-muted); }
+
+.ta-switch {
+  display: inline-flex; gap: 2px; margin: var(--sp-4) auto 0; padding: 3px;
+  background: var(--bg); border: 1px solid var(--line-strong); border-radius: 999px;
+}
+.ta-switch a {
+  padding: .45rem 1.1rem; border-radius: 999px; font-size: .82rem;
+  text-decoration: none; color: var(--ink-muted); white-space: nowrap;
+}
+.ta-switch a[aria-current="page"] { background: var(--olive); color: var(--cream); font-weight: 500; }
+
+.ta-sec { padding: var(--sp-6) 0; }
+.ta-sec--alt { background: var(--bg-alt); }
+.ta-sec-title {
+  font-family: var(--font-display); font-size: var(--fs-xl); font-weight: 500;
+  text-align: center; padding-bottom: .7rem; position: relative; margin-bottom: var(--sp-5);
+}
+.ta-sec-title::after {
+  content: ""; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%);
+  width: 54px; height: 2px; background: var(--olive);
+}
+.ta-list { list-style: none; max-width: 780px; margin: 0 auto; }
+.ta-row {
+  display: grid; grid-template-columns: minmax(0,1fr) auto;
+  gap: .5rem var(--sp-3); align-items: baseline;
+  padding: .85rem 0; border-bottom: 1px solid var(--line);
+}
+.ta-row:last-child { border-bottom: 0; }
+.ta-row-name { font-family: var(--font-display); font-size: var(--fs-md); font-weight: 500; color: var(--ink); }
+.ta-row-sub { display: block; font-family: var(--font-body); font-size: .8rem; color: var(--ink-muted); margin-top: .15rem; font-style: italic; }
+.ta-row-price {
+  font-family: var(--font-display); font-size: 1.3rem; font-weight: 500;
+  color: var(--olive); white-space: nowrap; font-variant-numeric: tabular-nums;
+}
+
+.ta-offer { text-align: center; }
+.ta-offer-price {
+  font-family: var(--font-display); font-size: clamp(3rem, 2rem + 4vw, 5rem);
+  font-weight: 500; color: var(--olive); line-height: 1; margin: .3rem 0 .4rem;
+}
+.ta-offer-sub { color: var(--ink-muted); font-style: italic; margin-bottom: var(--sp-5); }
+.ta-boxes { display: grid; gap: var(--sp-3); grid-template-columns: repeat(auto-fit, minmax(230px,1fr)); text-align: left; }
+.ta-box { background: var(--bg); border: 1px solid var(--line); border-top: 3px solid var(--olive); padding: var(--sp-3); border-radius: 0 0 var(--radius) var(--radius); }
+.ta-box h3 {
+  font-family: var(--font-body); font-size: .72rem; letter-spacing: .13em; text-transform: uppercase;
+  color: var(--olive); margin-bottom: .7rem; display: flex; gap: .5rem; align-items: baseline;
+}
+.ta-box h3 b { font-family: var(--font-display); font-size: 1.1rem; color: var(--saffron); }
+.ta-box ul { list-style: none; display: grid; gap: .4rem; }
+.ta-box li { font-size: .9rem; color: var(--ink-muted); line-height: 1.45; }
+
+.ta-diff { max-width: 70ch; margin: 0 auto; text-align: center; }
+.ta-diff h2 { font-family: var(--font-display); font-size: var(--fs-lg); font-weight: 500; margin-bottom: .7rem; }
+.ta-diff p { color: var(--ink-muted); }
+
+html[lang="zh"] .ta-box h3, html[lang="zh"] .bj-filters-label,
+html[lang="zh"] .bj-filter { text-transform: none; letter-spacing: .04em; }
+
+/* ---- header: the Take Away entry made the nav one item too wide ---------- */
+/* The primary nav was already close to the edge at 1024px; adding Take Away
+   tipped .nav-cta past it. Let the header wrap instead of pushing the page. */
+@media (max-width: 1100px) {
+  .site-header .nav { flex-wrap: wrap; row-gap: .4rem; }
+  .site-header .nav-links { min-width: 0; flex-wrap: wrap; }
+  .site-header .nav-cta { min-width: 0; flex-wrap: wrap; justify-content: flex-end; }
+}
+
+/* ---- long localised labels must wrap, never widen the page --------------- */
+/* Flex items default to min-width:auto and refuse to shrink below their
+   min-content width — that is what pushed 320px pages sideways. */
+@media (max-width: 560px) {
+  .hero-ctas .btn, .bj-hero-ctas .btn, .bj-ta-band .btn, .ta-switch a {
+    max-width: 100%; min-width: 0; flex: 1 1 100%;
+    white-space: normal; text-align: center; overflow-wrap: anywhere;
+    line-height: 1.3; justify-content: center;
+  }
+  .ta-switch { display: flex; width: 100%; }
+  .bj-ta-band { flex-direction: column; align-items: stretch; }
+}
+/* horizontal scrollers stay inside their column */
+.bj-nav-row, .bj-filters { max-width: 100%; min-width: 0; }
+.bj-nav .container { overflow: hidden; }
+
+/* ---- breakpoints --------------------------------------------------------- */
+@media (min-width: 700px) {
+  /* no media column while photography is out — text takes the full measure */
+  .bj-dish { grid-template-columns: minmax(0, 1fr) auto; align-items: start; gap: var(--sp-4); }
+  .bj-dish-price { justify-content: flex-end; flex-direction: column; align-items: flex-end; gap: .2rem; }
+  .bj-ladder { grid-template-columns: 1fr 1fr; }
+  .bj-sail-grid { grid-template-columns: 1fr 1fr; gap: var(--sp-5); }
+}
+@media (min-width: 1000px) {
+  .bj-act-media { aspect-ratio: 21 / 7; }
+  .bj-act-intro { padding-inline: var(--sp-5); }
+  .bj-dishes { padding-inline: var(--sp-5); }
+  .bj-rung { padding-inline: var(--sp-5); }
+}
+@media (max-width: 480px) {
+  .bj-act-intro { margin-top: -4.2rem; padding-inline: var(--sp-3); }
+  .bj-dishes { padding-inline: var(--sp-3); }
+  .bj-rung { padding-inline: var(--sp-3); }
+  .bj-hero-ctas .btn,
+  .bj-final .hero-ctas .btn {
+    width: 100%; justify-content: center;
+    /* long localised labels ("Choisissez votre Main Act") must wrap, not
+       push the page wider than the viewport at 320px */
+    white-space: normal; text-align: center; max-width: 100%;
+    overflow-wrap: anywhere; line-height: 1.3;
+    /* flex items default to min-width:auto and refuse to shrink below their
+       min-content width — that is what pushed the 320px page wider. */
+    flex: 1 1 100%; min-width: 0;
+  }
+  .bj-onetaste { flex-direction: column; align-items: flex-start; }
+}
+
+[data-diet][hidden], .bj-act[hidden], .bj-sec[hidden] { display: none !important; }
+
+/* Greek edition: brand names stay Latin, so don't let the Greek uppercase
+   rule strip accents from localised triads and tags. */
+html[lang="el"] .bj-act-triad,
+html[lang="el"] .bj-time-triad,
+html[lang="el"] .bj-dish-kicker { text-transform: none; letter-spacing: .06em; }
+/* CJK: uppercase/letter-spacing tracking hurts legibility. */
+html[lang="zh"] .bj-act-triad, html[lang="zh"] .bj-time-triad,
+html[lang="zh"] .bj-dish-kicker, html[lang="zh"] .bj-ess-tone,
+html[lang="zh"] .bj-navlink, html[lang="zh"] .bj-badge,
+html[lang="zh"] .bj-closing-sub { text-transform: none; letter-spacing: .04em; }
+/* ==================== end BELL JOURNEY block =============================== */

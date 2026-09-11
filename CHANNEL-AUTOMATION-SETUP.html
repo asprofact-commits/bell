@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Automating the other channels · Cookaki / Bell Kitchen</title>
+<style>
+  :root{
+    --cream:#FCFAF6; --ink:#1c1b19; --muted:#6b6862; --line:#e3ded4;
+    --blue:#1a73e8; --blue-dk:#1557b0; --grey-bg:#f1f3f4;
+    --pin:#d9531e; --ok:#1e8e3e; --warn:#b06000; --bad:#c5221f;
+    --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+  .wrap{max-width:920px;margin:0 auto;padding:0 24px 96px}
+  header.top{padding:56px 0 32px;border-bottom:1px solid var(--line)}
+  header.top .kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+  header.top h1{font-size:38px;line-height:1.15;margin:0 0 14px;letter-spacing:-.02em}
+  header.top p.lede{font-size:18px;color:#3d3a35;margin:0 0 22px;max-width:62ch}
+  .idbar{display:flex;flex-wrap:wrap;gap:10px}
+  .idchip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:13px}
+  .idchip b{font-family:var(--mono);font-weight:600}
+  h2{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:56px 0 14px;font-weight:700}
+  h3{font-size:22px;margin:0 0 6px;letter-spacing:-.01em}
+  p{margin:0 0 14px}
+  code{font-family:var(--mono);font-size:.88em;background:#fff;border:1px solid var(--line);border-radius:4px;padding:1px 5px}
+  a{color:var(--blue-dk)} .muted{color:var(--muted)} .small{font-size:14px}
+
+  .step{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px 26px 8px;margin:0 0 22px}
+  .step.crit{border-color:#f0c8b8;box-shadow:0 0 0 3px #fbe9e1 inset}
+  .step-head{display:flex;gap:16px;align-items:flex-start;margin-bottom:16px}
+  .num{flex:0 0 40px;height:40px;border-radius:10px;background:var(--ink);color:#fff;display:grid;place-items:center;font-weight:700;font-size:14px}
+  .step.crit .num{background:var(--pin)}
+  .step-head .meta{font-size:13px;color:var(--muted);margin:2px 0 0}
+  .path{font-family:var(--mono);font-size:12.5px;background:var(--grey-bg);border-radius:6px;padding:7px 11px;display:block;margin:0 0 14px;color:#3c4043}
+  .path b{color:var(--blue-dk);font-weight:600}
+
+  .note{border-left:3px solid var(--line);padding:2px 0 2px 16px;margin:0 0 18px;font-size:14.5px;color:#454239}
+  .note.warn{border-color:var(--warn);background:#fff8ec;padding:12px 16px;border-radius:0 8px 8px 0}
+  .note.bad{border-color:var(--bad);background:#fdeceb;padding:12px 16px;border-radius:0 8px 8px 0}
+  .note.ok{border-color:var(--ok);background:#eaf5ec;padding:12px 16px;border-radius:0 8px 8px 0}
+
+  table.data{width:100%;border-collapse:collapse;margin:0 0 18px;font-size:14px}
+  table.data th{text-align:left;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--line);padding:0 10px 8px 0;font-weight:700}
+  table.data td{border-bottom:1px solid #efeae0;padding:9px 10px 9px 0;vertical-align:top}
+  table.data td:first-child,table.data th:first-child{padding-left:0}
+  table.data code{background:var(--cream)}
+
+  .badge{display:inline-block;border-radius:999px;padding:2px 10px;font-size:11px;font-weight:700;letter-spacing:.04em;white-space:nowrap}
+  .b-auto{background:#e6f4ea;color:#137333}
+  .b-semi{background:#fef7e0;color:#8c5900}
+  .b-man{background:#fce8e6;color:#a50e0e}
+
+  .matrix{background:#fff;border:1px solid var(--line);border-radius:14px;padding:8px 22px 4px;margin:0 0 18px}
+  .matrix table{margin-bottom:6px}
+
+  .chan{background:#fff;border:1px solid var(--line);border-radius:14px;margin:0 0 22px;overflow:hidden}
+  .chan .ch{padding:18px 26px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .chan .ch h3{margin:0}
+  .chan .cb{padding:20px 26px 6px}
+  .kv{display:flex;gap:14px;margin:0 0 10px;font-size:14.5px;align-items:flex-start}
+  .kv .k{flex:0 0 116px;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);font-weight:700;padding-top:4px}
+
+  ol.steps{margin:0 0 16px;padding-left:20px;font-size:15px}
+  ol.steps li{margin-bottom:7px}
+
+  .foot{margin-top:64px;padding-top:22px;border-top:1px solid var(--line);font-size:13.5px;color:var(--muted)}
+  @media (max-width:680px){ header.top h1{font-size:29px} .wrap{padding:0 16px 64px} .kv{flex-direction:column;gap:2px} }
+  @media print{ body{background:#fff} .step,.chan,.matrix{break-inside:avoid} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <p class="kicker">Cookaki · Bell Kitchen</p>
+  <h1>Automating the other channels</h1>
+  <p class="lede">Instagram, TikTok, TripAdvisor and Google Business Profile — how much of each can actually
+  be automated, what has to stay manual, and the ten minutes a month that keeps the whole picture current.</p>
+  <div class="idbar">
+    <span class="idchip">One-time setup: <b>~20 min</b></span>
+    <span class="idchip">Monthly: <b>~10 min</b></span>
+    <span class="idchip">Feeds: <b>Cookaki-Monthly-Analytics-Tracker.xlsx</b></span>
+  </div>
+</header>
+
+<!-- ============================================================ -->
+<h2>How automatable each one really is</h2>
+
+<div class="matrix">
+<table class="data">
+  <tr><th>Channel</th><th>Best available</th><th>Effort / month</th><th>History limit</th></tr>
+  <tr>
+    <td><strong>Website (GA4)</strong></td>
+    <td><span class="badge b-auto">FULLY AUTOMATIC</span><br><span class="small muted">Sheets add-on, scheduled monthly</span></td>
+    <td>2 cell edits</td><td>unlimited</td>
+  </tr>
+  <tr>
+    <td><strong>Google Business</strong></td>
+    <td><span class="badge b-semi">DOWNLOAD</span><br><span class="small muted">CSV from the dashboard; API exists but needs a developer project</span></td>
+    <td>~3 min</td><td>6 months</td>
+  </tr>
+  <tr>
+    <td><strong>Instagram</strong></td>
+    <td><span class="badge b-semi">DOWNLOAD</span><br><span class="small muted">Meta Business Suite → Export Data</span></td>
+    <td>~3 min</td><td><strong>~90 days</strong></td>
+  </tr>
+  <tr>
+    <td><strong>TikTok</strong></td>
+    <td><span class="badge b-semi">DOWNLOAD</span><br><span class="small muted">TikTok Studio or Business Hub → Download data</span></td>
+    <td>~3 min</td><td><strong>60 days</strong> in Studio</td>
+  </tr>
+  <tr>
+    <td><strong>TripAdvisor</strong></td>
+    <td><span class="badge b-man">MANUAL ONLY</span><br><span class="small muted">No owner analytics API exists</span></td>
+    <td>~2 min</td><td>n/a — cumulative</td>
+  </tr>
+</table>
+</div>
+
+<div class="note bad"><strong>The history limits are the real deadline, not the reporting.</strong>
+TikTok keeps 60 days in Studio, Instagram roughly 90. Skip two months and that data is gone for good —
+no export, no support request, no recovery. This is the single strongest argument for doing the ten
+minutes on a fixed date rather than when you remember.</div>
+
+<!-- ============================================================ -->
+<h2>The shape of it</h2>
+
+<div class="step">
+  <div class="step-head">
+    <div class="num">◆</div>
+    <div><h3>One Drive folder, one naming rule</h3>
+    <p class="meta">Set up once · everything downstream depends on it</p></div>
+  </div>
+
+  <p>Rather than pasting figures into tabs by hand, drop the raw exports into Drive and let me parse them.
+  Create this folder in the same Google account the Drive connector uses:</p>
+
+  <span class="path"><b>My Drive / Cookaki Analytics /</b></span>
+
+  <p>Each month, save the downloads into it using this exact pattern — platform, then year and month:</p>
+
+  <table class="data">
+    <tr><th>File</th><th>From</th></tr>
+    <tr><td><code>gbp-2026-07.csv</code></td><td>Google Business Profile</td></tr>
+    <tr><td><code>instagram-2026-07.csv</code></td><td>Meta Business Suite</td></tr>
+    <tr><td><code>tiktok-2026-07.csv</code></td><td>TikTok Studio</td></tr>
+  </table>
+
+  <p>GA4 keeps writing to its own sheet, <code>Cookaki GA4 Monthly Data</code>, automatically. TripAdvisor
+  has no file — those four numbers get typed straight into the tracker.</p>
+
+  <div class="note ok"><strong>Why filenames and not tabs.</strong> Downloading and dropping takes seconds
+  and can't go wrong. Copy-pasting columns into a spreadsheet is where transcription errors creep in, and
+  a wrong number that looks plausible is worse than a missing one. Let the machine read the machine's file.</div>
+</div>
+
+<!-- ============================================================ -->
+<h2>Channel by channel</h2>
+
+<!-- GBP -->
+<div class="chan">
+  <div class="ch">
+    <h3>Google Business Profile</h3>
+    <span class="badge b-semi">DOWNLOAD</span>
+    <span class="small muted">Probably your largest channel — and the one most people never measure</span>
+  </div>
+  <div class="cb">
+    <div class="kv"><span class="k">Why first</span><span>Most people looking for a Koukaki restaurant never reach your website. They search Maps, look at the photos, and tap directions. Your GA4 <code>directions_click</code> only sees the small minority who came via the site.</span></div>
+
+    <span class="path">Search <b>"my business"</b> while signed in, or go to <b>business.google.com</b> → your profile → <b>Performance</b></span>
+
+    <ol class="steps">
+      <li>Set the date range to the previous calendar month.</li>
+      <li>Read the overview: <em>searches that showed your profile</em> split into discovery and direct, plus profile views.</li>
+      <li>Open the interactions breakdown for <em>direction requests</em>, <em>calls</em> and <em>website clicks</em>.</li>
+      <li>Use <strong>Download report</strong> to get the CSV, and save it as <code>gbp-2026-07.csv</code>.</li>
+    </ol>
+
+    <div class="kv"><span class="k">Feeds</span><span>Tracker tab <strong>Google Business</strong> — columns B through H</span></div>
+    <div class="kv"><span class="k">Watch</span><span><strong>Discovery searches.</strong> Those are people who did not search for you by name. That number is your actual reach into new demand, and it's the one that responds to photos, review volume and category accuracy.</span></div>
+
+    <div class="note">A Performance API exists if you ever want this fully automated, but it needs a Google Cloud project and OAuth setup — disproportionate for one location. Three minutes a month is cheaper than maintaining a developer integration.</div>
+  </div>
+</div>
+
+<!-- Instagram -->
+<div class="chan">
+  <div class="ch">
+    <h3>Instagram</h3>
+    <span class="badge b-semi">DOWNLOAD</span>
+    <span class="small muted">Requires a Business or Creator account</span>
+  </div>
+  <div class="cb">
+    <span class="path"><b>business.facebook.com</b> → <b>Insights</b> → set date range to last full month</span>
+
+    <ol class="steps">
+      <li><strong>Results</strong> gives the account-level figures: reach, accounts engaged, profile visits, website taps.</li>
+      <li><strong>Content</strong> gives post-level performance. Use the <strong>Export Data</strong> button (top right, near the date filter) for CSV or XLS.</li>
+      <li>Save as <code>instagram-2026-07.csv</code> in the Drive folder.</li>
+      <li>Note your follower count at month end — it isn't in the export.</li>
+    </ol>
+
+    <div class="kv"><span class="k">Feeds</span><span>Tracker tab <strong>Instagram</strong> — columns B, D, E, F, G, H</span></div>
+    <div class="kv"><span class="k">Watch</span><span><strong>Website taps against Referral sessions</strong> on the Monthly Log tab. If Instagram reports 300 taps and GA4 shows 30 referral sessions, something is losing nine out of ten people — usually the in-app browser, or a link that 404s.</span></div>
+
+    <div class="note warn"><strong>~90 day retention.</strong> Miss a quarter and those months are unrecoverable. If you only automate one reminder, make it this one.</div>
+  </div>
+</div>
+
+<!-- TikTok -->
+<div class="chan">
+  <div class="ch">
+    <h3>TikTok</h3>
+    <span class="badge b-semi">DOWNLOAD</span>
+    <span class="small muted">Shortest memory of the four</span>
+  </div>
+  <div class="cb">
+    <span class="path"><b>TikTok Studio</b> → <b>Analytics</b> → date range → <b>Download data</b> · or <b>business.tiktok.com</b> for up to a year of history</span>
+
+    <ol class="steps">
+      <li>Set the range to the previous calendar month.</li>
+      <li>Download the <strong>Overview</strong> category — views, profile views, likes, comments, shares, followers.</li>
+      <li>Only one category exports at a time. Overview is enough for the tracker; grab <em>Content</em> too if you want per-video detail.</li>
+      <li>Save as <code>tiktok-2026-07.csv</code>.</li>
+    </ol>
+
+    <div class="kv"><span class="k">Feeds</span><span>Tracker tab <strong>TikTok</strong> — columns B, D, E, F, G, H, I</span></div>
+    <div class="kv"><span class="k">Honest note</span><span>This is the thinnest of the four in business terms. TikTok views tell you about content, not covers. Your site already counts outbound TikTok clicks as <code>social_tiktok</code>, and inbound traffic lands in Referral. Track it if you're investing in it; skip it without guilt if you aren't.</span></div>
+
+    <div class="note warn"><strong>60 days in Studio.</strong> Use business.tiktok.com if you ever need to reach further back — it holds about a year.</div>
+  </div>
+</div>
+
+<!-- TripAdvisor -->
+<div class="chan">
+  <div class="ch">
+    <h3>TripAdvisor</h3>
+    <span class="badge b-man">MANUAL ONLY</span>
+    <span class="small muted">And no honest way around it</span>
+  </div>
+  <div class="cb">
+    <div class="kv"><span class="k">Why</span><span>There is no owner analytics API. The Content API is for displaying reviews on your own site and requires approval. Scraping the Management Center breaks their terms of service, so it's off the table.</span></div>
+
+    <span class="path"><b>Management Center</b> → your listing → Reviews and Analytics</span>
+
+    <ol class="steps">
+      <li>Total review count.</li>
+      <li>Average rating.</li>
+      <li>Rank among Athens restaurants.</li>
+      <li>How many of this month's reviews you replied to.</li>
+    </ol>
+
+    <div class="kv"><span class="k">Feeds</span><span>Tracker tab <strong>TripAdvisor</strong> — columns B, D, E, F, H. New reviews and rank change calculate themselves from the month before.</span></div>
+    <div class="kv"><span class="k">Watch</span><span><strong>Reply rate.</strong> It's the only one of these four you fully control, and the tracker computes it for you. Ranking moves slowly; replies are the lever.</span></div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<h2>The monthly ten minutes</h2>
+
+<div class="step">
+  <div class="step-head">
+    <div class="num">◷</div>
+    <div><h3>Fixed date, same order</h3>
+    <p class="meta">3rd of the month — late enough for GA4 to finish processing</p></div>
+  </div>
+
+  <table class="data">
+    <tr><th></th><th>Do</th><th>Time</th></tr>
+    <tr><td>1</td><td>Business Profile → Performance → last month → Download report → save as <code>gbp-YYYY-MM.csv</code></td><td>3 min</td></tr>
+    <tr><td>2</td><td>Meta Business Suite → Insights → last month → Export Data → save as <code>instagram-YYYY-MM.csv</code>. Note follower count.</td><td>3 min</td></tr>
+    <tr><td>3</td><td>TikTok Studio → Analytics → last month → Download data → save as <code>tiktok-YYYY-MM.csv</code></td><td>2 min</td></tr>
+    <tr><td>4</td><td>TripAdvisor Management Center → read four numbers</td><td>2 min</td></tr>
+    <tr><td>5</td><td>Update the two date cells in the GA4 sheet config</td><td>30 sec</td></tr>
+    <tr><td>6</td><td>Tell me it's ready — or let the scheduled task pick it up</td><td>—</td></tr>
+  </table>
+
+  <div class="note ok"><strong>Then I take over.</strong> Read the GA4 sheet and the three CSVs, fill every
+  tab of the tracker, compute the derived columns, and write you a short read across all channels: what
+  moved, the likeliest explanation, and the one thing worth acting on. Say the word and I'll set that up
+  as a scheduled task for the 3rd of each month, including a reminder if the files aren't there yet.</div>
+</div>
+
+<!-- ============================================================ -->
+<h2>If you'd rather pay to skip the ten minutes</h2>
+
+<table class="data">
+  <tr><th>Tool</th><th>Covers</th><th>Verdict</th></tr>
+  <tr><td>Coupler.io</td><td>Instagram, TikTok, GA4, and more → scheduled into Google Sheets</td><td>The closest to genuine hands-off. Has a limited free tier; paid beyond that.</td></tr>
+  <tr><td>Supermetrics</td><td>200+ sources including all of the above</td><td>Powerful, priced for agencies. Overkill for one restaurant.</td></tr>
+  <tr><td>Metricool</td><td>Instagram, TikTok, Google Business Profile in one dashboard</td><td>Built for exactly this use case. Worth a look if you'd rather have a dashboard than a spreadsheet.</td></tr>
+</table>
+
+<div class="note"><strong>My honest read:</strong> ten minutes a month is roughly two hours a year. Most
+subscriptions here cost more than that time is worth for a single-location restaurant, and none of them
+solves TripAdvisor. Revisit it if you open a second site or start spending on ads.</div>
+
+<!-- ============================================================ -->
+<h2>What feeds what</h2>
+
+<table class="data">
+  <tr><th>Tracker tab</th><th>Source</th><th>Automation</th></tr>
+  <tr><td>Monthly Log</td><td>GA4 → Reports Builder → <code>Cookaki GA4 Monthly Data</code></td><td><span class="badge b-auto">AUTO</span></td></tr>
+  <tr><td>Google Business</td><td><code>gbp-YYYY-MM.csv</code></td><td><span class="badge b-semi">DOWNLOAD</span></td></tr>
+  <tr><td>Instagram</td><td><code>instagram-YYYY-MM.csv</code> + follower count</td><td><span class="badge b-semi">DOWNLOAD</span></td></tr>
+  <tr><td>TikTok</td><td><code>tiktok-YYYY-MM.csv</code></td><td><span class="badge b-semi">DOWNLOAD</span></td></tr>
+  <tr><td>TripAdvisor</td><td>four numbers, typed</td><td><span class="badge b-man">MANUAL</span></td></tr>
+  <tr><td>All channels</td><td>formulas across the tabs above</td><td><span class="badge b-auto">AUTO</span></td></tr>
+  <tr><td>Dashboard</td><td>formulas</td><td><span class="badge b-auto">AUTO</span></td></tr>
+</table>
+
+<p class="foot">Cookaki · Bell Kitchen. Companion files: <code>GTM-SETUP-GUIDE.html</code> ·
+<code>MONTHLY-ANALYTICS-PROCESS.html</code> · <code>ANALYTICS-AUTOMATION-SETUP.html</code> ·
+<code>Cookaki-Monthly-Analytics-Tracker.xlsx</code>.
+Platform interfaces change often — if a button has moved, the sequence and the data behind it have not.
+Retention limits stated were current at the time of writing; treat them as the floor, not a promise.</p>
+
+</div>
+</body>
+</html>

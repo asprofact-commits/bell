@@ -1,12 +1,19 @@
 # Bell Kitchen · Cookaki — robots.txt
-# Allow all standard search engine crawlers full access.
-# Static site, no admin paths, no sensitive directories.
+# Static site, no admin paths. Two menus: the dine-in Bell Journey (/menu.html)
+# and the separate take-away catalogue (/takeaway.html), both in 6 languages.
+
+# ---------------------------------------------------------------------------
+# NOTE ON STRUCTURE
+# A crawler obeys exactly ONE group: the most specific User-agent that matches.
+# A named group therefore REPLACES the "*" group rather than adding to it, so
+# every protection has to be repeated in every named group. The previous file
+# listed the named crawlers with "Allow: /" only, which silently exempted
+# Googlebot and the AI crawlers from the unsubscribe/feedback rules below.
+# ---------------------------------------------------------------------------
 
 User-agent: *
 Allow: /
-
-# Transactional pages reached only from a post-visit message.
-# Not for indexing, and not for crawling: the unsubscribe link carries a token.
+Disallow: /staff/
 Disallow: /unsubscribe.html
 Disallow: /feedback-good.html
 Disallow: /feedback-fine.html
@@ -14,28 +21,77 @@ Disallow: /feedback-not-good.html
 Disallow: /*/unsubscribe.html
 Disallow: /*/feedback-
 
-# Explicit welcomes for AI / answer-engine crawlers
-# (these are allowed by the wildcard above; explicit rules make the intent unambiguous)
+# Explicit welcomes for search and answer-engine crawlers.
+# Each group repeats the rules above — that is required, not redundant.
 
 User-agent: Googlebot
 Allow: /
+Disallow: /staff/
+Disallow: /unsubscribe.html
+Disallow: /feedback-good.html
+Disallow: /feedback-fine.html
+Disallow: /feedback-not-good.html
+Disallow: /*/unsubscribe.html
+Disallow: /*/feedback-
 
 User-agent: Google-Extended
 Allow: /
-
-User-agent: GPTBot
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: Applebot
-Allow: /
+Disallow: /staff/
+Disallow: /unsubscribe.html
+Disallow: /*/unsubscribe.html
+Disallow: /*/feedback-
+Disallow: /feedback-good.html
+Disallow: /feedback-fine.html
+Disallow: /feedback-not-good.html
 
 User-agent: Bingbot
 Allow: /
+Disallow: /staff/
+Disallow: /unsubscribe.html
+Disallow: /*/unsubscribe.html
+Disallow: /*/feedback-
+Disallow: /feedback-good.html
+Disallow: /feedback-fine.html
+Disallow: /feedback-not-good.html
+
+User-agent: Applebot
+Allow: /
+Disallow: /staff/
+Disallow: /unsubscribe.html
+Disallow: /*/unsubscribe.html
+Disallow: /*/feedback-
+Disallow: /feedback-good.html
+Disallow: /feedback-fine.html
+Disallow: /feedback-not-good.html
+
+User-agent: GPTBot
+Allow: /
+Disallow: /staff/
+Disallow: /unsubscribe.html
+Disallow: /*/unsubscribe.html
+Disallow: /*/feedback-
+Disallow: /feedback-good.html
+Disallow: /feedback-fine.html
+Disallow: /feedback-not-good.html
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /staff/
+Disallow: /unsubscribe.html
+Disallow: /*/unsubscribe.html
+Disallow: /*/feedback-
+Disallow: /feedback-good.html
+Disallow: /feedback-fine.html
+Disallow: /feedback-not-good.html
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /staff/
+Disallow: /unsubscribe.html
+Disallow: /*/unsubscribe.html
+Disallow: /*/feedback-
+Disallow: /feedback-good.html
+Disallow: /feedback-fine.html
+Disallow: /feedback-not-good.html
 
 Sitemap: https://www.bellacropolis.gr/sitemap.xml

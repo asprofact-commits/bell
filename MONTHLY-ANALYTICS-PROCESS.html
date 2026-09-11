@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The monthly 30 minutes — reading your analytics · Cookaki / Bell Kitchen</title>
+<style>
+  :root{
+    --cream:#FCFAF6; --ink:#1c1b19; --muted:#6b6862; --line:#e3ded4;
+    --blue:#1a73e8; --blue-dk:#1557b0; --grey-bg:#f1f3f4; --white:#fff;
+    --pin:#d9531e; --ok:#1e8e3e; --warn:#b06000; --bad:#c5221f;
+    --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+  .wrap{max-width:920px;margin:0 auto;padding:0 24px 96px}
+
+  header.top{padding:56px 0 32px;border-bottom:1px solid var(--line)}
+  header.top .kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+  header.top h1{font-size:38px;line-height:1.15;margin:0 0 14px;letter-spacing:-.02em}
+  header.top p.lede{font-size:18px;color:#3d3a35;margin:0 0 22px;max-width:62ch}
+  .idbar{display:flex;flex-wrap:wrap;gap:10px}
+  .idchip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:13px}
+  .idchip b{font-family:var(--mono);font-weight:600}
+
+  h2{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:56px 0 14px;font-weight:700}
+  h3{font-size:22px;margin:0 0 6px;letter-spacing:-.01em}
+  p{margin:0 0 14px}
+  code{font-family:var(--mono);font-size:.88em;background:#fff;border:1px solid var(--line);border-radius:4px;padding:1px 5px}
+  a{color:var(--blue-dk)}
+  .muted{color:var(--muted)} .small{font-size:14px}
+
+  .step{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px 26px 8px;margin:0 0 22px;position:relative}
+  .step.crit{border-color:#f0c8b8;box-shadow:0 0 0 3px #fbe9e1 inset}
+  .step-head{display:flex;gap:16px;align-items:flex-start;margin-bottom:16px}
+  .num{flex:0 0 38px;height:38px;border-radius:10px;background:var(--ink);color:#fff;display:grid;place-items:center;font-weight:700;font-size:15px}
+  .step.crit .num{background:var(--pin)}
+  .step-head .meta{font-size:13px;color:var(--muted);margin:2px 0 0}
+  .path{font-family:var(--mono);font-size:12.5px;background:var(--grey-bg);border-radius:6px;padding:7px 11px;display:inline-block;margin:0 0 16px;color:#3c4043}
+  .path b{color:var(--blue-dk);font-weight:600}
+
+  .mock{border:1px solid #dadce0;border-radius:10px;overflow:hidden;margin:6px 0 20px;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.07);font-size:13.5px}
+  .mock-top{background:#fff;border-bottom:1px solid #dadce0;padding:10px 14px;display:flex;align-items:center;gap:12px}
+  .mock-top .dots{display:flex;gap:5px}
+  .mock-top .dots i{width:9px;height:9px;border-radius:50%;background:#dadce0;display:block}
+  .mock-top .crumb{font-size:12.5px;color:#5f6368}
+  .mock-top .spacer{flex:1}
+  .mock-body{display:flex;min-height:60px}
+  .mock-side{flex:0 0 152px;background:#f8f9fa;border-right:1px solid #e8eaed;padding:12px 0;font-size:12.5px}
+  .mock-side div{padding:6px 14px;color:#3c4043}
+  .mock-side div.on{background:#e8f0fe;color:var(--blue-dk);font-weight:600;border-right:3px solid var(--blue)}
+  .mock-side .hd{font-size:10.5px;letter-spacing:.06em;color:#80868b;padding:8px 14px 4px;font-weight:700}
+  .mock-main{flex:1;padding:18px 20px}
+  .panel-title{font-size:15px;font-weight:600;margin:0 0 4px;color:#202124}
+  .panel-sub{font-size:12.5px;color:#5f6368;margin:0 0 16px}
+  .field{margin:0 0 14px}
+  .field .lab{font-size:11.5px;color:#5f6368;margin:0 0 5px;display:block}
+  .inp{border:1px solid #dadce0;border-radius:5px;padding:8px 11px;background:#fff;font-family:var(--mono);font-size:12.5px;color:#202124;display:flex;align-items:center;gap:8px}
+  .inp.sel:after{content:"▾";margin-left:auto;color:#5f6368;font-family:var(--sans)}
+  .sec-hd{font-size:12.5px;font-weight:600;color:#202124;border-top:1px solid #e8eaed;padding-top:14px;margin:18px 0 12px;display:flex;align-items:center;gap:7px}
+  .sec-hd:before{content:"▸";color:#5f6368}
+  .chip{display:inline-block;background:#e8f0fe;color:var(--blue-dk);border-radius:4px;padding:4px 9px;font-size:11.5px;font-family:var(--mono);margin:0 6px 6px 0}
+  .chip.g{background:#e6f4ea;color:#137333}
+  .btn{display:inline-block;background:var(--blue);color:#fff;border-radius:5px;padding:7px 16px;font-size:12.5px;font-weight:600}
+  .btn.ghost{background:#fff;color:var(--blue);border:1px solid #dadce0}
+
+  .gtab{width:100%;border-collapse:collapse;font-size:12px;font-family:var(--mono)}
+  .gtab th{background:#f8f9fa;text-align:left;font-family:var(--sans);font-size:11px;color:#5f6368;font-weight:600;padding:7px 9px;border-bottom:1px solid #e8eaed}
+  .gtab td{padding:6px 9px;border-bottom:1px solid #f1f3f4}
+  .gtab td.n{text-align:right}
+  .gtab tr.tot td{font-weight:700;background:#fafafa}
+
+  .pin{display:inline-grid;place-items:center;width:19px;height:19px;border-radius:50%;background:var(--pin);color:#fff;font-size:11px;font-weight:700;font-family:var(--sans);flex:0 0 19px;vertical-align:middle}
+  .pinlist{list-style:none;padding:0;margin:0 0 18px}
+  .pinlist li{display:flex;gap:10px;align-items:flex-start;margin:0 0 9px;font-size:14.5px}
+  .pinlist li .pin{margin-top:3px}
+
+  .note{border-left:3px solid var(--line);padding:2px 0 2px 16px;margin:0 0 18px;font-size:14.5px;color:#454239}
+  .note.warn{border-color:var(--warn);background:#fff8ec;padding:12px 16px;border-radius:0 8px 8px 0}
+  .note.bad{border-color:var(--bad);background:#fdeceb;padding:12px 16px;border-radius:0 8px 8px 0}
+  .note.ok{border-color:var(--ok);background:#eaf5ec;padding:12px 16px;border-radius:0 8px 8px 0}
+
+  table.data{width:100%;border-collapse:collapse;margin:0 0 18px;font-size:14px}
+  table.data th{text-align:left;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--line);padding:0 10px 8px 0;font-weight:700}
+  table.data td{border-bottom:1px solid #efeae0;padding:9px 10px 9px 0;vertical-align:top}
+  table.data td:first-child,table.data th:first-child{padding-left:0}
+  table.data code{background:var(--cream)}
+
+  .decide{background:#f6f3ec;border-radius:0 8px 8px 0;border-left:3px solid var(--ink);padding:11px 16px;margin:4px 0 4px;font-size:14.5px}
+  .decide b{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:3px}
+  .logrow{background:#eef6ef;border-radius:0 8px 8px 0;border-left:3px solid var(--ok);padding:11px 16px;margin:10px 0 16px;font-size:14.5px}
+  .logrow b{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:#2c6b3c;display:block;margin-bottom:3px}
+
+  .clock{display:inline-block;background:var(--ink);color:#fff;border-radius:999px;padding:3px 11px;font-size:11.5px;font-weight:700;letter-spacing:.03em}
+
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:0 0 20px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+  .card h4{margin:0 0 8px;font-size:15px}
+  .card ul{margin:0;padding-left:18px;font-size:14px}
+  .card li{margin-bottom:5px}
+  .card.no{border-color:#f0d5d3}
+  .card.no h4{color:var(--bad)}
+  .card.yes h4{color:var(--ok)}
+
+  .foot{margin-top:64px;padding-top:22px;border-top:1px solid var(--line);font-size:13.5px;color:var(--muted)}
+
+  @media (max-width:680px){
+    .mock-side{display:none} .two{grid-template-columns:1fr}
+    header.top h1{font-size:29px} .wrap{padding:0 16px 64px}
+  }
+  @media print{ body{background:#fff} .step,.card,.mock{break-inside:avoid;box-shadow:none} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <p class="kicker">Cookaki · Bell Kitchen</p>
+  <h1>The monthly 30 minutes</h1>
+  <p class="lede">Once the container is live, GA4 will answer about a dozen questions worth acting on.
+  This is the fixed route through them — same order, same numbers, first week of every month.</p>
+  <div class="idbar">
+    <span class="idchip">First month: <b>+40 min</b> one-time setup</span>
+    <span class="idchip">Every month after: <b>~30 min</b></span>
+    <span class="idchip">Companion: <b>Cookaki-Monthly-Analytics-Tracker.xlsx</b></span>
+  </div>
+</header>
+
+<!-- ============================================================ -->
+<h2>First, the honest boundaries</h2>
+
+<div class="two">
+  <div class="card yes">
+    <h4>What this setup genuinely knows</h4>
+    <ul>
+      <li>How many people found you, and through which channel</li>
+      <li>Which country and city they're in — tourists vs locals</li>
+      <li>Which of the six language versions they read</li>
+      <li>Every online booking, with party size, date and time slot</li>
+      <li>Every tap on WhatsApp, phone, directions, Order Online</li>
+      <li><em>Where on the page</em> that tap happened</li>
+      <li>Which SEO landing pages actually lead to bookings</li>
+    </ul>
+  </div>
+  <div class="card no">
+    <h4>What it will never know</h4>
+    <ul>
+      <li>Visitors who declined cookies — invisible, entirely</li>
+      <li>Walk-ins, and phone bookings made after a <code>tel:</code> tap</li>
+      <li>Whether a booking was honoured or a no-show</li>
+      <li>Revenue, covers, or average spend</li>
+      <li>Bookings taken over WhatsApp by hand</li>
+      <li>Anyone who found you on Google Maps and never touched the site</li>
+    </ul>
+  </div>
+</div>
+
+<div class="note warn"><strong>Read every number as a trend, not a count.</strong> Consent Mode means GA4
+sees only the visitors who accepted the banner. If that's 60% of them, every figure below is roughly 60%
+of reality — but consistently so. "Directions clicks rose 30% this month" is trustworthy. "We had exactly
+altogether 214 directions clicks" is not.</div>
+
+<!-- ============================================================ -->
+<h2>Fix this before your first month</h2>
+
+<div class="step crit">
+  <div class="step-head">
+    <div class="num">!</div>
+    <div>
+      <h3>Turn off Form interactions in Enhanced Measurement</h3>
+      <p class="meta">2 minutes · otherwise your form numbers will be wrong from day one</p>
+    </div>
+  </div>
+
+  <p>GA4's Enhanced Measurement has a <em>Form interactions</em> toggle that automatically emits an event
+  called — unfortunately — <code>form_submit</code>. That is the exact name your GTM tag uses. Left on,
+  the two merge into one inflated event, and you can't tell them apart afterwards.</p>
+
+  <div class="note">Your <code>GTM-SETUP.md</code> says Enhanced Measurement "will not collide" with the
+  custom events. That's right for clicks — GA4's automatic event is <code>click</code>, yours is
+  <code>ui_click</code>. It is <em>not</em> right for forms. This is the one exception.</div>
+
+  <div class="path">GA4 → <b>Admin</b> → Data collection and modification → <b>Data streams</b> → your web stream → <b>Enhanced measurement</b> (gear icon)</div>
+
+  <div class="mock">
+    <div class="mock-top"><span class="dots"><i></i><i></i><i></i></span><span class="crumb">Enhanced measurement</span></div>
+    <div class="mock-body"><div class="mock-main">
+      <p class="panel-sub">Automatically measure interactions and content on your site.</p>
+      <table class="gtab">
+        <tr><td>Page views</td><td class="n" style="color:#1e8e3e;font-weight:700">ON</td></tr>
+        <tr><td>Scrolls</td><td class="n" style="color:#1e8e3e;font-weight:700">ON</td></tr>
+        <tr><td>Outbound clicks</td><td class="n" style="color:#1e8e3e;font-weight:700">ON</td></tr>
+        <tr><td>Site search</td><td class="n" style="color:#80868b">off — no search on this site</td></tr>
+        <tr><td>Video engagement</td><td class="n" style="color:#1e8e3e;font-weight:700">ON</td></tr>
+        <tr><td>File downloads</td><td class="n" style="color:#1e8e3e;font-weight:700">ON</td></tr>
+        <tr style="background:#fdeceb"><td><strong>Form interactions</strong> <span class="pin">1</span></td><td class="n" style="color:#c5221f;font-weight:700">TURN OFF</td></tr>
+      </table>
+    </div></div>
+  </div>
+
+  <ul class="pinlist">
+    <li><span class="pin">1</span><div>Switch it off. Your forms hand off to WhatsApp via JavaScript, which GA4's automatic form tracking misreads anyway — you lose nothing and keep a clean <code>form_submit</code>.</div></li>
+  </ul>
+
+  <div class="note ok">Leave <strong>Outbound clicks</strong> on. It produces <code>click</code>, not
+  <code>ui_click</code>, so there's no collision — and it quietly catches any external link you add in
+  future before you've thought about tagging it.</div>
+</div>
+
+<!-- ============================================================ -->
+<h2>Build once — three saved Explorations</h2>
+
+<p>Standard reports answer the traffic questions. These three answer the restaurant questions. Build them
+in your first session; afterwards you just change the date range and read.</p>
+
+<div class="step">
+  <div class="step-head">
+    <div class="num">A</div>
+    <div>
+      <h3>"CTA performance" — which button, in which spot</h3>
+      <p class="meta">~12 minutes to build · the single most actionable view you'll have</p>
+    </div>
+  </div>
+
+  <div class="path">Left sidebar → <b>Explore</b> → <b>Blank</b> → rename to <b>CTA performance</b></div>
+
+  <div class="mock">
+    <div class="mock-top"><span class="dots"><i></i><i></i><i></i></span><span class="crumb">Explore → CTA performance</span></div>
+    <div class="mock-body">
+      <div class="mock-side">
+        <div class="hd">VARIABLES</div>
+        <div>Segments</div>
+        <div class="on">Dimensions +</div>
+        <div style="padding-left:22px;color:#5f6368">Click action</div>
+        <div style="padding-left:22px;color:#5f6368">Click placement</div>
+        <div style="padding-left:22px;color:#5f6368">Page language</div>
+        <div class="on">Metrics +</div>
+        <div style="padding-left:22px;color:#5f6368">Event count</div>
+      </div>
+      <div class="mock-main">
+        <p class="panel-title">Tab Settings</p>
+        <div class="field"><span class="lab">TECHNIQUE</span><div class="inp sel" style="font-family:var(--sans)">Free form</div></div>
+        <div class="field"><span class="lab">ROWS <span class="pin">1</span></span>
+          <div><span class="chip">Click action</span><span class="chip">Click placement</span></div></div>
+        <div class="field"><span class="lab">VALUES</span><div><span class="chip g">Event count</span></div></div>
+        <div class="field"><span class="lab">FILTERS <span class="pin">2</span></span>
+          <div class="inp" style="font-size:12px">Event name · exactly matches · ui_click</div></div>
+
+        <div class="sec-hd">Result</div>
+        <table class="gtab">
+          <tr><th>Click action</th><th>Click placement</th><th style="text-align:right">Events</th></tr>
+          <tr><td>directions</td><td>sticky_bar</td><td class="n">412</td></tr>
+          <tr><td>directions</td><td>location</td><td class="n">188</td></tr>
+          <tr><td>reserve</td><td>header</td><td class="n">164</td></tr>
+          <tr><td>whatsapp</td><td>sticky_bar</td><td class="n">97</td></tr>
+          <tr><td>order_online</td><td>hero</td><td class="n">61</td></tr>
+          <tr><td>phone</td><td>footer</td><td class="n">23</td></tr>
+        </table>
+        <p class="panel-sub" style="margin:10px 0 0;font-style:italic">Illustrative figures — yours will differ.</p>
+      </div>
+    </div>
+  </div>
+
+  <ul class="pinlist">
+    <li><span class="pin">1</span><div>Drag <strong>Click action</strong> into Rows, then <strong>Click placement</strong> underneath it. Nested rows give you "directions, and specifically from the sticky bar".</div></li>
+    <li><span class="pin">2</span><div>The filter matters — without it you'd also count page views and bookings. Drag <em>Event name</em> into Filters and set <em>exactly matches</em> → <code>ui_click</code>.</div></li>
+  </ul>
+
+  <div class="decide"><b>The decision this drives</b>
+  If the sticky bar out-earns the hero three to one, that tells you where to put anything new you want
+  clicked. If a CTA in a prime position gets almost nothing, it's either invisible or the wrong ask.</div>
+</div>
+
+<div class="step">
+  <div class="step-head">
+    <div class="num">B</div>
+    <div>
+      <h3>"Language &amp; market" — is the six-language site earning its keep</h3>
+      <p class="meta">~10 minutes to build</p>
+    </div>
+  </div>
+
+  <div class="path">Explore → Blank → rename to <b>Language &amp; market</b></div>
+
+  <table class="data">
+    <tr><th>Setting</th><th>Value</th></tr>
+    <tr><td>Technique</td><td>Free form</td></tr>
+    <tr><td>Rows</td><td><code>Page language</code></td></tr>
+    <tr><td>Columns</td><td><code>Country</code> — cap at the top 5</td></tr>
+    <tr><td>Values</td><td><code>Sessions</code>, <code>Key events</code></td></tr>
+    <tr><td>Filters</td><td>none</td></tr>
+  </table>
+
+  <div class="note">You maintain 116 pages across six languages. This is the view that tells you whether
+  the German, French, Spanish and Chinese mirrors are pulling traffic that converts, or whether they're
+  116 pages of maintenance for a handful of sessions. Give each one at least two quarters before judging —
+  new language pages take time to rank.</div>
+
+  <div class="decide"><b>The decision this drives</b>
+  Which mirror gets the next round of attention, and whether any of them should be retired. Also: if
+  German visitors read the German pages but book far less than the English ones, the problem is usually
+  the booking flow's tone, not the traffic.</div>
+</div>
+
+<div class="step">
+  <div class="step-head">
+    <div class="num">C</div>
+    <div>
+      <h3>"Booking detail" — who's actually reserving</h3>
+      <p class="meta">~8 minutes to build · the one your kitchen will care about</p>
+    </div>
+  </div>
+
+  <div class="path">Explore → Blank → rename to <b>Booking detail</b></div>
+
+  <table class="data">
+    <tr><th>Setting</th><th>Value</th></tr>
+    <tr><td>Technique</td><td>Free form</td></tr>
+    <tr><td>Rows</td><td><code>Reservation time</code>, then <code>Reservation party</code></td></tr>
+    <tr><td>Values</td><td><code>Event count</code></td></tr>
+    <tr><td>Filters</td><td><code>Event name</code> exactly matches <code>reservation_complete</code></td></tr>
+  </table>
+
+  <div class="mock">
+    <div class="mock-top"><span class="dots"><i></i><i></i><i></i></span><span class="crumb">Explore → Booking detail</span></div>
+    <div class="mock-body"><div class="mock-main">
+      <table class="gtab">
+        <tr><th>Reservation time</th><th>Party</th><th style="text-align:right">Bookings</th></tr>
+        <tr><td>20:00</td><td>2</td><td class="n">31</td></tr>
+        <tr><td>20:30</td><td>2</td><td class="n">27</td></tr>
+        <tr><td>21:00</td><td>4</td><td class="n">19</td></tr>
+        <tr><td>13:00</td><td>2</td><td class="n">14</td></tr>
+        <tr><td>21:15</td><td>2</td><td class="n">6</td></tr>
+        <tr class="tot"><td colspan="2">Total</td><td class="n">97</td></tr>
+      </table>
+      <p class="panel-sub" style="margin:10px 0 0;font-style:italic">Illustrative figures.</p>
+    </div></div>
+  </div>
+
+  <div class="decide"><b>The decision this drives</b>
+  Staffing and slot design. If 21:15 barely fills while 20:00 turns people away, the constraint isn't
+  demand — it's how the slots are laid out. This is also how you'll find out, within a month or two,
+  whether the new 21:15 and 16:15 last seatings get used at all.</div>
+
+  <div class="note small">Swap <code>Reservation time</code> for <code>Reservation date</code> to see how far
+  ahead people book. Lead time tells you when to push a quiet week — there's no point promoting Friday on
+  Thursday if your guests typically book five days out.</div>
+</div>
+
+<!-- ============================================================ -->
+<h2>The monthly route — seven stops</h2>
+
+<p>First week of the month. Set the date range to <strong>last full calendar month</strong> and switch on
+<strong>Add comparison → Preceding period</strong> before you start; every stop then shows change as well
+as level. Numbers marked <span class="clock">LOG</span> go into the tracker.</p>
+
+<div class="step">
+  <div class="step-head">
+    <div class="num">1</div>
+    <div><h3>Sanity check <span class="clock">2 min</span></h3>
+    <p class="meta">Reports → Engagement → Events</p></div>
+  </div>
+  <p>Scan the event list. You are looking for eight familiar names and nothing weird:
+  <code>page_view</code>, <code>ui_click</code>, <code>reservation_complete</code>, <code>form_submit</code>,
+  <code>whatsapp_click</code>, <code>order_online_click</code>, <code>directions_click</code>,
+  <code>phone_click</code>.</p>
+  <div class="note bad" style="margin-bottom:8px"><strong>If <code>ui_click</code> is missing or has
+  collapsed to near zero</strong>, stop the review and check the container — a site deploy has probably
+  overwritten something. Analysing a broken month wastes the hour twice.</div>
+</div>
+
+<div class="step">
+  <div class="step-head">
+    <div class="num">2</div>
+    <div><h3>How many, and from where <span class="clock">5 min</span></h3>
+    <p class="meta">Reports → Acquisition → Traffic acquisition</p></div>
+  </div>
+  <p>Read the session totals by default channel group: Organic Search, Direct, Referral, Organic Social.</p>
+  <div class="logrow"><b>Log</b> Users · Sessions · New users % · Engagement rate · sessions from Organic
+  Search, Direct, Referral, Organic Social</div>
+  <div class="decide"><b>The decision this drives</b>
+  Organic Search rising month over month means the SEO landing pages are working and deserve more.
+  Direct rising usually means offline — signage, word of mouth, the plaque outside. Referral spikes are
+  worth chasing to their source: someone wrote about you.</div>
+</div>
+
+<div class="step">
+  <div class="step-head">
+    <div class="num">3</div>
+    <div><h3>Tourists or locals <span class="clock">4 min</span></h3>
+    <p class="meta">Reports → User → User attributes → Demographic details → Country, then City</p></div>
+  </div>
+  <p>Greece versus everywhere else, then Athens as a share of Greece.</p>
+  <div class="logrow"><b>Log</b> % of sessions from Greece · top non-Greek country</div>
+  <div class="decide"><b>The decision this drives</b>
+  The whole positioning of the site — "loved by locals, not a tourist trap" — depends on the ratio. It
+  also tells you which language mirror to invest in next, and it's seasonal: watch it move between
+  August and February rather than reading one month in isolation.</div>
+</div>
+
+<div class="step">
+  <div class="step-head">
+    <div class="num">4</div>
+    <div><h3>What they did <span class="clock">6 min</span></h3>
+    <p class="meta">Reports → Engagement → Key events</p></div>
+  </div>
+  <p>The five actions that mean something, plus form submissions.</p>
+  <table class="data">
+    <tr><th>Event</th><th>What it really means</th></tr>
+    <tr><td><code>reservation_complete</code></td><td>A confirmed table. Your one true conversion.</td></tr>
+    <tr><td><code>whatsapp_click</code></td><td>Opened a conversation — often a booking you took by hand</td></tr>
+    <tr><td><code>order_online_click</code></td><td>Sent to the delivery platform</td></tr>
+    <tr><td><code>directions_click</code></td><td>Someone standing nearby deciding to walk over. High intent.</td></tr>
+    <tr><td><code>phone_click</code></td><td>Tapped to call. You can't see whether they did.</td></tr>
+    <tr><td><code>form_submit</code></td><td>Contact or events enquiry handed to WhatsApp</td></tr>
+  </table>
+  <div class="logrow"><b>Log</b> all six counts. The tracker computes total contact actions, contact rate
+  and booking rate for you.</div>
+  <div class="decide"><b>The decision this drives</b>
+  Booking rate is the number to defend. If sessions climb while bookings stay flat, you have a traffic
+  win and a conversion problem — go to stop 5. If directions and phone dominate bookings, your visitors
+  are nearby and impulsive, which argues for the sticky bar and against long-form persuasion.</div>
+</div>
+
+<div class="step">
+  <div class="step-head">
+    <div class="num">5</div>
+    <div><h3>Which CTA won <span class="clock">5 min</span></h3>
+    <p class="meta">Explore → CTA performance (built above) → set date range</p></div>
+  </div>
+  <p>Read the action × placement table. Then add <code>Page language</code> as a third row for one minute,
+  to check nothing is broken in a mirror — a translated page with zero clicks on a CTA that works
+  elsewhere usually means a broken link, not disinterest.</p>
+  <div class="logrow"><b>Log</b> best-performing placement · its share of all clicks</div>
+</div>
+
+<div class="step">
+  <div class="step-head">
+    <div class="num">6</div>
+    <div><h3>Which pages pulled them in <span class="clock">5 min</span></h3>
+    <p class="meta">Reports → Engagement → Landing page</p></div>
+  </div>
+  <p>Sort by sessions, then look at the Key events column beside each. Your SEO pages —
+  <code>greek-restaurant-near-acropolis</code>, <code>where-to-eat-in-koukaki</code>,
+  <code>vegetarian-greek-koukaki</code> — and the dish pages are the ones to watch.</p>
+  <div class="logrow"><b>Log</b> top landing page and its sessions · best-converting landing page</div>
+  <div class="decide"><b>The decision this drives</b>
+  A page with high sessions and no key events is attracting the wrong reader, or failing to ask. A page
+  with few sessions but a high conversion rate deserves promotion and internal links — that's your next
+  piece of writing, told to you by the data.</div>
+</div>
+
+<div class="step">
+  <div class="step-head">
+    <div class="num">7</div>
+    <div><h3>Booking shape <span class="clock">3 min</span></h3>
+    <p class="meta">Explore → Booking detail (built above)</p></div>
+  </div>
+  <div class="logrow"><b>Log</b> average party size · busiest slot · quietest slot</div>
+  <div class="decide"><b>The decision this drives</b>
+  Slot design and staffing, and whether the last seatings are worth keeping.</div>
+</div>
+
+<!-- ============================================================ -->
+<h2>Getting the numbers out</h2>
+
+<div class="step">
+  <div class="step-head">
+    <div class="num">↓</div>
+    <div><h3>Export, log, and automate the boring part</h3>
+    <p class="meta">~5 minutes</p></div>
+  </div>
+
+  <table class="data">
+    <tr><th>From</th><th>How</th><th>Limit</th></tr>
+    <tr><td>Standard reports</td><td><strong>Share</strong> icon (top right) → <em>Download file</em> → PDF, CSV or Google Sheets</td><td>100,000 rows</td></tr>
+    <tr><td>Explorations</td><td><strong>Export</strong> icon above the table → Google Sheets, CSV, PDF</td><td>10,000 rows</td></tr>
+    <tr><td>Anything, monthly</td><td>Standard report → <strong>Share</strong> → <em>Schedule email</em> → monthly</td><td>arrives in your inbox</td></tr>
+  </table>
+
+  <div class="note ok"><strong>Set up the scheduled email once and stop remembering.</strong> Schedule
+  <em>Traffic acquisition</em> and <em>Key events</em> to arrive monthly. Then your 30 minutes starts with
+  two of the seven stops already answered, sitting in your inbox.</div>
+
+  <p>Paste the logged figures into <code>Cookaki-Monthly-Analytics-Tracker.xlsx</code>. The tracker's
+  charts are the point of the whole exercise — GA4 shows you this month against last month, but twelve
+  months side by side is what separates a seasonal dip from a real problem, and Athens is a
+  fiercely seasonal city.</p>
+</div>
+
+<!-- ============================================================ -->
+<h2>What Tag Manager gives you monthly</h2>
+
+<div class="step">
+  <div class="step-head">
+    <div class="num">⚙</div>
+    <div><h3>Nothing, and that's correct</h3>
+    <p class="meta">GTM is plumbing, not reporting — but it needs one habit</p></div>
+  </div>
+
+  <p>Tag Manager has no reports. It has no numbers. Everything you measure lives in GA4. What GTM needs
+  from you is a five-minute check, and only after something changes:</p>
+
+  <table class="data">
+    <tr><th>When</th><th>Do this</th><th>Why</th></tr>
+    <tr><td>After any site deploy</td><td>Run <strong>Preview</strong>, click one CTA, confirm <code>ui_click</code> still fires</td><td>A changed class name or restructured section can silently break placement detection</td></tr>
+    <tr><td>After any container edit</td><td>Preview, then Submit with a descriptive version name</td><td><strong>Versions</strong> becomes a readable history — and one-click rollback when something breaks</td></tr>
+    <tr><td>Quarterly</td><td>Skim <strong>Tags</strong> for anything not firing</td><td>Orphaned tags accumulate and confuse whoever inherits this</td></tr>
+    <tr><td>Quarterly</td><td>Re-run the console snippet in <code>GTM-SETUP-GUIDE.html</code></td><td>Catches double-counting introduced by a well-meaning plugin</td></tr>
+  </table>
+</div>
+
+<!-- ============================================================ -->
+<h2>Reading the movements</h2>
+
+<table class="data">
+  <tr><th>What you see</th><th>Usually means</th><th>What to check next</th></tr>
+  <tr><td>Sessions up, bookings flat</td><td>Wrong traffic, or a conversion problem</td><td>Landing page report — is the new traffic hitting a page that never asks for the booking?</td></tr>
+  <tr><td>Bookings up, sessions flat</td><td>Something on the site got better</td><td>Compare CTA placements against last month; whatever you changed, keep it</td></tr>
+  <tr><td>Everything down together</td><td>Seasonality, or measurement broke</td><td>Stop 1 first, always. Then compare with the same month last year, not last month</td></tr>
+  <tr><td><code>directions_click</code> spikes</td><td>Nearby foot traffic found you</td><td>Google Business Profile activity, or a guidebook/blog mention — check Referral</td></tr>
+  <tr><td>One language mirror at zero clicks</td><td>Almost always a broken link, not disinterest</td><td>Open that page and click the CTA yourself</td></tr>
+  <tr><td>Bookings with odd party sizes</td><td>Groups routed to the events form</td><td>Expected — 9+ is intercepted by design</td></tr>
+  <tr><td>Sudden <code>(not set)</code> everywhere</td><td>A custom dimension was renamed or dropped</td><td>GA4 Admin → Custom definitions</td></tr>
+</table>
+
+<!-- ============================================================ -->
+<h2>Three additions worth making later</h2>
+
+<table class="data">
+  <tr><th>Add</th><th>Effort</th><th>What it unlocks</th></tr>
+  <tr>
+    <td><strong>Consent acceptance rate</strong><br><span class="small muted">Tag the <code>cookaki_consent_update</code> event the site already pushes</span></td>
+    <td>one trigger, one tag</td>
+    <td>The most important missing number. It tells you what multiplier to apply to everything else — and whether a banner redesign would be worth more than any marketing you could buy</td>
+  </tr>
+  <tr>
+    <td><strong>Search Console link</strong><br><span class="small muted">Admin → Product links → Search Console links</span></td>
+    <td>5 minutes</td>
+    <td>Which search queries bring people, not just which pages. Closes the loop between the SEO landing pages and what people actually typed</td>
+  </tr>
+  <tr>
+    <td><strong>Google Business Profile view</strong><br><span class="small muted">Separate from GA4 entirely</span></td>
+    <td>none — it exists already</td>
+    <td>Most restaurant discovery never touches the website. Your Maps listing has its own stats, and for a Koukaki restaurant they may matter more than everything above</td>
+  </tr>
+</table>
+
+<p class="foot">Cookaki · Bell Kitchen · GA4 <code>G-VCL4K7HGYJ</code> · GTM <code>GTM-K6C53VGR</code>.
+Companion files: <code>GTM-SETUP-GUIDE.html</code> (build the container) ·
+<code>Cookaki-Monthly-Analytics-Tracker.xlsx</code> (log the numbers).
+Illustrative figures in the mock-ups are invented — they show the shape of the answer, not your data.</p>
+
+</div>
+</body>
+</html>

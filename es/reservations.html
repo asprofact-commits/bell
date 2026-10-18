@@ -389,7 +389,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   var API = "https://script.google.com/macros/s/AKfycbwlStypPRX6hhMt8EOII7KV32jzoBcRNi6mCNUpVMokj3P0oiztg2vJT_nVdMR0M1Vu8g/exec";
   /* Staff availability switch \u2014 the /exec URL of staff/Code.gs.
      Leave "" and the page behaves exactly as it did before the switch. */
-  var PAUSE_API = "https://script.google.com/macros/s/AKfycbyuzPXq1W429BEBYKTaNHXpUaTpn9tKbAPK1ohdVkhY3BgoXNAEORmqhqXtjk3GkPkTvw/exec";
+  var PAUSE_API = "https://script.google.com/macros/s/AKfycbwpX0emKO4RwlHRJP7C38k6F83vb6_QSlwgThhwCoFVQ9mD9Wk2gAwScdmi_PFfApVVNA/exec";
   var PAUSE_TTL = 60000;          /* re-read the switch at most once a minute */
   var DAYS_AHEAD = 7;
   var SLOT_MIN = 30, CUTOFF_MIN = 45;
@@ -401,6 +401,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   var WA_PHONE = "306982373505";
   var LANG = "es";
   var TXT = {
+    pausePartial: "<strong>Algunas horas est\u00e1n completas.</strong> Las horas en gris no est\u00e1n disponibles \u2014 las dem\u00e1s siguen abiertas, o escr\u00edbenos.",
+    pauseService: function (closed, open) { return "<strong>" + closed + " est\u00e1 completo.</strong> Para " + open.toLowerCase() + " a\u00fan tenemos mesa \u2014 las horas libres est\u00e1n abajo, o escr\u00edbenos."; },
+    pauseServiceOnly: function (closed) { return "<strong>" + closed + " est\u00e1 completo.</strong> Escr\u00edbenos y veremos qu\u00e9 podemos hacer."; },
     pauseDates: "<strong>Algunos d\u00edas est\u00e1n cerrados para reservas online.</strong> Las fechas en gris no est\u00e1n disponibles \u2014 escr\u00edbenos y veremos qu\u00e9 podemos hacer.",
     pauseDay: "<strong>Las reservas online est\u00e1n cerradas para este d\u00eda.</strong> Escr\u00edbenos y veremos qu\u00e9 podemos hacer.",
     pauseUntil: function (t) { return "<strong>Estamos completos hasta las " + t + ".</strong> Las horas en gris no est\u00e1n disponibles \u2014 los turnos posteriores siguen abiertos, o escr\u00edbenos."; },
@@ -456,9 +459,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
      from staff/pause.html. Two things can close a seating:
        untilDate/untilMin  every seating that starts before that instant
        days[]              whole dates closed to online booking
+       windows[]           part of one date: {d, a, b} in minutes, both ends
+                           inclusive, so a closed lunch takes 15:30 with it
      It FAILS OPEN on purpose: if the switch cannot be reached, booking
      behaves exactly as it did before it existed.                        */
-  var PAUSE = { untilDate: "", untilMin: 0, days: [], fetched: 0 };
+  var PAUSE = { untilDate: "", untilMin: 0, days: [], windows: [], fetched: 0 };
   var PAUSE_MSG = "";   /* survives the async rebuild that go(2) triggers */
 
   function pauseFetch() {
@@ -476,6 +481,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           PAUSE.untilDate = j.untilDate || "";
           PAUSE.untilMin = parseInt(j.untilMin, 10) || 0;
           PAUSE.days = j.days || [];
+          PAUSE.windows = (j.windows || []).filter(function (w) {
+            return w && w.d && isFinite(w.a) && isFinite(w.b);
+          });
           PAUSE.fetched = Date.now();
         }
         return PAUSE;
@@ -484,9 +492,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   }
 
   function dayPaused(iso) { return PAUSE.days.indexOf(iso) > -1; }
+  function windowPaused(iso, min) {
+    for (var i = 0; i < PAUSE.windows.length; i++) {
+      var w = PAUSE.windows[i];
+      if (w.d === iso && min >= w.a && min <= w.b) return true;
+    }
+    return false;
+  }
   function slotPaused(iso, min) {
     if (!iso) return false;
     if (dayPaused(iso)) return true;
+    if (windowPaused(iso, min)) return true;
     if (!PAUSE.untilDate) return false;
     if (iso < PAUSE.untilDate) return true;            /* window runs past this day */
     return iso === PAUSE.untilDate && min < PAUSE.untilMin;
@@ -514,6 +530,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       return !tooSoon(iso, m) && slotPaused(iso, m);
     }).length > 0 || dayPaused(iso);
   }
+  /* A service counts as closed when the switch took every seating in it.
+     Seatings already past (today's cutoff) are ignored, so "lunch is full"
+     is not announced at 20:00 to someone looking at tonight.               */
+  function serviceStatus(iso) {
+    var out = [];
+    services(dow(iso)).forEach(function (svc) {
+      var e = toMin(svc.end), live = [], shut = 0;
+      for (var m = toMin(svc.start); m <= e; m += SLOT_MIN) live.push(m);
+      if (live[live.length - 1] !== e) live.push(e);
+      live = live.filter(function (m) { return !tooSoon(iso, m); });
+      live.forEach(function (m) { if (slotPaused(iso, m)) shut++; });
+      if (!live.length) return;                        /* service already over */
+      out.push({ name: svc.name, closed: shut === live.length, open: live.length - shut });
+    });
+    return out;
+  }
+
   function pauseWaHref(iso) {
     return "https://wa.me/" + WA_PHONE + "?text=" +
       encodeURIComponent(TXT.pauseWa(iso ? longDate(iso) : ""));
@@ -653,8 +686,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       } else if (dayPaused(S.date) || openSlots(S.date) === 0) {
         pn.hidden = false; pn.innerHTML = TXT.pauseDay + pauseWaBtn(S.date);
       } else {
+        var sv = serviceStatus(S.date);
+        var shut = sv.filter(function (x) { return x.closed; });
+        var free = sv.filter(function (x) { return !x.closed && x.open; });
         pn.hidden = false;
-        pn.innerHTML = TXT.pauseUntil(toHHMM(PAUSE.untilMin)) + pauseWaBtn(S.date);
+        if (shut.length && free.length) {
+          pn.innerHTML = TXT.pauseService(shut[0].name, free[0].name) + pauseWaBtn(S.date);
+        } else if (shut.length) {
+          pn.innerHTML = TXT.pauseServiceOnly(shut[0].name) + pauseWaBtn(S.date);
+        } else {
+          /* Only say "until HH:MM" when the rolling pause is what closed these
+             seatings. A window can close the END of a day, where "until" lies. */
+          var rolling = S.date === PAUSE.untilDate && PAUSE.untilMin > 0;
+          pn.innerHTML = (rolling ? TXT.pauseUntil(toHHMM(PAUSE.untilMin)) : TXT.pausePartial) +
+                         pauseWaBtn(S.date);
+        }
       }
     }
   }
